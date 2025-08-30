@@ -1308,3 +1308,34 @@ $( function() {
     var mixer = mixitup(containerEl);
 } );
 
+// ==============================================================================================
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById('dropdownLangBtn');
+  const menu = document.querySelector('.change_language .dropdown-menu');
+  const items = document.querySelectorAll('.change_language .dropdown-item');
+  const btnFlag = document.getElementById('btn-flag');
+  const btnLabel = document.getElementById('btn-label');
+
+  function positionMenu(){
+    const r = btn.getBoundingClientRect();
+    const mw = menu.offsetWidth || 200;
+    menu.style.top  = (r.bottom + window.scrollY) + "px";
+    menu.style.left = (r.right - mw + window.scrollX) + "px";
+  }
+
+  btn.addEventListener('shown.bs.dropdown', positionMenu);
+  window.addEventListener('resize', () => { if(menu.classList.contains('show')) positionMenu(); });
+  window.addEventListener('scroll', () => { if(menu.classList.contains('show')) positionMenu(); });
+
+  items.forEach(item => {
+    item.addEventListener('click', function(e){
+      e.preventDefault();
+      const label = this.getAttribute('data-label');
+      const flag  = this.getAttribute('data-flag');
+      btnLabel.textContent = label;
+      btnFlag.className = flag;
+      items.forEach(i => i.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+});
