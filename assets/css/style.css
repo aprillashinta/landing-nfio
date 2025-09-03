@@ -2718,7 +2718,7 @@ small.text {
 }
 
 .navbar.nav-scroll {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   background: #fff;
   -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
@@ -2731,7 +2731,9 @@ small.text {
   transition: -webkit-transform 0.5s;
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  /* transition: transform 0.5s, -webkit-transform 0.5s; */
+  transition: box-shadow 0.3s ease, transform 0.5s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(100px);
   -ms-transform: translateY(100px);
   transform: translateY(100px);
@@ -16243,14 +16245,16 @@ footer .foot-info .d-flex.align-items-center {
     flex-direction: row;
   }
 
-  footer .foot-info .d-flex.align-items-center > a {
+  footer .foot-info .d-flex.align-items-center>a {
     display: flex;
     align-items: center;
   }
 
-    footer .foot-info .d-flex.align-items-center div {
-    text-align: center;   /* center text */
-    width: 100%;          /* biar full baris */
+  footer .foot-info .d-flex.align-items-center div {
+    text-align: center;
+    /* center text */
+    width: 100%;
+    /* biar full baris */
   }
 }
 
