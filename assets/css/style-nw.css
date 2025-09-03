@@ -1,4 +1,3 @@
-
 html,
 body {
   overflow-x: hidden;
@@ -525,4 +524,91 @@ footer .foot-info .d-flex.align-items-center {
   .features .features-card {
     max-width: 280px;
   }
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  top: -80px;
+  width: 40%;
+  max-width: unset;
+  max-height: unset;
+}
+
+.bubble {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 50%;
+  max-width: unset;
+  max-height: unset;
+  -webkit-animation: rotate-center 100s linear infinite both;
+  animation: rotate-center 100s linear infinite both;
+}
+
+@media screen and (max-width: 991px) {
+  .community .section-head.style-4 h2 {
+    margin-bottom: 50px !important;
+  }
+
+
+
+  .bubble {
+    top: 0;
+    width: 100%;
+  }
+
+  /* end community */
+}
+
+.frs-content .content-voucher {
+    position: relative;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.frs-content .content-voucher .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 476px;
+    height: 433px;
+}
+
+.frs-content .content-voucher .img img {
+    width: 100%;
+    height: 100%;
+    -webkit-animation: slide_up_down 2s ease-in-out infinite alternate both;
+    animation: slide_up_down 2s ease-in-out infinite alternate both;
+}
+
+@media screen and (max-width: 1026px) {
+    .frs-content .content-voucher .img {
+        padding: 0px 95px;
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .about.style-4 {
+        padding-top: 30px !important;
+    }
+
+    .frs-content .content-voucher .img {
+        padding: 0 0 20px 0;
+        width: 80%;
+        height: 80%;
+    }
+
+    .frs-content .content-voucher {
+        position: relative;
+        padding: 30px 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .frs-content .info .btn {
+        display: flex;
+        align-items: center;
+    }
 }
