@@ -29,12 +29,41 @@
   <link rel="stylesheet" href="assets/css/lib/swiper.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/style-nw.css" />
+  <style>
+    /* Floating button */
+.floating-button{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1100;
+}
+
+.floating-button #floating-btn{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.floating-button #floating-btn img{
+  width: 36px; height: 36px; object-fit: contain;
+}
+
+/* Pastikan elemen lain tidak menutup tombol */
+footer.style-4, .navbar.style-4 { position: relative; z-index: 1; }
+
+  </style>
 </head>
 
 <body>
   <div class="top-navbar style-4">
     <div class="container">
-      <div class="content text-white d-flex justify-content-end align-items-center">
+      <div class="content text-white d-flex justify-content-end align-items-center" data-bs-display="static">
         <div class="dropdown change_language">
           <button class="dropdown-toggle" type="button" id="dropdownLangBtn" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -489,97 +518,16 @@
     </div>
   </footer>
 
-  <!-- <footer class="style-4">
-    <div class="container">
-      <div class="section-head text-center style-4">
-        <h2 class="mb-10">Ready To <span> Download </span></h2>
-        <p>
-          Discover your new favorite spaces, from Sao Paulo to Seoul. Download
-          from App Store or Google Play.
-        </p>
-        <div class="d-flex align-items-center justify-content-center mt-50">
-          <a href="https://www.apple.com/app-store/" class="btn rounded-pill bg-blue4 fw-bold text-white me-4"
-            target="_blank">
-            <small>
-              <i class="fab fa-apple me-2 pe-2 border-end"></i> Download On
-              App Store
-            </small>
-          </a>
-          <a href="https://play.google.com/store/apps" class="btn rounded-pill hover-blue4 fw-bold border-blue4"
-            target="_blank">
-            <small>
-              <i class="fab fa-google-play me-2 pe-2 border-end"></i> Download
-              On Google Play
-            </small>
-          </a>
-        </div>
-      </div>
-      <div class="foot mt-80">
-        <div class="row align-items-center">
-          <div class="col-lg-2">
-            <div class="logo">
-              <img src="assets/img/logo_lgr.png" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <ul class="links">
-              <li>
-                <a href="home-app-landing.html" class="active">Home</a>
-              </li>
-              <li>
-                <a href="page-about-5.html">about</a>
-              </li>
-              <li>
-                <a href="page-product-5.html">product</a>
-              </li>
-              <li>
-                <a href="page-portfolio-5.html">portfolio</a>
-              </li>
-              <li>
-                <a href="page-services-5.html">services</a>
-              </li>
-              <li>
-                <a href="page-shop-5.html">shop</a>
-              </li>
-              <li>
-                <a href="page-blog-5.html">blog</a>
-              </li>
-              <li>
-                <a href="page-contact-5.html">contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-2">
-            <div class="dropdown">
-              <button class="dropdown-toggle p-0 border-0 bg-transparent" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="assets/img/lang.png" alt="" class="icon-25 rounded-circle me-2" />
-                <small>English</small>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">English</a></li>
-                <li><a class="dropdown-item" href="#">Arabic</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copywrite text-center">
-        <small class="small">
-          © 2023 Copyrights by
-          <a href="#" class="fw-bold text-decoration-underline">Iteck Co.</a>
-          All Rights Reserved. Designed by
-          <a href="https://themeforest.net/user/themescamp" class="fw-bold text-decoration-underline">ThemesCamp</a>
-        </small>
-      </div>
-    </div>
-    <img src="assets/img/footer/footer_4_wave.png" alt="" class="wave" />
-  </footer> -->
+  <div class="floating-button">
+    <button id="floating-btn" class="border-0" style="background: transparent;"><img
+        src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png" alt=""></button>
+  </div>
 
-  <!-- <a href="#" class="to_top bg-gray rounded-circle icon-40 d-inline-flex align-items-center justify-content-center">
+  <a href="#" class="to_top bg-gray rounded-circle icon-40 d-inline-flex align-items-center justify-content-center">
     <i class="bi bi-chevron-up fs-6 text-dark"></i>
-  </a> -->
+  </a>
 
+  <script id="chat-init" src="https://chat.joglo.ink/account/js/init.js?id=5261972"></script>
   <script src="assets/js/lib/jquery-3.0.0.min.js"></script>
   <script src="assets/js/lib/jquery-migrate-3.0.0.min.js"></script>
   <script src="assets/js/lib/wow.min.js"></script>
@@ -590,6 +538,166 @@
   <script src="assets/js/lib/jquery.counterup.js"></script>
   <script src="assets/js/lib/scrollIt.min.js"></script>
   <script src="assets/js/main.js"></script>
+<script>
+  $('#btn-claim-voucher').on('click', function() {
+    $('#floating-btn').click();
+    return;
+    var voucherNotClaim = localStorage.getItem('is_claim') === 'false';
+    if (voucherNotClaim) {
+      localStorage.setItem('is_claim', true);
+      Swal.fire({
+        title: '<strong>Yeay, Berhasil Klaim Voucher !!</strong>',
+        html: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
+        showCancelButton: false,
+        confirmButtonText: 'Ok, Lanjut',
+        confirmButtonColor: '#4A90E2',
+        customClass: {
+          popup: 'custom-swal-popup',
+          title: 'custom-swal-title',
+          confirmButton: 'custom-swal-button'
+        },
+        willClose: () => {
+          window.location.href = 'https://fingerspot.io/price';
+        }
+      });
+      var end = Date.now() + (1 * 1000);
+      var colors = ['#3F87B9', '#39B5E0', '#A31ACB'];
+      setTimeout(() => {
+        let canvas = document.querySelector('canvas');
+        if (canvas) {
+          canvas.style.zIndex = '10000';
+        }
+      }, 100);
+      (function frame() {
+        confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 55,
+          origin: {
+            x: 0,
+            y: 0.95
+          },
+          colors: colors
+        });
+        confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 55,
+          origin: {
+            x: 1,
+            y: 0.95
+          },
+          colors: colors
+        });
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    } else {
+      Swal.fire({
+        title: '<strong>Yahhhh</strong>',
+        html: 'Pantau terus, segera hadir!',
+        showCancelButton: false,
+        confirmButtonText: 'Kembali',
+        confirmButtonColor: '#4A90E2',
+        customClass: {
+          popup: 'custom-swal-popup',
+          title: 'custom-swal-title',
+          confirmButton: 'custom-swal-button'
+        }
+      });
+    }
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    if (localStorage.getItem('is_claim') === null) {
+      localStorage.setItem('is_claim', 'false');
+    }
+  });
+  $('#floating-btn').on('click', function() {
+    var voucherNotClaim = localStorage.getItem('is_claim') === 'false';
+    if (voucherNotClaim) {
+      localStorage.setItem('is_claim', true);
+      Swal.fire({
+        title: '<strong>Yeay, Berhasil Klaim Voucher !!</strong>',
+        html: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
+        showCancelButton: false,
+        confirmButtonText: 'Ok, Lanjut',
+        confirmButtonColor: '#4A90E2',
+        customClass: {
+          popup: 'custom-swal-popup',
+          title: 'custom-swal-title',
+          confirmButton: 'custom-swal-button'
+        },
+        willClose: () => {
+          window.location.href = 'https://fingerspot.io/price';
+        }
+      });
+      var end = Date.now() + (1 * 1000);
+      var colors = ['#3F87B9', '#39B5E0', '#A31ACB'];
+      setTimeout(() => {
+        let canvas = document.querySelector('canvas');
+        if (canvas) {
+          canvas.style.zIndex = '10000';
+        }
+      }, 100);
+      (function frame() {
+        confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 55,
+          origin: {
+            x: 0,
+            y: 0.95
+          },
+          colors: colors
+        });
+        confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 55,
+          origin: {
+            x: 1,
+            y: 0.95
+          },
+          colors: colors
+        });
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    } else {
+      Swal.fire({
+        title: '<strong>Sudah Klaim Voucher !</strong>',
+        html: 'Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher, ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan mulai jelajahi fitur-fitur sesuai kebutuhanmu.',
+        showCancelButton: false,
+        confirmButtonText: 'Kembali',
+        confirmButtonColor: '#4A90E2',
+        customClass: {
+          popup: 'custom-swal-popup',
+          title: 'custom-swal-title',
+          confirmButton: 'custom-swal-button'
+        }
+      });
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // sekarang aman pakai jQuery
+    $('#btn-claim-voucher').on('click', function() {
+      $('#floating-btn').trigger('click');
+    });
+    if (localStorage.getItem('is_claim') === null) {
+      localStorage.setItem('is_claim', 'false');
+    }
+    $('#floating-btn').on('click', function() {
+      // ... (isi SweetAlert & confetti kamu)
+    });
+  });
+</script>
 </body>
 
 </html>
