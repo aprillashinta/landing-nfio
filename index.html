@@ -30,33 +30,11 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/style-nw.css" />
   <style>
-    /* Floating button */
-.floating-button{
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 1100;
-}
-
-.floating-button #floating-btn{
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 10px 25px rgba(0,0,0,.15);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.floating-button #floating-btn img{
-  width: 36px; height: 36px; object-fit: contain;
-}
-
-/* Pastikan elemen lain tidak menutup tombol */
-footer.style-4, .navbar.style-4 { position: relative; z-index: 1; }
-
+    footer.style-4,
+    .navbar.style-4 {
+      position: relative;
+      z-index: 1;
+    }
   </style>
 </head>
 
@@ -452,7 +430,7 @@ footer.style-4, .navbar.style-4 { position: relative; z-index: 1; }
 
         <div class="col-lg-2 col-6">
           <h6 class="fw-bold mb-3">Informasi</h6>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled" style="line-height: 1.7;">
             <li>
               <a href="https://fingerspot.io/about-us" class="text-muted">Tentang Kami</a>
             </li>
@@ -482,7 +460,7 @@ footer.style-4, .navbar.style-4 { position: relative; z-index: 1; }
 
         <div class="col-lg-3 col-6">
           <h6 class="fw-bold mb-3">Mesin Absensi Populer</h6>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled" style="line-height: 1.7;">
             <li>
               <a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-telapak-tangan-revo-wfv-208BNC"
                 class="text-muted">Revo WFV-208BNC</a>
@@ -519,8 +497,24 @@ footer.style-4, .navbar.style-4 { position: relative; z-index: 1; }
   </footer>
 
   <div class="floating-button">
-    <button id="floating-btn" class="border-0" style="background: transparent;"><img
-        src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png" alt=""></button>
+    <img id="floating-btn" src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+      alt="Voucher">
+  </div>
+
+  <div class="voucher-modal" id="voucherModal" aria-hidden="true">
+    <div class="vm-backdrop" data-close></div>
+
+    <div class="vm-dialog" role="dialog" aria-modal="true" aria-labelledby="vm-title" aria-describedby="vm-desc">
+      <h3 id="vm-title">Sudah Klaim Voucher !</h3>
+
+      <p id="vm-desc" class="vm-text">
+        Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher,
+        ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan
+        mulai jelajahi fitur–fitur sesuai kebutuhanmu.
+      </p>
+
+      <button class="vm-btn" type="button" data-close aria-label="Tutup dan kembali">Kembali</button>
+    </div>
   </div>
 
   <a href="#" class="to_top bg-gray rounded-circle icon-40 d-inline-flex align-items-center justify-content-center">
@@ -538,166 +532,122 @@ footer.style-4, .navbar.style-4 { position: relative; z-index: 1; }
   <script src="assets/js/lib/jquery.counterup.js"></script>
   <script src="assets/js/lib/scrollIt.min.js"></script>
   <script src="assets/js/main.js"></script>
-<script>
-  $('#btn-claim-voucher').on('click', function() {
-    $('#floating-btn').click();
-    return;
-    var voucherNotClaim = localStorage.getItem('is_claim') === 'false';
-    if (voucherNotClaim) {
-      localStorage.setItem('is_claim', true);
-      Swal.fire({
-        title: '<strong>Yeay, Berhasil Klaim Voucher !!</strong>',
-        html: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
-        showCancelButton: false,
-        confirmButtonText: 'Ok, Lanjut',
-        confirmButtonColor: '#4A90E2',
-        customClass: {
-          popup: 'custom-swal-popup',
-          title: 'custom-swal-title',
-          confirmButton: 'custom-swal-button'
-        },
-        willClose: () => {
-          window.location.href = 'https://fingerspot.io/price';
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script>
+    (() => {
+      const $ = s => document.querySelector(s);
+      const modal = $("#voucherModal");
+      const btn = $("#floating-btn");
+      try {
+        if (window.jQuery) {
+          $('#floating-btn').off('click');
+          $('#btn-claim-voucher').off('click');
         }
+      } catch {}
+      localStorage.is_claim ??= 'false';
+      const COPY = {
+        successTitle: 'Yeay, Berhasil Klaim Voucher!!',
+        successHtml: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
+        successCta: 'Ok, Lanjut',
+        alreadyTitle: 'Sudah Klaim Voucher!',
+        alreadyHtml: 'Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher, ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan mulai jelajahi fitur–fitur sesuai kebutuhanmu.',
+        alreadyCta: 'Kembali'
+      };
+      const vmTitle = document.getElementById('vm-title');
+      const vmText = document.getElementById('vm-desc') || document.querySelector('.vm-text');
+      const vmBtn = document.getElementById('vm-btn') || document.querySelector('.vm-btn');
+      if (vmTitle) vmTitle.textContent = COPY.alreadyTitle;
+      if (vmText) vmText.innerHTML = COPY.alreadyHtml;
+      if (vmBtn) vmBtn.textContent = COPY.alreadyCta;
+      const open = () => {
+        if (!modal) return;
+        modal.classList.add('is-open');
+        modal.ariaHidden = 'false';
+        document.body.style.overflow = 'hidden';
+      };
+      const close = () => {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        modal.ariaHidden = 'true';
+        document.body.style.overflow = '';
+      };
+      const confettiBurst = () => {
+        if (!window.confetti) return;
+        const end = Date.now() + 1000,
+          colors = ['#3F87B9', '#39B5E0', '#A31ACB'];
+        (function frame() {
+          confetti({
+            particleCount: 3,
+            angle: 60,
+            spread: 55,
+            origin: {
+              x: 0,
+              y: .95
+            },
+            colors
+          });
+          confetti({
+            particleCount: 3,
+            angle: 120,
+            spread: 55,
+            origin: {
+              x: 1,
+              y: .95
+            },
+            colors
+          });
+          if (Date.now() < end) requestAnimationFrame(frame);
+        })();
+        setTimeout(() => {
+          const c = document.querySelector('canvas');
+          if (c) c.style.zIndex = '10000';
+        }, 80);
+      };
+      const showClaimSuccess = () => {
+        if (!window.Swal) {
+          alert('Berhasil klaim voucher!');
+          location.href = 'https://fingerspot.io/price';
+          return;
+        }
+        Swal.fire({
+          title: 'Yeay, Berhasil Klaim Voucher !!',
+          html: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
+          confirmButtonText: 'Ok, Lanjut',
+          confirmButtonColor: '#4A90E2',
+          width: 'min(560px, 85vw)',
+          padding: '1.25rem',
+          buttonsStyling: false,
+          backdrop: true,
+          customClass: {
+            popup: 'sw-claim',
+            title: 'sw-claim-title',
+            htmlContainer: 'sw-claim-text',
+            actions: 'sw-claim-actions',
+            confirmButton: 'sw-claim-btn'
+          }
+        }).then(() => location.href = 'https://fingerspot.io/price');
+      };
+      let locked = false;
+      btn ?.addEventListener('click', () => {
+        if (locked) return;
+        locked = true;
+        setTimeout(() => locked = false, 500);
+        if (localStorage.is_claim === 'false') {
+          localStorage.is_claim = 'true';
+          confettiBurst();
+          showClaimSuccess();
+          return;
+        }
+        open();
       });
-      var end = Date.now() + (1 * 1000);
-      var colors = ['#3F87B9', '#39B5E0', '#A31ACB'];
-      setTimeout(() => {
-        let canvas = document.querySelector('canvas');
-        if (canvas) {
-          canvas.style.zIndex = '10000';
-        }
-      }, 100);
-      (function frame() {
-        confetti({
-          particleCount: 3,
-          angle: 60,
-          spread: 55,
-          origin: {
-            x: 0,
-            y: 0.95
-          },
-          colors: colors
-        });
-        confetti({
-          particleCount: 3,
-          angle: 120,
-          spread: 55,
-          origin: {
-            x: 1,
-            y: 0.95
-          },
-          colors: colors
-        });
-        if (Date.now() < end) {
-          requestAnimationFrame(frame);
-        }
-      }());
-    } else {
-      Swal.fire({
-        title: '<strong>Yahhhh</strong>',
-        html: 'Pantau terus, segera hadir!',
-        showCancelButton: false,
-        confirmButtonText: 'Kembali',
-        confirmButtonColor: '#4A90E2',
-        customClass: {
-          popup: 'custom-swal-popup',
-          title: 'custom-swal-title',
-          confirmButton: 'custom-swal-button'
-        }
-      });
-    }
-  });
-</script>
+      document.getElementById('btn-claim-voucher') ?.addEventListener('click', () => btn ?.click());
+      modal ?.addEventListener('click', e => e.target.hasAttribute('data-close') && close());
+      window.addEventListener('keydown', e => e.key === 'Escape' && modal ?.classList.contains('is-open') &&
+    close());
+    })();
+  </script>
 
-<script>
-  $(document).ready(function() {
-    if (localStorage.getItem('is_claim') === null) {
-      localStorage.setItem('is_claim', 'false');
-    }
-  });
-  $('#floating-btn').on('click', function() {
-    var voucherNotClaim = localStorage.getItem('is_claim') === 'false';
-    if (voucherNotClaim) {
-      localStorage.setItem('is_claim', true);
-      Swal.fire({
-        title: '<strong>Yeay, Berhasil Klaim Voucher !!</strong>',
-        html: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
-        showCancelButton: false,
-        confirmButtonText: 'Ok, Lanjut',
-        confirmButtonColor: '#4A90E2',
-        customClass: {
-          popup: 'custom-swal-popup',
-          title: 'custom-swal-title',
-          confirmButton: 'custom-swal-button'
-        },
-        willClose: () => {
-          window.location.href = 'https://fingerspot.io/price';
-        }
-      });
-      var end = Date.now() + (1 * 1000);
-      var colors = ['#3F87B9', '#39B5E0', '#A31ACB'];
-      setTimeout(() => {
-        let canvas = document.querySelector('canvas');
-        if (canvas) {
-          canvas.style.zIndex = '10000';
-        }
-      }, 100);
-      (function frame() {
-        confetti({
-          particleCount: 3,
-          angle: 60,
-          spread: 55,
-          origin: {
-            x: 0,
-            y: 0.95
-          },
-          colors: colors
-        });
-        confetti({
-          particleCount: 3,
-          angle: 120,
-          spread: 55,
-          origin: {
-            x: 1,
-            y: 0.95
-          },
-          colors: colors
-        });
-        if (Date.now() < end) {
-          requestAnimationFrame(frame);
-        }
-      }());
-    } else {
-      Swal.fire({
-        title: '<strong>Sudah Klaim Voucher !</strong>',
-        html: 'Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher, ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan mulai jelajahi fitur-fitur sesuai kebutuhanmu.',
-        showCancelButton: false,
-        confirmButtonText: 'Kembali',
-        confirmButtonColor: '#4A90E2',
-        customClass: {
-          popup: 'custom-swal-popup',
-          title: 'custom-swal-title',
-          confirmButton: 'custom-swal-button'
-        }
-      });
-    }
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // sekarang aman pakai jQuery
-    $('#btn-claim-voucher').on('click', function() {
-      $('#floating-btn').trigger('click');
-    });
-    if (localStorage.getItem('is_claim') === null) {
-      localStorage.setItem('is_claim', 'false');
-    }
-    $('#floating-btn').on('click', function() {
-      // ... (isi SweetAlert & confetti kamu)
-    });
-  });
-</script>
 </body>
 
 </html>
