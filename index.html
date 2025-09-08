@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,14 +8,10 @@
   <meta name="description" content="Iteck - Multi-Purpose HTML5 Template" />
   <meta name="author" content="" />
   <title>ABSENSI NFIO</title>
+
   <link rel="shortcut icon" href="assets/pict/fingerspot_logo_circle.png" title="Favicon" sizes="16x16" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
-    integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" /> -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/flag-icons@6.7.0/css/flag-icons.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
@@ -29,37 +24,53 @@
   <link rel="stylesheet" href="assets/css/lib/swiper.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/style-nw.css" />
+
   <style>
+    :root {
+      --section-space-y: 70px;
+    }
     footer.style-4,
     .navbar.style-4 {
       position: relative;
       z-index: 1;
     }
+    #route-header.compact {
+      padding: 0 !important;
+    }
+    .section-space {
+      padding-top: var(--section-space-y);
+      padding-bottom: var(--section-space-y);
+    }
+    .section-space-top {
+      padding-top: var(--section-space-y);
+    }
+    .section-space-bottom {
+      padding-bottom: var(--section-space-y);
+    }
+    .screenshots.style-4.section-space {
+      position: relative;
+    }
   </style>
 </head>
 
-<body>
+<body data-page="home">
   <div class="top-navbar style-4">
     <div class="container">
       <div class="content text-white d-flex justify-content-end align-items-center" data-bs-display="static">
         <div class="dropdown change_language">
-          <button class="dropdown-toggle" type="button" id="dropdownLangBtn" data-bs-toggle="dropdown"
-            aria-expanded="false">
+          <button class="dropdown-toggle" type="button" id="dropdownLangBtn" data-bs-toggle="dropdown" aria-expanded="false">
             <span id="btn-flag" class="fi fi-id fis rounded-circle"></span>
             <span id="btn-label" class="lang-label">Bahasa Indonesia</span>
           </button>
-
           <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="dropdownLangBtn">
             <li>
-              <a class="dropdown-item active" href="#" data-lang="id" data-label="Bahasa Indonesia"
-                data-flag="fi fi-id fis rounded-circle">
+              <a class="dropdown-item active" href="#" data-lang="id" data-label="Bahasa Indonesia" data-flag="fi fi-id fis rounded-circle">
                 <span class="fi fi-id fis rounded-circle"></span>
                 <span class="lang-label">Bahasa Indonesia</span>
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#" data-lang="en" data-label="English"
-                data-flag="fi fi-us fis rounded-circle">
+              <a class="dropdown-item" href="#" data-lang="en" data-label="English" data-flag="fi fi-us fis rounded-circle">
                 <span class="fi fi-us fis rounded-circle"></span>
                 <span class="lang-label">English</span>
               </a>
@@ -73,114 +84,121 @@
   <nav class="navbar navbar-expand-lg navbar-light style-4">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="assets/pict/logo_text_grey.png" alt="" />
+        <img src="assets/pict/logo_text_grey.png" alt="Fingerspot" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase">
-          <li class="nav-item dropdown">
-            <a class="nav-link active" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Beranda
-            </a>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" data-route="/">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> FITUR </a>
+            <a class="nav-link" href="features.html" data-route="/features">Fitur</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> FAQ </a>
+            <a class="nav-link" href="faq.html" data-route="/faq">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> HARGA </a>
+            <a class="nav-link" href="price.html" data-route="/price">Harga</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> MESIN ABSENSI </a>
+            <a class="nav-link" href="device.html" data-route="/device">Mesin Absensi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> CEK MESIN ABSENSI </a>
+            <a class="nav-link" href="check-device.html" data-route="/check-device">Cek Mesin Absensi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> KONTAK KAMI </a>
+            <a class="nav-link" href="contact.html" data-route="/contact">Kontak Kami</a>
           </li>
         </ul>
+
         <div class="nav-side">
           <div class="d-flex align-items-center">
-            <a href="#" class="search-icon me-4">
-              <i class="bi bi-person"></i>
+            <a href="#" class="search-icon me-1"><i class="fa fa-search"></i></a>
+
+            <div class="nav-item dropdown icon-wishlist">
+              <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="search-icon me-1">
+                <i class="fa fa-heart"></i>
+              </a>
+              <div class="dropdown-menu wishlist">
+                <div class="title">
+                  Produk Ditambahkan
+                  <span class="bi bi-question-circle me-10" style="color:#263238;font-size:14px;float:right" data-toggle="tooltip" data-bs-original-title="Ceklist item untuk melakukan komparasi"></span>
+                </div>
+                <ul id="wishlist" aria-labelledby="wishlist"></ul>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-wishlisit disabled" id="btn-request-quote" data-slugs="">Minta Penawaran</a>
+                  <a href="#" class="btn btn-sm btn-compare disabled" id="btn-compare" data-slugs="">Komparasi</a>
+                </div>
+              </div>
+              <span class="badge-wishlist hide"></span>
+            </div>
+
+            <a href="https://fingerspot.io/price/cart" class="search-icon me-1">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="badge-wishlist-cart hide"></span>
             </a>
-            <a href="#l" class="btn rounded-pill brd-gray hover-blue4 sm-butn fw-bold">
-              <span>Join iteck Hub <i class="bi bi-arrow-right ms-1"></i>
-              </span>
-            </a>
+
+            <button id="btnLogin" class="btn rounded-pill brd-gray hover-blue4 sm-butn fw-bold">
+              <span>Masuk</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </nav>
-  <header class="style-4">
-    <div class="content">
+
+  <header class="style-4" id="route-header">
+    <div class="content section-space-bottom">
       <div class="container">
         <div class="row gx-0 gy-4 gy-lg-0">
           <div class="col-12 col-lg-6 d-flex">
             <div class="info w-100">
-              <!-- <small class="mb-50 title_small">Notero - Easy Notes App</small> -->
-              <h1 class="mb-30 hero-title" style="font-weight: 600">
-                Mesin Absensimu <span> Bisa Online? </span>
-              </h1>
+              <h1 class="mb-30 hero-title" style="font-weight:600">Mesin Absensimu <span>Bisa Online?</span></h1>
               <p class="text hero-text">
-                Nikmati berbagai kemudahan seperti mengatur jadwal kerja yang fleksibel. mengunduh data absensi karyawan
-                dari mana saja, monitoring kehadiran karyawan harian via ponsel, dan lain sebagainya. Jangan tunggu
-                nanti, ayo online-kan mesin absensimu sekarang !
+                Nikmati berbagai kemudahan seperti mengatur jadwal kerja yang fleksibel. mengunduh data absensi karyawan dari mana saja, monitoring kehadiran karyawan harian via ponsel, dan lain sebagainya. Jangan tunggu nanti, ayo online-kan mesin absensimu sekarang!
               </p>
-              <div class="d-flex align-items-center mt-40 hero-cta" style="gap: 12px">
+              <div class="d-flex align-items-center mt-40 hero-cta" style="gap:12px">
                 <a href="#" class="btn btn-cek rounded-pill bg-blue4 fw-bold text-white me-lg-4" target="_blank">
-                  <small>Cek Mesin Absensi Saya !</small>
+                  <small>Cek Mesin Absensi Saya!</small>
                 </a>
-                <a href="#" data-lity class="klaim-btn bg-white">
-                  <span class="icon">
-                    <i class="bi bi-ticket-perforated-fill"></i>
-                  </span>
+                <a href="#" data-lity class="klaim-btn">
+                  <span class="icon"><i class="bi bi-ticket-perforated-fill"></i></span>
                   <strong class="small">Klaim Voucher</strong>
                 </a>
               </div>
             </div>
           </div>
+
           <div class="col-12 col-lg-6">
             <div class="img">
-              <img src="assets/pict/header1.png" alt="" class="img-fluid" />
+              <img src="assets/pict/header1.png" alt="Header Illustration" class="img-fluid" />
             </div>
           </div>
         </div>
       </div>
-      <!-- <img src="https://fingerspot.io/assets3/img/about/about_s4_lines.png" alt="" class="lines"> -->
-      <!-- <img src="https://fingerspot.io/assets3/img/about/about_s4_bubble.png" alt="" class="bubble"> -->
-      <img src="https://fingerspot.io/assets3/img/header/header_4_bubble.png" alt="" class="bubble">
 
-      <!-- <img src="https://fingerspot.io/assets3/img/about/about_s4_wave.png" alt="" class="bottom-wave"> -->
-      <!-- <img src="assets/img/header/header_4_bubble.png" alt="" class="bubble" /> -->
+      <img src="https://fingerspot.io/assets3/img/header/header_4_bubble.png" alt="Bubble" class="bubble">
     </div>
-    <!-- <img src="assets/img/header/header_4_wave.png" alt="" class="wave" /> -->
   </header>
 
   <main class="position-sticky">
-    <!-- <img src="https://fingerspot.io/assets3/img/about/about_s4_bubble.png" alt="" class="bubble"> -->
-
-    <section class="features pt-70 style-4">
+    <section class="features style-4 section-space">
       <div class="container">
         <div class="section-head text-left style-4">
           <h2>
             Tingkatkan Efisiensi Manajemen SDM
-            <span class="color-blue4"> Dengan Fitur Next Gen </span>
+            <span class="color-blue4">Dengan Fitur Next Gen</span>
           </h2>
 
           <a href="#fitur-lainnya" class="cta-link" aria-label="Lihat fitur lain yang pasti Anda suka">
             Fitur lain yang pasti Anda suka
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M5 12h14"></path>
                 <path d="m13 5 7 7-7 7"></path>
               </svg>
@@ -191,107 +209,100 @@
         <div class="content features-row">
           <div class="features-card">
             <div class="icon img-contain">
-              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/1.png" alt="">
+              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/1.png" alt="Download data absensi" />
             </div>
-            <h6><span class="color-blue4 font-weight-100">Download data absensi</span> <br>dari mana saja</h6>
+            <h6><span class="color-blue4 font-weight-100">Download data absensi</span> <br />dari mana saja</h6>
           </div>
 
           <div class="features-card">
             <div class="icon img-contain">
-              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/2.png" alt="">
+              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/2.png" alt="Pemantauan absensi harian" />
             </div>
-            <h6><span class="color-blue4">Pemantauan absensi</span> <br>harian</h6>
+            <h6><span class="color-blue4">Pemantauan absensi</span> <br />harian</h6>
           </div>
 
           <div class="features-card">
             <div class="icon img-contain">
-              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/3.png" alt="">
+              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/3.png" alt="Absensi Mobile App berbasis GPS" />
             </div>
-            <h6><span class="color-blue4">Absensi Mobile App</span> <br>berbasis GPS</h6>
+            <h6><span class="color-blue4">Absensi Mobile App</span> <br />berbasis GPS</h6>
           </div>
 
           <div class="features-card">
             <div class="icon img-contain">
-              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/4.png" alt="">
+              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/4.png" alt="Geofence" />
             </div>
-            <h6><span class="color-blue4">Pembatasan area virtual</span> <br>dengan fitur geofence</h6>
+            <h6><span class="color-blue4">Pembatasan area virtual</span> <br />dengan fitur geofence</h6>
           </div>
 
           <div class="features-card">
             <div class="icon img-contain">
-              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/5.png" alt="">
+              <img src="https://fingerspot.io/assets3/img/custom/icon-levelup/5.png" alt="Pengaturan jadwal kerja jarak jauh" />
             </div>
-            <h6><span class="color-blue4">Pengaturan jadwal</span> <br>kerja jarak jauh</h6>
+            <h6><span class="color-blue4">Pengaturan jadwal</span> <br />kerja jarak jauh</h6>
           </div>
         </div>
       </div>
 
-      <img src="assets/img/feat_circle.png" alt="" class="feat-circle">
+      <img src="assets/img/feat_circle.png" alt="Decoration" class="feat-circle" />
     </section>
 
-    <section class="about pt-70 style-4">
-
+    <section class="about style-4 section-space">
       <div class="content frs-content mb-100" data-scroll-index="1">
         <div class="container">
           <div class="row align-items-center justify-content-between">
             <div class="col-lg-6">
               <div class="content-voucher mb-30 mb-lg-0">
                 <div class="img">
-                  <img src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
-                    alt="">
-
+                  <img src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png" alt="Voucher" />
                 </div>
               </div>
             </div>
+
             <div class="col-lg-5">
               <div class="info">
-                <div class="section-head style-4  wow fadeInUp">
-                  <h2 class="mb-30">Get Welcome <span>Voucher Rp 225.000,- </span></h2>
+                <div class="section-head style-4">
+                  <h2 class="mb-30">Get Welcome <span>Voucher Rp 225.000,-</span></h2>
                 </div>
-                <p class="text mb-40  wow fadeInUp">
-                  Nikmati pengalaman penggunaan absensi online yang lebih baik, dengan bergabung
-                  bersama mereka yang telah menggunakan fingerspot.io. Khusus anda pengguna akun baru,
-                  bisa memanfaatkan voucher ini. </p>
-                <ul class="wow fadeInUp">
 
+                <p class="text mb-40">
+                  Nikmati pengalaman penggunaan absensi online yang lebih baik, dengan bergabung bersama mereka yang telah menggunakan fingerspot.io. Khusus anda pengguna akun baru, bisa memanfaatkan voucher ini.
+                </p>
+
+                <ul>
                   <li class="d-flex align-items-center mb-3">
-                    <small
-                      class="icon-30 rounded-circle color-white d-inline-flex align-items-center justify-content-center me-3 bg-blue4">
+                    <small class="icon-30 rounded-circle color-white d-inline-flex align-items-center justify-content-center me-3 bg-blue4">
                       <i class="fa fa-check"></i>
                     </small>
-                    <p class="text">Mesin Absensi Online</p>
+                    <p class="text mb-0">Mesin Absensi Online</p>
                   </li>
                   <li class="d-flex align-items-center mb-3">
-                    <small
-                      class="icon-30 rounded-circle color-white d-inline-flex align-items-center justify-content-center me-3 bg-blue4">
+                    <small class="icon-30 rounded-circle color-white d-inline-flex align-items-center justify-content-center me-3 bg-blue4">
                       <i class="fa fa-check"></i>
                     </small>
-                    <p class="text">Absensi GPS Ponsel</p>
+                    <p class="text mb-0">Absensi GPS Ponsel</p>
                   </li>
-
-                  <button type="button" id="btn-claim-voucher" class="btn rounded-pill bg-blue4 text-white mt-30">
-                    <small> Klaim Voucher </small>
-                  </button>
                 </ul>
+
+                <button type="button" id="btn-claim-voucher" class="btn rounded-pill bg-blue4 text-white mt-30">
+                  <small>Klaim Voucher</small>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <img src="https://fingerspot.io/assets3/img/about/about_s4_wave.png" alt="" class="top-wave hide"> -->
-      <img src="https://fingerspot.io/assets3/img/about/about_s4_wave.png" alt="" class="bottom-wave hide">
-      <img src="https://fingerspot.io/assets3/img/about/about_s4_lines.png" alt="" class="lines">
-      <img src="https://fingerspot.io/assets3/img/about/about_s4_bubble.png" alt="" class="bubble">
-      <img src="https://fingerspot.io/assets3/img/about/about_s4_wave.png" alt="" class="bottom-wave">
-      </div>
 
+      <img src="https://fingerspot.io/assets3/img/about/about_s4_wave.png" alt="Decoration" class="bottom-wave hide" />
+      <img src="https://fingerspot.io/assets3/img/about/about_s4_lines.png" alt="Decoration" class="lines" />
+      <img src="https://fingerspot.io/assets3/img/about/about_s4_bubble.png" alt="Decoration" class="bubble" />
+      <img src="https://fingerspot.io/assets3/img/about/about_s4_wave.png" alt="Decoration" class="bottom-wave" />
     </section>
 
-    <div class="screenshots style-4" data-scroll-index="4">
-
+    <div class="screenshots style-4 section-space" data-scroll-index="4">
       <div class="container">
         <div class="section-head style-4 wow fadeIn">
-          <h2 class="mb-20">Aplikasi Mobile <br><span> fingerspot.io </span></h2>
+          <h2 class="mb-20">Aplikasi Mobile <br /><span>fingerspot.io</span></h2>
         </div>
       </div>
 
@@ -299,128 +310,184 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/0.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/0.png" alt="Screenshot 0" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/1.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/1.png" alt="Screenshot 1" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/2.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/2.png" alt="Screenshot 2" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/3.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/3.png" alt="Screenshot 3" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/4.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/4.png" alt="Screenshot 4" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/5.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/5.png" alt="Screenshot 5" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/6.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/6.png" alt="Screenshot 6" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/7.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/7.png" alt="Screenshot 7" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/8.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/8.png" alt="Screenshot 8" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/9.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/9.png" alt="Screenshot 9" /></div>
             </div>
             <div class="swiper-slide">
-              <div class="img">
-                <img src="https://fingerspot.io/assets3/img/custom/screenshots/id/10.png" alt="">
-              </div>
+              <div class="img"><img src="https://fingerspot.io/assets3/img/custom/screenshots/id/10.png" alt="Screenshot 10" /></div>
             </div>
           </div>
         </div>
       </div>
-      <img src="https://fingerspot.io/assets3/img/screenshots/hand.png" alt="" class="mob-hand">
+
+      <img src="https://fingerspot.io/assets3/img/screenshots/hand.png" alt="Phone Hand" class="mob-hand" />
     </div>
 
-    <div class="container">
-      <div class="section-head text-center style-4 pt-70">
-        <h2 class="mb-10 wow fadeInUp"> <span>Download</span> Sekarang! </h2>
-        <p class="wow fadeInUp">Biar kerja tetap full senyum, yuk install aplikasi absensi online fingerspot.io.
-        </p>
+    <div class="container section-space">
+      <section class="new-testimonials style-4" data-scroll-index="5">
+        <div class="content">
+          <div class="container">
+            <div class="section-head style-4 wow fadeInUp">
+              <h2 class="mb-50">Pengalaman seru mereka tentang <br /><span>fingerspot.io</span></h2>
+            </div>
+
+            <div class="d-flex align-items-center button-group wow fadeInUp">
+              <a href="https://fingerspot.io/customer/form_register" target="_blank" class="btn coba-gratis">Gabung Sekarang !</a>
+              <a href="https://fingerspot.io/testimonial" class="play-btn wow fadeInUp" style="border-left:1px solid #3f87b9;padding:5px 20px;">
+                <span class="icon me-2"><i class="fas fa-eye"></i></span>
+                <strong class="small" style="font-size:14px">Lihat Testimoni Lainnya</strong>
+              </a>
+            </div>
+          </div>
+
+          <div class="testimonials-slider">
+            <div class="swiper-button-prev"><i class="fa fa-arrow-left" style="font-weight:100;"></i></div>
+            <div class="swiper-button-next"><i class="fa fa-arrow-right" style="font-weight:100;"></i></div>
+
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonials-card-all">
+                    <div class="img">
+                      <img src="https://fingerspot.io/assets3/img/custom/icon-testi/fingerspot-io-testimoni-profile.png" alt="Profile 1" />
+                    </div>
+                    <div class="testimonials-card">
+                      <div class="info">
+                        <p style="font-weight:400">
+                          Sebelumnya saya bingung sekali ketika mesin absensi saya mengalami gangguan. Saya coba bertanya di layanan ini dan Alhamdulillah, saya dibimbing step by step dan sekarang sudah lancar kembali mesin absensi saya. Terima Kasih
+                        </p>
+                      </div>
+                      <div class="footer-card">
+                        <div class="stars mb-2">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="sender"><span>IMAM MAHMUDI - PPM. Al Azhar Muncar</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="testimonials-card-all">
+                    <div class="img">
+                      <img src="https://fingerspot.io/assets3/img/custom/icon-testi/fingerspot-io-testimoni-profile.png" alt="Profile 2" />
+                    </div>
+                    <div class="testimonials-card">
+                      <div class="info">
+                        <p style="font-weight:400">Sangat recomended produk ini untuk manajemen absensi pegawai, respon CS juga cepat dan kompeten mantap deh pokoknya</p>
+                      </div>
+                      <div class="footer-card">
+                        <div class="stars mb-2">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="sender"><span>RAHMAT - Kantor Wilayah Kementrian Agama Provinsi Sulawesi Barat</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="testimonials-card-all">
+                    <div class="img">
+                      <img src="https://fingerspot.io/assets3/img/custom/icon-testi/fingerspot-io-testimoni-profile.png" alt="Profile 3" />
+                    </div>
+                    <div class="testimonials-card">
+                      <div class="info">
+                        <p style="font-weight:400">
+                          Pelayanan Customer Service sangat memuaskan, cepat tanggap, tidak nunggu lama. Sukses terus buat Fingerspot. Kalau bisa ada training khusus buat konsumen agar lebih mudah dalam mengoperasikan software... maknyus pwoool
+                        </p>
+                      </div>
+                      <div class="footer-card">
+                        <div class="stars mb-2">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="sender"><span>WEBING SANDRA RIYANTO - PT. Makmur Properti Indonesia</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- .swiper-wrapper -->
+            </div> <!-- .swiper-container -->
+          </div> <!-- .testimonials-slider -->
+        </div> <!-- .content -->
+      </section>
+
+      <div class="section-head text-center style-4 pt-100">
+        <h2 class="mb-10 wow fadeInUp"><span>Download</span> Sekarang!</h2>
+        <p class="wow fadeInUp">Biar kerja tetap full senyum, yuk install aplikasi absensi online fingerspot.io.</p>
+
         <div class="d-flex align-items-center justify-content-center mt-50 mb-50 wow fadeInUp">
-
           <div class="row justify-content-center">
-            <div class="col-6 col-md-6 mb-30">
-              <img src="https://fingerspot.io/assets/custom/img/playstore_fio.png" alt="Google Play"
-                style="width: 12em;"><br>
-              <a href="https://play.google.com/store/apps/details?id=com.fingerspot.io" target="_blank"
-                class="google-play">
-                <img src="https://fingerspot.io/assets/custom/img/get_in_on_google_play.png" alt="Google Play"
-                  style="max-width:12em; width: 114px; height: 33px; margin-top: 20px;">
+            <div class="col-6 col-md-6 mb-30 text-center">
+              <img src="https://fingerspot.io/assets/custom/img/playstore_fio.png" alt="Google Play" style="width:12em;" /><br />
+              <a href="https://play.google.com/store/apps/details?id=com.fingerspot.io" target="_blank" class="google-play d-inline-block">
+                <img src="https://fingerspot.io/assets/custom/img/get_in_on_google_play.png" alt="Get it on Google Play" style="max-width:12em;width:114px;height:33px;margin-top:20px;" />
               </a>
             </div>
-            <div class="col-6 col-md-6 mb-30">
-              <img src="https://fingerspot.io/assets/custom/img/appstore_fio.png" alt="App Store"
-                style="width:12em"><br>
-              <a href="https://apps.apple.com/id/app/fingerspot-io-fio/id1545606174" target="_blank" class="app-store">
-                <img src="https://fingerspot.io/assets/custom/img/download_on_the_app_store.png" alt="App Store"
-                  style="max-width:12em; width: 114px; height: 33px; margin-top: 20px;">
+            <div class="col-6 col-md-6 mb-30 text-center">
+              <img src="https://fingerspot.io/assets/custom/img/appstore_fio.png" alt="App Store" style="width:12em;" /><br />
+              <a href="https://apps.apple.com/id/app/fingerspot-io-fio/id1545606174" target="_blank" class="app-store d-inline-block">
+                <img src="https://fingerspot.io/assets/custom/img/download_on_the_app_store.png" alt="Download on the App Store" style="max-width:12em;width:114px;height:33px;margin-top:20px;" />
               </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </div> <!-- .container -->
   </main>
 
-  <footer class="position-sticky style-4 bg-light pt-5">
+  <footer class="position-sticky style-4 bg-light pt-5 section-space-top">
     <div class="container">
       <div class="row gy-4 gx-5 justify-content-between">
         <div class="col-lg-4">
           <div class="foot-info">
             <div class="foot-logo mb-3">
-              <img src="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" alt="Fingerspot" width="156"
-                height="25" />
+              <img src="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" alt="Fingerspot" width="156" height="25" />
             </div>
-            <p class="text-muted" style="text-align: justify">
-              Jadi kapan mulai online-kan mesin absensimu? Berbagai kemudahan
-              bisa kamu dapatkan seperti: bisa download data absensi dari mana
-              saja, registrasi & pengaturan jadwal kerja dari mana saja,
-              hingga bisa menikmati fitur Daily Monitoring.
+            <p class="text-muted" style="text-align:justify">
+              Jadi kapan mulai online-kan mesin absensimu? Berbagai kemudahan bisa kamu dapatkan seperti: bisa download data absensi dari mana saja, registrasi & pengaturan jadwal kerja dari mana saja, hingga bisa menikmati fitur Daily Monitoring.
             </p>
+
             <div class="d-flex align-items-center mt-3">
               <a href="https://pse.kominfo.go.id/tdpse-detail/5437" target="_blank" class="me-1">
-                <img src="https://fingerspot.io/assets3/img/custom/certification/kominfo_new.png" alt="Kominfo"
-                  style="max-height: 50px" />
+                <img src="https://fingerspot.io/assets3/img/custom/certification/kominfo_new.png" alt="Kominfo" style="max-height:50px" />
               </a>
-              <a href="https://secure.trust-provider.com/ttb_searcher/trustlogo?v_querytype=W&v_shortname=CL1&v_search=https://fingerspot.io"
-                target="_blank" class="me-3">
-                <img src="https://fingerspot.io/assets3/img/ssl.png" alt="SSL" style="max-height: 40px;" />
+              <a href="https://secure.trust-provider.com/ttb_searcher/trustlogo?v_querytype=W&v_shortname=CL1&v_search=https://fingerspot.io" target="_blank" class="me-3">
+                <img src="https://fingerspot.io/assets3/img/ssl.png" alt="SSL" style="max-height:40px;" />
               </a>
               <div>
-                <div style="font-size: 8pt">
+                <div style="font-size:8pt">
                   Tanda Daftar Kominfo <br />
                   Penyelenggara System Elektronik
                 </div>
-                <div style="font-size: 8pt; font-weight: bold; margin-top: 10px">
+                <div style="font-size:8pt;font-weight:bold;margin-top:10px">
                   003983.01/DJAI.PSE/07/2022
                 </div>
               </div>
@@ -430,57 +497,30 @@
 
         <div class="col-lg-2 col-6">
           <h6 class="fw-bold mb-3">Informasi</h6>
-          <ul class="list-unstyled" style="line-height: 1.7;">
-            <li>
-              <a href="https://fingerspot.io/about-us" class="text-muted">Tentang Kami</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/feature" class="text-muted">Fitur</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/faq" class="text-muted">FAQ</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/news" class="text-muted">Tahukah Kamu?</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/privacy-policy" class="text-muted">Kebijakan Privasi</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/terms-and-conditions" class="text-muted">Syarat & Ketentuan</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/device" class="text-muted">Cek Mesin Absensi</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/check-server" class="text-muted">Cek Server</a>
-            </li>
+          <ul class="list-unstyled" style="line-height:1.7;">
+            <li><a href="https://fingerspot.io/about-us" class="text-muted">Tentang Kami</a></li>
+            <li><a href="https://fingerspot.io/feature" class="text-muted">Fitur</a></li>
+            <li><a href="https://fingerspot.io/faq" class="text-muted">FAQ</a></li>
+            <li><a href="https://fingerspot.io/news" class="text-muted">Tahukah Kamu?</a></li>
+            <li><a href="https://fingerspot.io/privacy-policy" class="text-muted">Kebijakan Privasi</a></li>
+            <li><a href="https://fingerspot.io/terms-and-conditions" class="text-muted">Syarat & Ketentuan</a></li>
+            <li><a href="https://fingerspot.io/device" class="text-muted">Cek Mesin Absensi</a></li>
+            <li><a href="https://fingerspot.io/check-server" class="text-muted">Cek Server</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-6">
           <h6 class="fw-bold mb-3">Mesin Absensi Populer</h6>
-          <ul class="list-unstyled" style="line-height: 1.7;">
-            <li>
-              <a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-telapak-tangan-revo-wfv-208BNC"
-                class="text-muted">Revo WFV-208BNC</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-revo-wf-206bnc"
-                class="text-muted">Revo WF-206BNC</a>
-            </li>
-            <li>
-              <a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-telapak-tangan-Revo-WDV-204BNC"
-                class="text-muted">Revo WDV-204BNC</a>
-            </li>
+          <ul class="list-unstyled" style="line-height:1.7;">
+            <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-telapak-tangan-revo-wfv-208BNC" class="text-muted">Revo WFV-208BNC</a></li>
+            <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-revo-wf-206bnc" class="text-muted">Revo WF-206BNC</a></li>
+            <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-telapak-tangan-Revo-WDV-204BNC" class="text-muted">Revo WDV-204BNC</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3">
           <h6 class="fw-bold mb-3">Hubungi Kami</h6>
-          <p class="mb-1">
-            <a href="https://fingerspot.io/contact-us" class="text-muted">Kontak Kami</a>
-          </p>
+          <p class="mb-1"><a href="https://fingerspot.io/contact-us" class="text-muted">Kontak Kami</a></p>
           <p class="text-muted">customercare@fingerspot.io</p>
           <div class="social-icons gap-3 mt-3 justify-content-start">
             <a href="https://www.facebook.com/fingerspot.io" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -489,6 +529,7 @@
             <a href="https://www.instagram.com/fingerspot.io" target="_blank"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+
         <div class="border-top mt-4 mb-5 pt-3 text-center">
           <small class="text-muted">© Copyright by <b>Fingerspot</b> | All Rights Reserved 2025</small>
         </div>
@@ -497,22 +538,16 @@
   </footer>
 
   <div class="floating-button">
-    <img id="floating-btn" src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
-      alt="Voucher">
+    <img id="floating-btn" src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png" alt="Voucher" />
   </div>
 
   <div class="voucher-modal" id="voucherModal" aria-hidden="true">
     <div class="vm-backdrop" data-close></div>
-
     <div class="vm-dialog" role="dialog" aria-modal="true" aria-labelledby="vm-title" aria-describedby="vm-desc">
       <h3 id="vm-title">Sudah Klaim Voucher !</h3>
-
       <p id="vm-desc" class="vm-text">
-        Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher,
-        ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan
-        mulai jelajahi fitur–fitur sesuai kebutuhanmu.
+        Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher, ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan mulai jelajahi fitur-fitur sesuai kebutuhanmu.
       </p>
-
       <button class="vm-btn" type="button" data-close aria-label="Tutup dan kembali">Kembali</button>
     </div>
   </div>
@@ -534,120 +569,7 @@
   <script src="assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-  <script>
-    (() => {
-      const $ = s => document.querySelector(s);
-      const modal = $("#voucherModal");
-      const btn = $("#floating-btn");
-      try {
-        if (window.jQuery) {
-          $('#floating-btn').off('click');
-          $('#btn-claim-voucher').off('click');
-        }
-      } catch {}
-      localStorage.is_claim ??= 'false';
-      const COPY = {
-        successTitle: 'Yeay, Berhasil Klaim Voucher!!',
-        successHtml: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
-        successCta: 'Ok, Lanjut',
-        alreadyTitle: 'Sudah Klaim Voucher!',
-        alreadyHtml: 'Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher, ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan mulai jelajahi fitur–fitur sesuai kebutuhanmu.',
-        alreadyCta: 'Kembali'
-      };
-      const vmTitle = document.getElementById('vm-title');
-      const vmText = document.getElementById('vm-desc') || document.querySelector('.vm-text');
-      const vmBtn = document.getElementById('vm-btn') || document.querySelector('.vm-btn');
-      if (vmTitle) vmTitle.textContent = COPY.alreadyTitle;
-      if (vmText) vmText.innerHTML = COPY.alreadyHtml;
-      if (vmBtn) vmBtn.textContent = COPY.alreadyCta;
-      const open = () => {
-        if (!modal) return;
-        modal.classList.add('is-open');
-        modal.ariaHidden = 'false';
-        document.body.style.overflow = 'hidden';
-      };
-      const close = () => {
-        if (!modal) return;
-        modal.classList.remove('is-open');
-        modal.ariaHidden = 'true';
-        document.body.style.overflow = '';
-      };
-      const confettiBurst = () => {
-        if (!window.confetti) return;
-        const end = Date.now() + 1000,
-          colors = ['#3F87B9', '#39B5E0', '#A31ACB'];
-        (function frame() {
-          confetti({
-            particleCount: 3,
-            angle: 60,
-            spread: 55,
-            origin: {
-              x: 0,
-              y: .95
-            },
-            colors
-          });
-          confetti({
-            particleCount: 3,
-            angle: 120,
-            spread: 55,
-            origin: {
-              x: 1,
-              y: .95
-            },
-            colors
-          });
-          if (Date.now() < end) requestAnimationFrame(frame);
-        })();
-        setTimeout(() => {
-          const c = document.querySelector('canvas');
-          if (c) c.style.zIndex = '10000';
-        }, 80);
-      };
-      const showClaimSuccess = () => {
-        if (!window.Swal) {
-          alert('Berhasil klaim voucher!');
-          location.href = 'https://fingerspot.io/price';
-          return;
-        }
-        Swal.fire({
-          title: 'Yeay, Berhasil Klaim Voucher !!',
-          html: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
-          confirmButtonText: 'Ok, Lanjut',
-          confirmButtonColor: '#4A90E2',
-          width: 'min(560px, 85vw)',
-          padding: '1.25rem',
-          buttonsStyling: false,
-          backdrop: true,
-          customClass: {
-            popup: 'sw-claim',
-            title: 'sw-claim-title',
-            htmlContainer: 'sw-claim-text',
-            actions: 'sw-claim-actions',
-            confirmButton: 'sw-claim-btn'
-          }
-        }).then(() => location.href = 'https://fingerspot.io/price');
-      };
-      let locked = false;
-      btn ?.addEventListener('click', () => {
-        if (locked) return;
-        locked = true;
-        setTimeout(() => locked = false, 500);
-        if (localStorage.is_claim === 'false') {
-          localStorage.is_claim = 'true';
-          confettiBurst();
-          showClaimSuccess();
-          return;
-        }
-        open();
-      });
-      document.getElementById('btn-claim-voucher') ?.addEventListener('click', () => btn ?.click());
-      modal ?.addEventListener('click', e => e.target.hasAttribute('data-close') && close());
-      window.addEventListener('keydown', e => e.key === 'Escape' && modal ?.classList.contains('is-open') &&
-    close());
-    })();
-  </script>
+  <script src="assets/js/new.js"></script>
 
 </body>
-
 </html>

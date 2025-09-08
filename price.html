@@ -1,1390 +1,603 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+    .point-font {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 6px;
+        color: #4b575e;
+    }
 
-<head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Fingerspot.io" />
-    <meta name="language" content="id" />
-    <meta name="geo.region" content="ID" />
-    <meta name="geo.placename" content="Indonesia" />
-    <meta name="description"
-        content="Temukan harga layanan aplikasi absensi online terbaik di Fingerspot.io. Paket fleksibel sesuai kebutuhan bisnis Anda, cocok untuk semua bidang bisnis: UMKM hingga enterprise." />
-    <meta name="keywords"
-        content="harga absensi online, biaya absensi online, paket absensi online, harga aplikasi absensi online, harga aplikasi absensi, fingerspot.io absensi online, harga absen online, harga absensi berbasis cloud, biaya software presensi, absensi online fingerspot.io" />
+    .point-font span {
+        font-style: italic;
+        color: #3f87b9;
+        font-weight: 800;
+    }
 
-    <!-- Open Graph (OG) Tags -->
-    <meta property="og:locale" content="id_ID" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Fingerspot.io - Aplikasi Absensi Online & Monitoring Tim Lapangan" />
-    <meta property="og:description"
-        content="Kelola kehadiran, lokasi, dan kinerja karyawan dari dashboard cloud. Bisa GPS & mesin absensi!" />
-    <meta property="og:url" content="https://fingerspot.io" />
-    <meta property="og:site_name" content="Fingerspot.io" />
-    <meta property="og:image" content="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" />
+    .description-font {
+        color: #5d6b79;
+        font-size: 15.5px;
+        line-height: 1.75;
+        margin-bottom: 8px;
+        max-width: 980px;
+    }
 
-    <!-- Facebook Tags -->
-    <meta property="og:url" content="https://fingerspot.io" />
-    <meta property="og:image" content="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png">
-    <meta property="og:image:secure_url" content="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png">
+    .price-cards {
+        margin-top: 18px;
+    }
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@fingerspot" />
-    <meta name="twitter:creator" content="@fingerspot" />
-    <meta name="twitter:title" content="Fingerspot.io - Absensi Online & Pemantauan Tim" />
-    <meta name="twitter:description"
-        content="Absensi dari mesin atau HP. GPS, cloud, ELMO & laporan otomatis. Coba gratis sekarang!" />
-    <meta name="twitter:image" content="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" />
-    <meta name="twitter:image:alt" content="Dashboard monitoring absensi online Fingerspot.io" />
+    .price-card {
+        background: #b8e2ff;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 280px;
+        padding: 12px;
+    }
 
-    <!-- Google Verification -->
-    <meta name="google-site-verification" content="6G8ZiXnaPGrK1Jflnq9IS2hB7DueZZag5hEnW6MUV4E" />
+    .price-card img {
+        max-width: 432px;
+        max-height: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 
-    <!-- Progressive Web App & Mobile Friendly -->
-    <meta name="theme-color" content="#0062cc" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Fingerspot.io" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    .price-label {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 16px;
+        color: #2e3a46;
+    }
 
-    <meta name="csrf-token" content="GnlRS1pSP8pqUi0xOzhPAUubQEv3oMC6GLjAY8bj">
+    .price-label img {
+        width: 20px;
+        height: 20px;
+    }
 
-    <!-- Title  -->
-    <title>Daftar Harga &amp; Paket Software Layanan Absensi Online Cloud Fingerspot.io</title>
+    .col-md-2.form-button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-top: 6px;
+    }
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="https://fingerspot.io/assets3/img/custom/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"
-        href="https://fingerspot.io/assets3/img/custom/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="https://fingerspot.io/assets3/img/custom/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96"
-        href="https://fingerspot.io/assets3/img/custom/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="https://fingerspot.io/assets3/img/custom/favicon/favicon-16x16.png">
-    <link rel="manifest" href="https://fingerspot.io/assets3/img/custom/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="https://fingerspot.io/assets3/img/custom/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    .form-button .input-group {
+        gap: 0.55rem;
+    }
 
-    <!-- ====== bootstrap icons cdn ====== -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    .form-button .btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50% !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        font-weight: 700;
+        line-height: 1;
+    }
 
-    <!-- bootstrap 5 -->
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/lib/bootstrap.min.css">
+    #decreaseDeviceValue,
+    #decreaseGpsValue {
+        background: #dfe6ec;
+        color: #2e3a46;
+        border-color: #dfe6ec;
+    }
 
-    <!-- ====== font family ====== -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    #increaseDeviceValue,
+    #increaseGpsValue {
+        background: #3f87b9;
+        color: #fff;
+        border-color: #3f87b9;
+    }
 
-    <link
-        href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
-        rel='stylesheet' type='text/css'>
+    .form-button input[type="number"] {
+        width: 72px;
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid #e1e7ec;
+        background: #fff;
+        font-weight: 600;
+        color: #2e3a46;
+        text-align: center;
+        padding: 0 0.25rem;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02) inset;
+    }
 
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/lib/all.min.css" />
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/lib/animate.css" />
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/lib/jquery.fancybox.css" />
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/lib/lity.css" />
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/lib/swiper.min.css" />
-    <!-- ====== global style ====== -->
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/style_new.css" />
-    <!-- ====== global custom style ====== -->
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/custom.css" />
-    <link href="https://fingerspot.io/assets/custom/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet">
-    <link href="https://fingerspot.io/assets/bower_components/select2/dist/css/select2.min.css" rel="stylesheet">
+    .input-group.serial-number {
+        width: 100%;
+        max-width: 640px;
+        margin-top: 10px;
+    }
 
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/lib/flag-icon/css/flag-icons.css">
+    .input-group.serial-number .form-control {
+        height: 42px;
+        border-radius: 10px;
+        border: 1px solid #e1e7ec;
+        font-size: 14.5px;
+        color: #2e3a46;
+        background: #fff;
+    }
 
-    <!-- ====== custom price css ====== -->
-    <link rel="stylesheet" href="https://fingerspot.io/assets3/css/custom_pricing.css">
+    .input-group.serial-number .btn {
+        height: 42px;
+        border-radius: 10px;
+        border: 1px solid #e1e7ec;
+        background: #fff;
+        color: #3f87b9;
+        font-weight: 600;
+        padding: 0 16px;
+    }
 
-    <script src="https://www.google.com/recaptcha/api.js?hl=id" async defer></script>
+    #confirmButton {
+        width: 380px;
+        height: 52px;
+        border: 0;
+        border-radius: 999px;
+        background: #3f87b9 !important;
+        color: #fff;
+        box-shadow: 0 6px 14px rgba(63, 135, 185, 0.22);
+    }
 
-    <style>
-        #rc-imageselect,
-        .g-recaptcha {
-            float: right;
-            margin: 0px 0px 20px 0px;
+    #confirmButton:hover {
+        filter: brightness(0.97);
+    }
+
+    #confirmButton:disabled {
+        background: #a4aeb4 !important;
+        color: #fff;
+        box-shadow: none;
+    }
+
+    .container .row {
+        row-gap: 8px;
+    }
+
+    .container .row+.row {
+        margin-top: 26px;
+    }
+
+    @media (max-width: 991.98px) {
+        .col-md-2.form-button {
+            justify-content: flex-start;
+            padding-top: 10px;
         }
 
-        /* form group with icon */
-        .form-group-with-icon {
-            position: relative;
+        .price-card {
+            height: 220px;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .price-card {
+            height: 190px;
         }
 
-        .form-group-with-icon>i {
-            position: absolute;
-            left: 30px;
-            top: 17px;
-            color: var(--color-blue6);
-            padding: inherit;
-            z-index: 1;
+        .price-card img {
+            max-width: 300px;
         }
 
-        .form-group-with-icon>.form-control {
-            padding-left: 50px !important;
+        .form-button .input-group {
+            gap: 0.45rem;
         }
 
-        .form-group-with-icon>.select2 {
-            padding-left: 50px !important;
+        .form-button input[type="number"] {
+            width: 64px;
         }
+    }
+</style>
 
-        /* form group with icon end */
+<div class="container">
+    <div class="row mt-5"></div>
 
-
-        /* select2 start */
-        .select2-container {
-            border: 1px solid #9994;
-            border-radius: 30px;
-            min-height: 50px;
-            font-size: 12px;
-            padding: 10px 25px;
-            background-color: white;
-            padding: 5px 10px 0 10px;
-        }
-
-        .selection {
-            width: 100%;
-            text-align: left;
-        }
-
-        .select2-selection {
-            padding: 3px 0px;
-            min-height: 38px !important;
-            border: 0px solid black !important;
-        }
-
-        .select2-selection__rendered {
-            padding: 0px !important;
-        }
-
-        .select2-selection__arrow {
-            top: 5px !important;
-            right: 10px !important;
-        }
-
-        .select2-selection__arrow {
-            margin-top: 5px;
-        }
-
-        .select2-container,
-        .select2-dropdown,
-        .select2-search,
-        .select2-results {
-            -webkit-transition: none !important;
-            -moz-transition: none !important;
-            -ms-transition: none !important;
-            -o-transition: none !important;
-            transition: none !important;
-        }
-
-        .select2-dropdown {
-            margin-top: -10px;
-            border: 0px solid black;
-            margin-left: 5px;
-            background-color: rgba(0, 0, 0, 0);
-        }
-
-        .select2-search__field {
-            border: 1px solid rgba(0, 0, 0, 0.178) !important;
-        }
-
-        .select2-container--open {
-            border: 0px solid black;
-        }
-
-        .select2-search {
-            margin-left: 5px;
-            margin-right: 20px;
-            background-color: white;
-
-        }
-
-        .select2-results {
-            margin-left: 5px;
-            margin-right: 20px;
-            background-color: white;
-        }
-
-        /* select2 end */
-
-        /* hidden file input start */
-        .hidden_file_input {
-            position: absolute;
-            display: block;
-            opacity: 0;
-            filter: alpha(opacity=0);
-        }
-
-        /* hidden file input end */
-
-        footer.style-4 .links li a.active {
-            color: var(--color-blue2);
-        }
-
-        /* bubble */
-        header.style-4 .content .bubble {
-            height: 50em;
-        }
-
-        /* bubble */
-
-        .style-4 br {
-            display: block;
-        }
-
-        /* font */
-        /* DM Sans - latin */
-        /* Only use this main one as blocking */
-        @font-face {
-            font-display: block;
-            font-family: DMSans;
-            font-style: normal;
-            font-weight: 400 600;
-            src: url(../assets3/fonts/DMSans/DMSans-VariableFont_opsz,wght.ttf);
-        }
-
-        /* DM Sans italic - latin */
-        @font-face {
-            font-display: swap;
-            font-family: DMSans;
-            font-style: italic;
-            font-weight: 400 600;
-            src: url(../assets3/fonts/DMSans/DMSans-Italic-VariableFont_opsz,wght.ttf);
-        }
-
-        /* .container, .container-lg, .container-md, .container-sm, .container-xl {
-            max-width: 90%;
-        } */
-
-        .navbar.style-4 .navbar-nav .nav-item .nav-link {
-            font-size: 12px !important;
-        }
-
-        .row.equal-height {
-            display: table;
-            width: 100%;
-            table-layout: fixed;
-        }
-
-        .row.equal-height>.col-md-6 {
-            display: table-cell;
-            float: none;
-            vertical-align: top;
-        }
-
-        .truncate-label {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            /* maksimal 2 baris */
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-    </style>
-
-    <script src="https://fingerspot.io/assets3/js/lib/jquery-3.0.0.min.js"></script>
-    <script src="https://fingerspot.io/assets/bower_components/select2/dist/js/select2.full.js"></script>
-
-    <script src="https://fingerspot.io/assets/js/sweetalert.js"></script>
-
-    <script src="https://fingerspot.io/assets/bower_components/popper.js/dist/umd/popper.min.js"></script>
-    <script src="https://fingerspot.io/assets/bower_components/bootstrap/js/dist/tooltip.js"></script>
-
-    <script>
-        function toastr_msg(type_, msg_, title_) {
-            toastr.options = {
-                closeButton: true,
-                positionClass: 'toast-top-center',
-                onclick: null
-            };
-            toastr[type_](msg_, title_);
-        }
-
-        function show_loading() {
-            $.LoadingOverlay("show");
-        }
-
-        function hide_loading() {
-            $.LoadingOverlay("hide");
-        }
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KLLCV2LN');
-    </script>
-    <!-- End Google Tag Manager -->
-</head>
-
-<body class="home-onePage">
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLLCV2LN" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- ====== start loading page ====== -->
-
-    <!-- ====== end loading page ====== -->
-
-    <!-- ====== start top navbar ====== -->
-    <div class="top-navbar style-4 ">
-
-        <div class="container">
-            <div class="change_language dropdown">
-                <button class="dropdown-toggle p-0 border-0 bg-transparent rounded-circle img-cover" type="button"
-                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="fi fi-id me-1"></span> <span> Bahasa Indonesia</span> </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start">
-                    <li>
-                        <a class="dropdown-item  active" id="id" data-lang="id" href="" data-flag="fi-id"><span
-                                class="fi fi-id me-1"></span> <span>Bahasa Indonesia</span></a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item " href="" id="en" data-lang="en" data-flag="fi-us"><span
-                                class="fi fi-us me-1"></span> <span>English</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- ====== end top navbar ====== -->
-
-    <!-- ====== start navbar ====== -->
-    <nav class="navbar navbar-expand-lg navbar-light style-4 " id="main-nav">
-        <div class="container">
-            <a class="navbar-brand" href="https://fingerspot.io" data-scroll-nav="0">
-                <img src="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0 text-uppercase">
-                    <li class="nav-item">
-                        <a id="mn_h_home" class="nav-link " href="https://fingerspot.io">
-                            Beranda </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a id="mn_h_feature" class="nav-link " href="https://fingerspot.io/feature">
-                            Fitur </a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="mn_h_faq" class="nav-link " href="https://fingerspot.io/faq">
-                            FAQ </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a id="mn_h_price" class="nav-link  active" href="https://fingerspot.io/price">
-                            Harga </a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="mn_h_device" class="nav-link " href="https://fingerspot.io/attendance-device">
-                            Mesin Absensi </a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="mn_h_device" class="nav-link " href="https://fingerspot.io/device">
-                            Cek Mesin Absensi </a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="mn_h_contact_us" class="nav-link " href="https://fingerspot.io/contact-us">
-                            Kontak Kami </a>
-                    </li>
-                    <li class="nav-item" style="display: none !important;">
-                        <a id="mn_h_affiliate" class="nav-link" href="https://fingerspot.io/affiliate">
-                            Affiliasi
-                        </a>
-                    </li>
-                </ul>
-                <div class="nav-item">
-                    <a href="https://fingerspot.io/search">
-                        <i class="fa fa-search"></i>
-                    </a>
+    <div class="row price-cards">
+        <div class="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
+            <div>
+                <div class="price-card">
+                    <img src="https://fingerspot.io/assets3/img/image2.png" alt="Mesin Absensi Online" />
                 </div>
-                <div class="nav-item dropdown icon-wishlist">
-                    <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-heart"></i>
-                    </a>
-                    <div class="dropdown-menu wishlist">
-                        <div class="title">
-                            Produk Ditambahkan
-                            <span class="bi bi-question-circle me-10"
-                                style="color: #263238; font-size: 14px; float: right;" data-toggle="tooltip"
-                                data-bs-original-title="Ceklist item untuk melakukan komparasi"></span>
-                        </div>
-                        <ul id="wishlist" aria-labelledby="wishlist"></ul>
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-sm btn-wishlisit disabled" id="btn-request-quote"
-                                data-slugs="">Minta Penawaran</a>
-                            <a href="#" class="btn btn-sm btn-compare disabled" id="btn-compare"
-                                data-slugs="">Komparasi</a>
-                        </div>
-                    </div>
-                    <span class="badge-wishlist hide"></span>
-                </div>
-                <div class="nav-item" style="position: relative;">
-                    <a href="https://fingerspot.io/price/cart">
-                        <i class="fa fa-shopping-cart"></i>
-                        <span class="badge-wishlist-cart hide"></span>
-                    </a>
-                </div>
-                <div class="nav-side">
-                    <div class="d-flex align-items-center button-group">
-
-                        <button id="btnLogin" class="btn rounded-pill" target="_blank">
-                            <span>Masuk</span>
-                        </button>
-                    </div>
+                <div class="price-label">
+                    <img src="https://fingerspot.io/assets3/img/check-icon.png" id="checkDevice" class="d-none"
+                        alt="" />
+                    <span>Mesin Absensi Online</span>
                 </div>
             </div>
         </div>
-    </nav>
-    <!-- ====== end navbar ====== -->
 
-    <style>
-        /* Hapus tombol increment dan decrement di input tipe number */
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        input[type="number"] {
-            -moz-appearance: textfield;
-        }
-
-        .no-focus-border:focus {
-            outline: none;
-            border-color: gainsboro;
-            box-shadow: none;
-        }
-
-        .tooltip-inner {
-            background-color: #3F87B9 !important;
-            color: white !important;
-            max-width: 600px;
-            /* Atur lebar maksimum sesuai kebutuhan */
-            white-space: pre-wrap;
-            /* Membungkus teks jika terlalu panjang */
-            text-align: justify;
-        }
-
-        /* .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before{
-  border-bottom-color: none !important;
-  background-color: #3F87B9 !important;
-} */
-        div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
-            background: #3F87B9 !important;
-        }
-
-        .input-group.serial-number {
-            width: 50%;
-            display: flex;
-            align-items: center;
-        }
-
-        #checkDeviceStatusForm {
-            padding-left: 20px;
-        }
-
-        .dropdown-menu.custom {
-            border-radius: 0px !important;
-        }
-
-        /* Gaya untuk tablet dalam mode potret */
-        @media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
-            #backButton {
-                margin-bottom: 10px;
-            }
-
-            .input-group {
-                margin-top: 0px !important;
-            }
-
-            .form-control.custom {
-                margin: 0px !important;
-                padding: 0px !important;
-            }
-
-            .form-button {
-                padding-left: 0px !important;
-            }
-
-            #decreaseDeviceValue {
-                margin-right: 0.3rem !important;
-            }
-
-            #increaseDeviceValue {
-                margin-left: 0.3rem !important;
-            }
-
-            #decreaseGpsValue {
-                margin-right: 0.3rem !important;
-            }
-
-            #increaseGpsValue {
-                margin-left: 0.3rem !important;
-            }
-
-            .input-group.serial-number {
-                width: 72% !important;
-            }
-        }
-    </style>
-    <div class="container">
-        <div class="row mt-5">
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-6 d-flex justify-content-center">
-                <div>
-                    <div style="background: #B8E2FF; border-radius: 15px">
-                        <img src="https://fingerspot.io/assets3/img/image2.png" alt="Image description"
-                            style="width:432px; height:280px;">
-                    </div>
-                    <div class="d-flex mt-3 justify-content-center">
-                        <div class="form-check">
-                            <div>
-                                <div class="col">
-                                    <img src="https://fingerspot.io/assets3/img/check-icon.png" id="checkDevice"
-                                        class="d-none" alt="Image description"
-                                        style="width:20px; height:20px; margin-right: 8px;">
-                                    <!-- <i class="bi bi-check2" id="checkDevice" style="font-size: 20px; color:white"></i>  -->
-                                    <span>Mesin Absensi Online</span>
-                                </div>
-                            </div>
-                            <!-- <div class="icon-container d-flex justify-content-center">
-                <i class="bi bi-check2" id="checkDevice" style="font-size: 30px; color:white"></i>
-            </div> -->
-                        </div>
-                    </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <div>
+                <div class="price-card">
+                    <img src="https://fingerspot.io/assets3/img/image1.png" alt="Absensi GPS Ponsel" />
                 </div>
-            </div>
-            <div class="col-md-6 d-flex justify-content-center">
-                <div>
-                    <div style="background: #B8E2FF; border-radius: 15px">
-                        <img src="https://fingerspot.io/assets3/img/image1.png" alt="Image description"
-                            style="width:432px; height:280px;">
-                    </div>
-                    <div class="d-flex mt-3 justify-content-center">
-                        <div class="form-check">
-                            <div>
-                                <div class="col">
-                                    <!-- <i class="bi bi-check2" id="checkApp" style="font-size: 20px; color:white"></i> -->
-                                    <img src="https://fingerspot.io/assets3/img/check-icon.png" id="checkApp"
-                                        class="d-none" alt="Image description"
-                                        style="width:20px; height:20px; margin-right: 8px;">
-                                    <span>Absensi GPS Ponsel</span>
-                                </div>
-                            </div>
-                            <!-- <div class="icon-container d-flex justify-content-center">
-                <i class="bi bi-check2" id="checkApp" style="font-size: 30px; color:white"></i>
-            </div> -->
-                        </div>
-                    </div>
+                <div class="price-label">
+                    <img src="https://fingerspot.io/assets3/img/check-icon.png" id="checkApp" class="d-none" alt="" />
+                    <span>Absensi GPS Ponsel</span>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row" style="margin-top: 2rem;">
-            <div class="col-md-10">
-                <div class="point-font" id="device-intro-1">1. Berapa jumlah mesin absensi yang akan di <span
-                        style="font-style: italic; color: #3F87B9; ">online-kan ?</span> </div>
-                <div class="description-font" id="device-intro-">
-                    <span id="have-machine">Sudah punya mesin absensi? Silahkan tambahkan jumlah mesin absensi
-                        Anda.</span>
-                    <span id="dont-have-machine" class="d-none">Sudah punya mesin absensi? Silahkan tambahkan jumlah
-                        mesin absensi yang akan terhubung fingerspot.io</span>
-                    <br />
-                    <span class="intro-3"> Mohon pastikan kembali apakah mesin absensi Anda dapat terhubung
-                        fingerspot.io dengan menginformasikan
-                        Serial Number / Cloud ID di bawah ini. </span>
-                    <span class="intro-4 d-none"> Belum punya mesin absensi ? <a
-                            href="https://fingerspot.io/attendance-device"
-                            style="color: #3F87B9; font-weight: bold;">Klik di sini</a> Untuk melihat rekomendasi mesin
-                        absensi yang bisa dipilih sesuai kebutuhan.</span>
-                </div>
+</div>
+
+<div class="container">
+    <!-- step 1 -->
+    <div class="row" style="margin-top: 2rem">
+        <div class="col-md-10">
+            <div class="point-font" id="device-intro-1">
+                1. Berapa jumlah mesin absensi yang akan di
+                <span style="font-style: italic; color: #3f87b9">online-kan ?</span>
             </div>
-            <div class="col-md-2 form-button">
-                <div>&nbsp</div>
-                <div class="input-group" style="margin-top: 18px;">
-                    <div class="input-group-prepend" style="margin-top:5px">
-                        <button type="button" class="btn btn-primary btn-circle" id="decreaseDeviceValue"
-                            style="width: 30px; height: 30px; text-align: center; padding: 6px 0; font-size: 12px; line-height: 1.428571429; border-radius: 15px; background-color: #A4AEB4; border-color:#A4AEB4">-</button>
-                    </div>
-                    <input type="number" onchange="onChangeCountDevice(this)" class="form-control custom rounded"
-                        style="margin-left: 1rem;margin-right: 1rem; text-align: center;" id="attendaceValue" value="0">
-                    <div class="input-group-prepend" style="margin-top:5px">
-                        <button type="button" class="btn btn-primary rounded-circle btn-xs" id="increaseDeviceValue"
-                            style="width: 30px; height: 30px; text-align: center; padding: 6px 0; font-size: 12px; line-height: 1.428571429; border-radius: 15px; background-color:#3F87B9">+</button>
-                    </div>
-                </div>
+            <div class="description-font" id="device-intro-">
+                <span id="have-machine">Sudah punya mesin absensi? Silahkan tambahkan jumlah mesin absensi
+                    Anda.</span>
+                <span id="dont-have-machine" class="d-none">Sudah punya mesin absensi? Silahkan tambahkan jumlah mesin
+                    absensi
+                    yang akan terhubung fingerspot.io</span><br />
+                <span class="intro-3">Mohon pastikan kembali apakah mesin absensi Anda dapat terhubung
+                    fingerspot.io dengan menginformasikan Serial Number / Cloud ID di
+                    bawah ini.</span>
+                <span class="intro-4 d-none">Belum punya mesin absensi ?
+                    <a href="https://fingerspot.io/attendance-device" style="color: #3f87b9; font-weight: bold">Klik di
+                        sini</a>
+                    Untuk melihat rekomendasi mesin absensi yang bisa dipilih sesuai
+                    kebutuhan.
+                </span>
             </div>
         </div>
-
-        <div class="col mt-20 d-none" id="checkDeviceStatusForm">
-            <div class="input-group serial-number">
-                <input type="text" class="form-control no-focus-border" id="serialNumberForm"
-                    placeholder="Masukan Serial Number mesinnmu disini ..."
-                    aria-label="Inputkan Serial Number mesinnmu disini ..." aria-describedby="button-addon1">
-                <button class="btn btn-outline-secondary" type="submit" onclick="checkDeviceInfo()" id="button-addon2"
-                    style="padding:6px; border-color: gainsboro;">Cek Mesin Absensi</button>
-                <i class="fa fa-info-circle" data-toggle="tooltip" data-bs-original-title="
-        ** Cara Mendapatkan Serial Number / Cloud ID **
-
-        1. Cek Serial Number di stiker yang ada di sisi belakang mesin absensi.
-        2. Lihat Cloud ID dengan masuk ke menu Mesin absensi.
-
-        Belum menemukannya? Tenang, yuk mulai chat dengan Customer Care
-        Online kami!
-      " data-bs-placement="bottom" style="cursor: pointer; color: #3F87B9; padding-left: 10px;"></i>
-            </div>
-            <div class="row">
-                <div class="col mt-10 mb-10" style="display: flex; align-items: center;">
-                    <img src="https://fingerspot.io/assets3/img/check-icon.png" class="d-none" id="enableInfoIcon"
-                        alt="Image description" style="width:20px; height:20px; margin-right: 8px;">
-                    <img src="https://fingerspot.io/assets3/img/close-bold.png" class="d-none" id="disableInfoIcon"
-                        alt="Image description" style="width:20px; height:25px; margin-right: 8px;">
-                    <!-- <i class="bi bi-check2 d-none" id="enableInfoIcon" style="font-size: 20px; color:#3F87B9"></i> -->
-                    <!-- <i class="bi bi-x d-none" id="disableInfoIcon" style="font-size: 20px; color:red"></i> -->
-                    <div class="d-none mb-1" id="deviceStatusInfo"
-                        style="font-size: 16px;  font-family: Inter, sans-serif;"></div>
-                </div>
-            </div>
-            <div class="container p-0" id="checkDeviceConnection">
-                <div>Silahkan pilih tipe mesin lalu klik tombol cek mesin absensi</div>
-                <select onchange="handleSelectChange(this)" class="form-select mt-2 mb-2"
-                    aria-label="Default select example" style="max-width:20%">
-                    <option selected value="">Silahkan Pilih Tipe Mesin</option>
-                    <option value="ZK">ZK</option>
-                </select>
-                <div id="instructionText">
-                    <p>Ikuti langkah-langkah pengaturan di mesin sebagai berikut:</p>
-                    <ol>
-                        <li>Hubungkan mesin absensi Anda dengan jaringan internet.</li>
-                        <li>Masuk pada menu mesin absensi, pilih menu <strong>Setelan</strong> dan pilih submenu
-                            <strong>Jaringan</strong>.</li>
-                        <li>
-                            Atur <strong>IP Server</strong> menjadi <code>fdevice.com</code> dan <strong>Port
-                                Server</strong> menjadi <code>8013</code>. <br>
-                            <em>Catatan: Jika mesin tidak dapat terhubung dengan server <code>fingerspot.io</code>, maka
-                                ubah <code>fdevice.com</code> menjadi <code>3.1.174.198</code> pada <strong>IP
-                                    Server</strong>.</em>
-                        </li>
-                        <li>Matikan mesin absensi kemudian hidupkan kembali.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="margin-top: 2rem;">
-            <div class="col-md-10">
-                <div class="point-font">2. Berapa jumlah karyawan yang Anda inginkan bisa <span
-                        style="font-style: italic; color: #3F87B9;">Absensi GPS via ponsel?</span> </div>
-                <div class="description-font">Silahkan mengisi jumlah karyawan yang Anda inginkan. </br>✨Fitur - fitur
-                    di paket MobilePro yang akan Anda dapatkan : absensi GPS via ponsel, pengajuan izin & cuti via
-                    ponsel, dan notifikasi kehadiran.</div>
-            </div>
-            <div class="col-md-2 form-button">
-                <div>&nbsp</div>
-                <div class="input-group" style="margin-top: 18px;">
-                    <div class="input-group-prepend" style="margin-top:5px">
-                        <button type="button" class="btn btn-primary btn-circle" id="decreaseGpsValue"
-                            style="width: 30px; height: 30px; text-align: center; padding: 6px 0; font-size: 12px; line-height: 1.428571429; border-radius: 15px; background-color: #A4AEB4; border-color:#A4AEB4">-</button>
-                    </div>
-                    <input type="number" onchange="onChangeCountMobile(this)" class="form-control custom rounded"
-                        style="margin-left: 1rem;margin-right: 1rem; text-align: center;" id="gpsValue" value="0">
-                    <div class="input-group-prepend" style="margin-top:5px">
-                        <button type="button" class="btn btn-primary rounded-circle btn-xs" id="increaseGpsValue"
-                            style="width: 30px; height: 30px; text-align: center; padding: 6px 0; font-size: 12px; line-height: 1.428571429; border-radius: 15px; background-color:#3F87B9">+</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="alert alert-danger mt-4 d-none" role="alert" id="alert"></div>
-        <div class="row" style="margin-top: 2rem;">
-            <div class="col d-flex justify-content-center">
-                <button class="btn rounded-pill brd-gray hover-blue4 sm-butn fw-bold"
-                    style="margin-top: 2rem; width: 380px; height: 52px;background-color: #EBEBEB;" id="confirmButton"
-                    disabled>
-                    <span id="buttonText"
-                        style="padding-top: 5px; font-family: Roboto, sans-serif; font-size: 15px;color:white;"> Oke,
-                        Selanjutnya</span>
+        <div class="col-md-2 form-button">
+            <div class="input-group" style="margin-top: 18px">
+                <button type="button" class="btn btn-primary btn-circle" id="decreaseDeviceValue" style="
+            width: 30px;
+            height: 30px;
+            background: #a4aeb4;
+            border-color: #a4aeb4;
+          ">
+                    -
+                </button>
+                <input type="number" onchange="onChangeCountDevice(this)"
+                    class="form-control custom rounded mx-2 text-center" id="attendaceValue" value="0" />
+                <button type="button" class="btn btn-primary rounded-circle" id="increaseDeviceValue"
+                    style="width: 30px; height: 30px; background: #3f87b9">
+                    +
                 </button>
             </div>
         </div>
     </div>
 
-    <div class="overlay" id="loader" style="display: none;">
-        <div class="spinner"></div>
-    </div>
-    <style>
-        #noHoverButton {
-            background-color: #dc3545;
-            border-color: #dc3545;
-        }
+    <!-- cek device -->
+    <div class="col mt-20 d-none" id="checkDeviceStatusForm">
+        <div class="input-group serial-number">
+            <input type="text" class="form-control no-focus-border" id="serialNumberForm"
+                placeholder="Masukan Serial Number mesinnmu disini ..." />
+            <button class="btn btn-outline-secondary" type="submit" onclick="checkDeviceInfo()"
+                style="padding: 6px; border-color: gainsboro">
+                Cek Mesin Absensi
+            </button>
+        </div>
+        <div class="row">
+            <div class="col mt-10 mb-10 d-flex align-items-center">
+                <img src="https://fingerspot.io/assets3/img/check-icon.png" class="d-none" id="enableInfoIcon"
+                    style="width: 20px; height: 20px; margin-right: 8px" alt="" />
+                <img src="https://fingerspot.io/assets3/img/close-bold.png" class="d-none" id="disableInfoIcon"
+                    style="width: 20px; height: 25px; margin-right: 8px" alt="" />
+                <div class="d-none mb-1" id="deviceStatusInfo" style="font-size: 16px"></div>
+            </div>
+        </div>
 
-        #noHoverButton:hover {
-            background-color: #dc3545;
-            border-color: #dc3545;
-        }
-    </style>
-    <!-- Modal -->
-    <div class="modal fade" id="deviceNotFoundModal" tabindex="-1" aria-labelledby="deviceNotFoundModal"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="container text-end"><button type="button" class="btn-close mt-2" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body" style="text-align: center">
-                    <img src="https://fingerspot.io/assets3/img/landing_device/fail.png" alt=""
-                        style="max-width: 70%; max-height: 20%;">
-                    <div class="container" style="text-align: center; font-size: 16px; margin-bottom: 20px;">
-                        <div class="d-none">
-                            <p>Apakah mesin Anda milik brand Fingerspot ?</p>
-                            <table style="width: 100%; margin-top: 5px;">
-                                <tr>
-                                    <td style="text-align: right; padding-right: 5px;" id="yesButtonCol">
-                                        <button onclick="isDeviceFingerspot()" type="button"
-                                            style="padding: 0.3rem; min-width: 4.5rem; background-color: rgb(63, 135, 185); border: none;"
-                                            class="btn rounded-pill btn-primary btn-sm">
-                                            Ya </button>
-                                    </td>
-                                    <td style="text-align: left; padding-left: 5px;" id="noButtonCol">
-                                        <button onclick="displayDeviceTypeDropdown()" id="noHoverButton" type="button"
-                                            style="padding: 0.3rem; min-width: 4.5rem"
-                                            class="btn rounded-pill btn-danger btn-sm">
-                                            Tidak </button>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <span style='font-size: 16px; font-weight: 600; margin-top:10px;'>
-                            Mesin absensi Anda tidak dapat dihubungkan fingerspot.io. Hubungi <a href='#'><span
-                                    style='color:var(--color-blue2);)'> Customer Care Online </span></a> kami untuk
-                            informasi lebih lanjut. </span>
-                    </div>
-                </div>
+        <!-- bantuan koneksi -->
+        <div class="container p-0" id="checkDeviceConnection">
+            <div>Silahkan pilih tipe mesin lalu klik tombol cek mesin absensi</div>
+            <select onchange="handleSelectChange(this)" class="form-select mt-2 mb-2" style="max-width: 20%">
+                <option selected value="">Silahkan Pilih Tipe Mesin</option>
+                <option value="ZK">ZK</option>
+            </select>
+            <div id="instructionText">
+                <p>Ikuti langkah-langkah pengaturan di mesin sebagai berikut:</p>
+                <ol>
+                    <li>Hubungkan mesin absensi Anda dengan jaringan internet.</li>
+                    <li>Masuk menu <strong>Setelan → Jaringan</strong> pada mesin.</li>
+                    <li>
+                        Atur <strong>IP Server</strong> ke <code>fdevice.com</code> dan
+                        <strong>Port</strong> ke <code>8013</code>.
+                        <em>Jika gagal, ubah <code>fdevice.com</code> ke
+                            <code>3.1.174.198</code>.</em>
+                    </li>
+                    <li>Matikan mesin lalu hidupkan kembali.</li>
+                </ol>
             </div>
         </div>
     </div>
 
-    <script>
-        function displayDeviceTypeDropdown() {
-            $("#checkDeviceConnection").show();
-            $("#deviceNotFoundModal").modal('hide');
-        }
+    <!-- step 2 -->
+    <div class="row" style="margin-top: 2rem">
+        <div class="col-md-10">
+            <div class="point-font">
+                2. Berapa jumlah karyawan yang Anda inginkan bisa
+                <span style="font-style: italic; color: #3f87b9">Absensi GPS via ponsel?</span>
+            </div>
+            <div class="description-font">
+                Silahkan mengisi jumlah karyawan yang Anda inginkan. <br />
+                ✨Fitur - fitur di paket MobilePro: absensi GPS via ponsel, pengajuan
+                izin & cuti via ponsel, dan notifikasi kehadiran.
+            </div>
+        </div>
+        <div class="col-md-2 form-button">
+            <div class="input-group" style="margin-top: 18px">
+                <button type="button" class="btn btn-primary btn-circle" id="decreaseGpsValue" style="
+            width: 30px;
+            height: 30px;
+            background: #a4aeb4;
+            border-color: #a4aeb4;
+          ">
+                    -
+                </button>
+                <input type="number" onchange="onChangeCountMobile(this)"
+                    class="form-control custom rounded mx-2 text-center" id="gpsValue" value="0" />
+                <button type="button" class="btn btn-primary rounded-circle" id="increaseGpsValue"
+                    style="width: 30px; height: 30px; background: #3f87b9">
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
 
-        function handleSelectChange(selectElement) {
-            const selectedValue = selectElement.value;
-            if (selectedValue != "") {
-                $("#instructionText").show();
-            } else {
-                $("#instructionText").hide();
-            }
-        }
+    <div class="alert alert-danger mt-4 d-none" role="alert" id="alert"></div>
 
-        function isDeviceFingerspot() {
-            $("#deviceNotFoundModal").modal('hide');
-            $('select.form-select').each(function() {
-                this.selectedIndex = 0;
-            });
-            $("#checkDeviceConnection").hide();
-        }
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('#checkDeviceConnection').hide();
-            $('#instructionText').hide();
-            var parsedData = JSON.parse(localStorage.getItem('attendances'));
-            // ======== set nilai default ==================================
-            $("#attendaceValue").val(1);
-            $("#gpsValue").val(2);
-            // display check icon
-            $("#checkDevice").removeClass("d-none");
-            $("#checkApp").removeClass("d-none");
-            $(".intro-3").removeClass("d-none");
-            $("#checkDeviceStatusForm").removeClass('d-none');
-            // remove disable button and change background color
-            $("#decreaseDeviceValue").css("background-color", "#3F87B9");
-            $("#decreaseGpsValue").css("background-color", "#3F87B9");
-            $("#confirmButton").prop("disabled", false);
-            $("#confirmButton").css("background-color", "#3F87B9");
-            // =============================================================
-            if (parsedData) {
-                if (JSON.parse(parsedData.devices) > 0) {
-                    // $("#checkDevice").css("color", "#3f87b9");
-                    $("#checkDevice").removeClass("d-none");
-                    $("#attendaceValue").val(JSON.parse(parsedData.devices));
-                    $("#decreaseDeviceValue").css("background-color", "#3F87B9");
-                    $("#confirmButton").prop("disabled", false);
-                    $("#confirmButton").css("background-color", "#3F87B9");
-                    $("#checkDeviceStatusForm").removeClass("d-none");
-                    $('#dont-have-machine').addClass("d-none");
-                    $('#have-machine').removeClass("d-none");
-                    $(".intro-3").removeClass("d-none");
-                    $(".intro-4").addClass("d-none");
-                }
-                if (JSON.parse(parsedData.mobiles) > 0) {
-                    // $("#checkApp").css("color", "#3f87b9");
-                    $("#checkApp").removeClass("d-none");
-                    $("#gpsValue").val(JSON.parse(parsedData.mobiles));
-                    $("#decreaseGpsValue").css("background-color", "#3F87B9");
-                    $("#confirmButton").prop("disabled", false);
-                    $("#confirmButton").css("background-color", "#3F87B9");
-                }
-            }
-            $("#increaseDeviceValue").on("click", function() {
-                $('#alert').addClass('d-none');
-                let currentValue = parseInt($("#attendaceValue").val(), 10);
-                let newValue = currentValue + 1;
-                // $("#checkDevice").css("color", "#3f87b9");
+    <div class="row" style="margin-top: 2rem">
+        <div class="col d-flex justify-content-center">
+            <button class="btn rounded-pill fw-bold" id="confirmButton" disabled>
+                <span id="buttonText" style="font-family: Roboto, sans-serif; font-size: 15px">Oke, Selanjutnya</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- loader & modal -->
+<div class="overlay" id="loader" style="display: none">
+    <div class="spinner"></div>
+</div>
+
+<div class="modal fade" id="deviceNotFoundModal" tabindex="-1" aria-labelledby="deviceNotFoundModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container text-end">
+                <button type="button" class="btn-close mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="text-align: center">
+                <img src="https://fingerspot.io/assets3/img/landing_device/fail.png" alt=""
+                    style="max-width: 70%; max-height: 20%" />
+                <div class="container" style="text-align: center; font-size: 16px; margin-bottom: 20px">
+                    <span style="font-size: 16px; font-weight: 600; margin-top: 10px">
+                        Mesin absensi Anda tidak dapat dihubungkan fingerspot.io. Hubungi
+                        <a href="#"><span style="color: var(--color-blue2)">Customer Care Online</span></a>
+                        kami untuk informasi lebih lanjut.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- floating voucher -->
+<div class="floating-button">
+    <button id="floating-btn" class="border-0" style="background: transparent">
+        <img src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png" alt="" />
+    </button>
+</div>
+
+<!-- ========== SCRIPT HALAMAN ========== -->
+<script>
+    function displayDeviceTypeDropdown() {
+        $("#checkDeviceConnection").show();
+        $("#deviceNotFoundModal").modal("hide");
+    }
+
+    function handleSelectChange(el) {
+        const v = el.value;
+        v !== "" ? $("#instructionText").show() : $("#instructionText").hide();
+    }
+
+    function isDeviceFingerspot() {
+        $("#deviceNotFoundModal").modal("hide");
+        $("select.form-select").each(function() {
+            this.selectedIndex = 0;
+        });
+        $("#checkDeviceConnection").hide();
+    }
+    $(document).ready(function() {
+        $("#checkDeviceConnection").hide();
+        $("#instructionText").hide();
+        // default agar tampilan sesuai screenshot
+        $("#attendaceValue").val(1);
+        $("#gpsValue").val(2);
+        $("#checkDevice,#checkApp").removeClass("d-none");
+        $(".intro-3").removeClass("d-none");
+        $("#checkDeviceStatusForm").removeClass("d-none");
+        $("#decreaseDeviceValue,#decreaseGpsValue").css(
+            "background-color",
+            "#3F87B9"
+        );
+        $("#confirmButton")
+            .prop("disabled", false)
+            .css("background-color", "#3F87B9");
+        const parsedData = JSON.parse(
+            localStorage.getItem("attendances") || "null"
+        );
+        if (parsedData) {
+            if (parseInt(parsedData.devices) > 0) {
                 $("#checkDevice").removeClass("d-none");
-                $('#dont-have-machine').addClass("d-none");
-                $('#have-machine').removeClass("d-none");
-                $("#attendaceValue").val(newValue);
+                $("#attendaceValue").val(parseInt(parsedData.devices));
                 $("#decreaseDeviceValue").css("background-color", "#3F87B9");
-                $("#confirmButton").prop("disabled", false);
-                $("#confirmButton").css("background-color", "#3F87B9");
+                $("#confirmButton")
+                    .prop("disabled", false)
+                    .css("background-color", "#3F87B9");
                 $("#checkDeviceStatusForm").removeClass("d-none");
+                $("#dont-have-machine").addClass("d-none");
+                $("#have-machine").removeClass("d-none");
                 $(".intro-3").removeClass("d-none");
                 $(".intro-4").addClass("d-none");
-            });
-            $("#decreaseDeviceValue").on("click", function() {
-                let currentValue = parseInt($("#attendaceValue").val(), 10);
-                let gpsValue = parseInt($("#gpsValue").val(), 10);
-                if (currentValue != 0) {
-                    let newValue = currentValue - 1;
-                    if (newValue == 0 && gpsValue < 2) {
-                        newValue = 1;
-                        displayErrorMessage('Mesin absensi tidak boleh kurang dari 1');
-                    } else if (newValue == 0 && gpsValue >= 2) {
-                        $('#dont-have-machine').removeClass("d-none");
-                        $('#have-machine').addClass("d-none");
-                        $(".intro-3").addClass("d-none");
-                        $(".intro-4").removeClass("d-none");
-                        $("#checkDevice").addClass("d-none");
-                        $("#decreaseDeviceValue").css("background-color", "#A4AEB4");
-                        $("#checkDeviceStatusForm").addClass("d-none");
-                    }
-                    $("#attendaceValue").val(newValue);
-                }
-            });
-            $("#increaseGpsValue").on("click", function() {
-                $('#alert').addClass('d-none');
-                let currentValue = parseInt($("#gpsValue").val(), 10);
-                let newValue = currentValue + 1;
-                // $("#checkApp").css("color", "#3f87b9");
+            }
+            if (parseInt(parsedData.mobiles) > 0) {
                 $("#checkApp").removeClass("d-none");
-                $("#gpsValue").val(newValue);
+                $("#gpsValue").val(parseInt(parsedData.mobiles));
                 $("#decreaseGpsValue").css("background-color", "#3F87B9");
-                if (newValue > 1) {
-                    $("#confirmButton").prop("disabled", false);
-                    $("#confirmButton").css("background-color", "#3F87B9");
-                }
-            });
-            $("#decreaseGpsValue").on("click", function() {
-                let currentValue = parseInt($("#gpsValue").val(), 10);
-                let attendaceValue = parseInt($("#attendaceValue").val(), 10);
-                if (currentValue != 0) {
-                    if (attendaceValue == 0 && currentValue - 1 < 2) {
-                        displayErrorMessage(
-                            'Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2')
-                    } else {
-                        let newValue = currentValue - 1;
-                        if (newValue == 0) {
-                            $("#checkApp").addClass("d-none");
-                            $("#decreaseGpsValue").css("background-color", "#A4AEB4");
-                            if (attendaceValue == 0) {
-                                $("#confirmButton").prop("disabled", true);
-                                $("#confirmButton").css("background-color", "#A4AEB4");
-                            }
-                        }
-                        $("#gpsValue").val(newValue);
-                    }
-                }
-            });
-            $("#confirmButton").on("click", function() {
-                var attendances = JSON.parse(localStorage.getItem('attendances'));
-                var packageStorage = localStorage.getItem('package');
-                var addonsStorage = localStorage.getItem('addons');
-                let url = "https://fingerspot.io/price/subscribe";
-                var deviceCount = $("#attendaceValue").val() ? ? 0;
-                var mobileCount = $("#gpsValue").val() ? ? 0;
-                var attendaceParse = {
-                    devices: parseInt(deviceCount),
-                    mobiles: parseInt(mobileCount),
-                    period: attendances !== null ? attendances.period : 12
-                }
-                var parsedPackageStorage = JSON.parse(packageStorage);
-                if (parsedPackageStorage != null) {
-                    if (deviceCount == 0 && Object.keys(parsedPackageStorage.devices).length > 0) {
-                        parsedPackageStorage.devices = {};
-                    }
-                }
-                var package = packageStorage != null && parseInt(deviceCount) != 0 ?
-                    parsedPackageStorage : {
-                        devices: {},
-                        mobile: {}
-                    };
-                var addons = addonsStorage != null ? JSON.parse(addonsStorage) : [];
-                //hapus prostaff localstorage jika nilai = 0
-                if (attendaceParse.mobiles == 0) {
-                    package.mobile = {};
-                }
-                // localStorage.clear()
-                localStorage.setItem('attendances', JSON.stringify(attendaceParse));
-                localStorage.setItem('package', JSON.stringify(package));
-                localStorage.setItem('addons', JSON.stringify(addons));
-                localStorage.setItem('option', '0');
-                if (attendaceParse.devices == 0 && attendaceParse.mobiles < 2) {
-                    // $('#alert').text('Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2');
-                    // $('#alert').removeClass('d-none');
-                    displayErrorMessage(
-                        'Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2');
-                } else {
-                    window.location.href = url;
-                }
-            });
+                $("#confirmButton")
+                    .prop("disabled", false)
+                    .css("background-color", "#3F87B9");
+            }
+        }
+        $("#increaseDeviceValue").on("click", function() {
+            $("#alert").addClass("d-none");
+            let v = parseInt($("#attendaceValue").val(), 10) + 1;
+            $("#checkDevice").removeClass("d-none");
+            $("#dont-have-machine").addClass("d-none");
+            $("#have-machine").removeClass("d-none");
+            $("#attendaceValue").val(v);
+            $("#decreaseDeviceValue").css("background-color", "#3F87B9");
+            $("#confirmButton")
+                .prop("disabled", false)
+                .css("background-color", "#3F87B9");
+            $("#checkDeviceStatusForm").removeClass("d-none");
+            $(".intro-3").removeClass("d-none");
+            $(".intro-4").addClass("d-none");
         });
-
-        function onChangeCountDevice(element) {
-            $('#alert').addClass('d-none');
-            var value = parseInt(element.value, 10);
-            let gpsValue = parseInt($("#gpsValue").val(), 10);
-            if (value <= 0 && gpsValue <= 0) {
-                displayErrorMessage('Tambahkan kuota Mesin Absensi atau Pengguna Absensi Ponsel');
-                // $("#checkDevice").addClass("d-none");
-                $("#decreaseDeviceValue").css("background-color", "#A4AEB4");
-                value = 1;
-                // $("#attendaceValue").val(1);
-                // $("#gpsValue").val(2);
-                // $("#decreaseDeviceValue").css("background-color", "#3F87B9");
-                // $("#decreaseGpsValue").css("background-color", "#3F87B9");
-            } else {
-                if (value <= 0 && gpsValue < 2) {
-                    displayErrorMessage('Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2');
-                    value = 1;
-                } else if (value <= 0 && gpsValue >= 2) {
+        $("#decreaseDeviceValue").on("click", function() {
+            let cur = parseInt($("#attendaceValue").val(), 10),
+                gps = parseInt($("#gpsValue").val(), 10);
+            if (cur !== 0) {
+                let v = cur - 1;
+                if (v === 0 && gps < 2) {
+                    v = 1;
+                    displayErrorMessage("Mesin absensi tidak boleh kurang dari 1");
+                } else if (v === 0 && gps >= 2) {
+                    $("#dont-have-machine").removeClass("d-none");
+                    $("#have-machine").addClass("d-none");
+                    $(".intro-3").addClass("d-none");
+                    $(".intro-4").removeClass("d-none");
                     $("#checkDevice").addClass("d-none");
                     $("#decreaseDeviceValue").css("background-color", "#A4AEB4");
                     $("#checkDeviceStatusForm").addClass("d-none");
-                    $(".intro-3").addClass("d-none");
-                    $(".intro-4").removeClass("d-none");
-                    // if(gpsValue <= 0){
-                    //   $("#confirmButton").prop("disabled", true);
-                    //   $("#confirmButton").css("background-color", "#A4AEB4");
-                    // }
-                } else {
-                    $("#checkDevice").removeClass("d-none");
-                    $("#decreaseDeviceValue").css("background-color", "#3F87B9");
-                    $("#confirmButton").css("background-color", "#3F87B9");
-                    $("#confirmButton").prop("disabled", false);
-                    $("#checkDeviceStatusForm").removeClass("d-none");
                 }
-            }
-            if (value < 0) {
-                value = 0;
-            }
-            $("#attendaceValue").val(value);
-        }
-
-        function onChangeCountMobile(element) {
-            $('#alert').addClass('d-none');
-            var value = parseInt(element.value, 10);
-            let attendaceValue = parseInt($("#attendaceValue").val(), 10);
-            if (value < 0) {
-                value = 0;
-            }
-            if (value < 2 && attendaceValue == 0) {
-                // $('#alert').text('Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2');
-                // $('#alert').removeClass('d-none');
-                displayErrorMessage('Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2');
-                // $("#attendaceValue").val(1);
-                $("#gpsValue").val(2);
-                // $("#decreaseDeviceValue").css("background-color", "#3F87B9");
-                $("#decreaseGpsValue").css("background-color", "#3F87B9");
-            } else {
-                if (value <= 0) {
-                    $("#checkApp").addClass("d-none");
-                    $("#decreaseGpsValue").css("background-color", "#A4AEB4");
-                    if (attendaceValue == 0) {
-                        $("#confirmButton").prop("disabled", true);
-                        $("#confirmButton").css("background-color", "#A4AEB4");
-                    }
-                } else {
-                    $("#checkApp").removeClass("d-none");
-                    $("#decreaseGpsValue").css("background-color", "#3F87B9");
-                    if (attendaceValue == 0 && value < 2) {
-                        // $('#alert').text('Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2');
-                        // $('#alert').removeClass('d-none');
-                        displayErrorMessage('Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2')
-                    } else {
-                        $("#confirmButton").css("background-color", "#3F87B9");
-                        $("#confirmButton").prop("disabled", false);
-                    }
-                }
-                $("#gpsValue").val(value);
-            }
-        }
-
-        function checkDeviceInfo() {
-            var coudOrSerialNumber = $("#serialNumberForm").val();
-            var deviceType = $('.form-select').val();
-            $("#enableInfoIcon").addClass('d-none');
-            $("#disableInfoIcon").addClass('d-none');
-            $("#deviceStatusInfo").addClass('d-none');
-            if (coudOrSerialNumber != "") {
-                data = {
-                    sn: coudOrSerialNumber,
-                    device_type: deviceType
-                };
-                loader_show();
-                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    // url: "https://fingerspot.io/price/check_device",
-                    url: "https://fingerspot.io/validate_sn",
-                    method: 'POST',
-                    data: data,
-                    dataType: 'json',
-                    success: function(response) {
-                        loader_hide();
-                        if (response.status == 'success' && response.available == true) {
-                            $('#enableInfoIcon').removeClass('d-none');
-                            $("#deviceStatusInfo").removeClass('d-none');
-                            $("#deviceStatusInfo").text(
-                                'Yeayy! Mesin absensi yang Anda miliki dapat terhubung absensi online fingerspot.io'
-                                );
-                        } else {
-                            $("#deviceNotFoundModal").modal('show');
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                        loader_hide();
-                        console.log(error);
-                    }
-                });
-            } else {
-                $("#deviceStatusInfo").removeClass('d-none');
-                $("#deviceStatusInfo").text('Mohon isi Serial Number terlebih dahulu');
-            }
-        }
-
-        function loader_show() {
-            $('#loader').show();
-        }
-
-        function loader_hide() {
-            $('#loader').hide();
-        }
-
-        function displayErrorMessage(text) {
-            Swal.fire({
-                title: '',
-                text: text,
-                icon: 'warning',
-                showCancelButton: false,
-                confirmButtonText: 'Tutup',
-                //  cancelButtonText: 'swal_close_button',
-            });
-        }
-    </script>
-
-    <!-- ====== start footer ====== -->
-    <footer class="style-4" data-scroll-index="8" style="">
-        <div class="container ">
-            <div class="section-head text-center style-4 pt-70 hide">
-                <h2 class="mb-10"> <span>Download</span> Sekarang! </h2>
-                <p>Biar kerja tetap full senyum, yuk coba GRATIS aplikasi absensi online fingerspot.io.</p>
-                <div class="d-flex align-items-center justify-content-center mt-50 mb-50">
-
-                    <div class="row justify-content-center">
-                        <div class="col-6 col-md-6 mb-30">
-                            <img src="https://fingerspot.io/assets/custom/img/playstore_fio.png" alt="Google Play"
-                                style="max-width: 12em;"><br>
-                            <a href="https://play.google.com/store/apps/details?id=com.fingerspot.io" target="_blank">
-                                <img src="https://fingerspot.io/assets/custom/img/get_in_on_google_play.png"
-                                    alt="Google Play" style="max-width:12em">
-                            </a>
-                        </div>
-                        <div class="col-6 col-md-6 mb-30">
-                            <img src="https://fingerspot.io/assets/custom/img/appstore_fio.png" alt="App Store"
-                                style="max-width:12em"><br>
-                            <a href="https://apps.apple.com/id/app/fingerspot-io-fio/id1545606174" target="_blank">
-                                <img src="https://fingerspot.io/assets/custom/img/download_on_the_app_store.png"
-                                    alt="App Store" style="max-width:12em">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-content">
-
-                <div class="content pt-100 pb-50">
-                    <div class="row justify-content-between align-item-center gx-0">
-                        <div class="col-lg-4">
-                            <div class="foot-info">
-                                <div class="foot-logo">
-                                    <img src="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" alt=""
-                                        width="176px" height="28px">
-                                </div>
-                                <p style="text-align: justify;"> Jadi kapan mulai online-kan mesin absensimu? Berbagai
-                                    kemudahan bisa kamu dapatkan seperti : bisa download data absensi dari mana saja,
-                                    registrasi & pengaturan jadwal kerja dari mana saja, hingga bisa menikmati fitur
-                                    Daily Monitoring. </p>
-                                <div class="kominfo">
-
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="d-flex">
-                                                <a href="https://pse.kominfo.go.id/tdpse-detail/5437" target="_blank"
-                                                    style="max-width:30%;">
-                                                    <img src="https://fingerspot.io/assets3/img/custom/certification/kominfo_new.png"
-                                                        alt="">
-                                                </a>
-                                                <div>
-                                                    <div style="font-size: 8pt;">
-                                                        Tanda Daftar Kominfo <br>
-                                                        Penyelenggara System Elektronik </div>
-                                                    <div style="font-size:8pt;font-weight:bold;margin-top:10px;">
-                                                        003983.01/DJAI.PSE/07/2022
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 mt-3">
-                                            <a href="https://secure.trust-provider.com/ttb_searcher/trustlogo?v_querytype=W&v_shortname=CL1&v_search=https://fingerspot.io&x=6&y=5"
-                                                target="_blank">
-                                                <img src="https://fingerspot.io/assets3/img/ssl.png" alt=""
-                                                    style="width:100px;">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="links">
-                                <h6 class="sub-link text-uppercase mb-20 mt-5 mt-lg-0"><b> Informasi </b> </h6>
-                                <ul>
-
-                                    <li> <a href="https://fingerspot.io/about-us" class=""> Tentang Kami </a> </li>
-                                    <li> <a href="https://fingerspot.io/feature" class=""> Fitur </a> </li>
-                                    <li> <a href="https://fingerspot.io/faq" class=""> FAQ </a> </li>
-
-                                    <li> <a href="https://fingerspot.io/news" class=""> Tahukah Kamu? </a> </li>
-                                    <li> <a href="https://fingerspot.io/privacy-policy" class=""> Kebijakan Privasi </a>
-                                    </li>
-                                    <li> <a href="https://fingerspot.io/terms-and-conditions" class=""> Syarat dan
-                                            Ketentuan </a> </li>
-                                    <li> <a href="https://fingerspot.io/device" class=""> Cek Mesin Absensi </a> </li>
-                                    <li> <a href="https://fingerspot.io/check-server" class=""> Cek Server </a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="popular-device pl-40">
-
-                                <h6 class="sub-link text-uppercase mb-20 mt-5 mt-lg-0"><b> Mesin Absensi Populer </b>
-                                </h6>
-                                <ul>
-                                    <li><a
-                                            href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-telapak-tangan-revo-wfv-208BNC">Revo
-                                            WFV-208BNC</a></li>
-                                    <li><a
-                                            href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-revo-wf-206bnc">Revo
-                                            WF-206BNC</a></li>
-                                    <li><a
-                                            href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-telapak-tangan-Revo-WDV-204BNC">Revo
-                                            WDV-204BNC</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="contact" style="padding-left: 35px;">
-                                <h6 class="sub-link text-uppercase mb-20 mt-5 mt-lg-0"><b> Hubungi Kami </b> </h6>
-                                <div><a href="https://fingerspot.io/contact-us" class=""> Kontak Kami </a></div>
-                                <div class="text mb-20">
-                                    <p>customercare@fingerspot.io</p>
-                                </div>
-                                <div class="social-icons">
-                                    <a href="https://www.facebook.com/fingerspot.io"> <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="https://www.youtube.com/@Fingerspotindonesia"> <i
-                                            class="fab fa-youtube"></i> </a>
-                                    <a href="https://www.tiktok.com/@fingerspot.io"> <i class="fab fa-tiktok"></i> </a>
-                                    <a href="https://www.instagram.com/fingerspot.io"> <i class="fab fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="foot border-1 border-top brd-gray py-3 pb-30">
-                    <div class="row align-items-center">
-                        <div class="col-lg-12 text-lg-center">
-                            <div class="text color-666 my-2" align="center"> Copyright by <a
-                                    href="https://fingerspot.com" target="_blank" class="fw-bold">Fingerspot</a> | All
-                                Rights Reserved 2025</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <img src="https://fingerspot.io/assets3/img/footer/footer_4_wave.png" alt="" class="wave hide">
-    </footer>
-    <!-- ====== end footer ====== -->
-
-    <style>
-        .floating-button {
-            position: fixed;
-            bottom: 0;
-            right: -17px;
-            color: white;
-            padding: 15px 10px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            z-index: 999;
-            width: 16%;
-            animation: pulse 2s infinite;
-        }
-
-        /* Efek saat di-hover */
-        .floating-button:hover {
-            transform: scale(1.1);
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            50% {
-                transform: scale(1.1);
-                opacity: 1;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @media (max-width: 991px) {
-            .floating-button {
-                padding: 0px;
-                bottom: 83px;
-                right: -5px;
-                width: 35%;
-            }
-        }
-
-        .custom-swal-popup {
-            border-radius: 10px;
-            padding: 20px;
-            width: 991px;
-            z-index: 9999;
-        }
-
-        .custom-swal-title {
-            font-size: 20px;
-            color: var(--color-blue4);
-            font-weight: bold;
-        }
-
-        .custom-swal-button {
-            background-color: var(--color-blue4) !important;
-            color: white !important;
-            padding: 8px 25px;
-            font-size: 14px !important;
-            border-radius: 20px !important;
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-        }
-
-        div:where(.swal2-container) .swal2-html-container {
-            padding: 0px 0px 50px;
-            margin: 1em 0em .3em;
-        }
-    </style>
-
-    <div class="floating-button">
-        <button id="floating-btn" class="border-0" style="background: transparent;"><img
-                src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
-                alt=""></button>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            if (localStorage.getItem('is_claim') === null) {
-                localStorage.setItem('is_claim', 'false');
+                $("#attendaceValue").val(v);
             }
         });
-        $('#floating-btn').on('click', function() {
-            var voucherNotClaim = localStorage.getItem('is_claim') === 'false';
+        $("#increaseGpsValue").on("click", function() {
+            $("#alert").addClass("d-none");
+            let v = parseInt($("#gpsValue").val(), 10) + 1;
+            $("#checkApp").removeClass("d-none");
+            $("#gpsValue").val(v);
+            $("#decreaseGpsValue").css("background-color", "#3F87B9");
+            if (v > 1) {
+                $("#confirmButton")
+                    .prop("disabled", false)
+                    .css("background-color", "#3F87B9");
+            }
+        });
+        $("#decreaseGpsValue").on("click", function() {
+            let cur = parseInt($("#gpsValue").val(), 10),
+                dev = parseInt($("#attendaceValue").val(), 10);
+            if (cur !== 0) {
+                if (dev === 0 && cur - 1 < 2) {
+                    displayErrorMessage(
+                        "Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2"
+                    );
+                } else {
+                    let v = cur - 1;
+                    if (v === 0) {
+                        $("#checkApp").addClass("d-none");
+                        $("#decreaseGpsValue").css("background-color", "#A4AEB4");
+                        if (dev === 0) {
+                            $("#confirmButton")
+                                .prop("disabled", true)
+                                .css("background-color", "#A4AEB4");
+                        }
+                    }
+                    $("#gpsValue").val(v);
+                }
+            }
+        });
+        $("#confirmButton").on("click", function() {
+            const attendances = JSON.parse(
+                localStorage.getItem("attendances") || "null"
+            );
+            const packageStorage = localStorage.getItem("package");
+            const addonsStorage = localStorage.getItem("addons");
+            const url = "https://fingerspot.io/price/subscribe";
+            const deviceCount = parseInt($("#attendaceValue").val() || 0, 10);
+            const mobileCount = parseInt($("#gpsValue").val() || 0, 10);
+            const attendaceParse = {
+                devices: deviceCount,
+                mobiles: mobileCount,
+                period: attendances !== null ? attendances.period : 12,
+            };
+            let parsedPackage = packageStorage ?
+                JSON.parse(packageStorage) :
+                {
+                    devices: {},
+                    mobile: {},
+                };
+            if (
+                parsedPackage &&
+                deviceCount === 0 &&
+                Object.keys(parsedPackage.devices || {}).length > 0
+            ) {
+                parsedPackage.devices = {};
+            }
+            let pkg =
+                packageStorage && deviceCount !== 0 ?
+                parsedPackage :
+                {
+                    devices: {},
+                    mobile: {},
+                };
+            let addons = addonsStorage ? JSON.parse(addonsStorage) : [];
+            if (attendaceParse.mobiles === 0) {
+                pkg.mobile = {};
+            }
+            localStorage.setItem("attendances", JSON.stringify(attendaceParse));
+            localStorage.setItem("package", JSON.stringify(pkg));
+            localStorage.setItem("addons", JSON.stringify(addons));
+            localStorage.setItem("option", "0");
+            if (attendaceParse.devices === 0 && attendaceParse.mobiles < 2) {
+                displayErrorMessage(
+                    "Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2"
+                );
+            } else {
+                window.location.href = url;
+            }
+        });
+        // floating voucher
+        if (localStorage.getItem("is_claim") === null) {
+            localStorage.setItem("is_claim", "false");
+        }
+        $("#floating-btn").on("click", function() {
+            const voucherNotClaim = localStorage.getItem("is_claim") === "false";
             if (voucherNotClaim) {
-                localStorage.setItem('is_claim', true);
+                localStorage.setItem("is_claim", true);
                 Swal.fire({
-                    title: '<strong>Yeay, Berhasil Klaim Voucher !!</strong>',
-                    html: 'Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.',
+                    title: "<strong>Yeay, Berhasil Klaim Voucher !!</strong>",
+                    html: "Selamat, Anda telah berhasil klaim voucher. Silahkan mengikuti langkah selanjutnya yaitu membuat akun fingerspot.io untuk nikmati poin voucher senilai Rp 225.000.",
                     showCancelButton: false,
-                    confirmButtonText: 'Ok, Lanjut',
-                    confirmButtonColor: '#4A90E2',
+                    confirmButtonText: "Ok, Lanjut",
+                    confirmButtonColor: "#4A90E2",
                     customClass: {
-                        popup: 'custom-swal-popup',
-                        title: 'custom-swal-title',
-                        confirmButton: 'custom-swal-button'
+                        popup: "custom-swal-popup",
+                        title: "custom-swal-title",
+                        confirmButton: "custom-swal-button",
                     },
                     willClose: () => {
-                        window.location.href = 'https://fingerspot.io/price';
-                    }
+                        window.location.href = "https://fingerspot.io/price";
+                    },
                 });
-                var end = Date.now() + (1 * 1000);
-                var colors = ['#3F87B9', '#39B5E0', '#A31ACB'];
+                const end = Date.now() + 1 * 1000;
+                const colors = ["#3F87B9", "#39B5E0", "#A31ACB"];
                 setTimeout(() => {
-                    let canvas = document.querySelector('canvas');
+                    const canvas = document.querySelector("canvas");
                     if (canvas) {
-                        canvas.style.zIndex = '10000';
+                        canvas.style.zIndex = "10000";
                     }
                 }, 100);
                 (function frame() {
@@ -1394,9 +607,9 @@
                         spread: 55,
                         origin: {
                             x: 0,
-                            y: 0.95
+                            y: 0.95,
                         },
-                        colors: colors
+                        colors,
                     });
                     confetti({
                         particleCount: 3,
@@ -1404,378 +617,156 @@
                         spread: 55,
                         origin: {
                             x: 1,
-                            y: 0.95
+                            y: 0.95,
                         },
-                        colors: colors
+                        colors,
                     });
                     if (Date.now() < end) {
                         requestAnimationFrame(frame);
                     }
-                }());
+                })();
             } else {
                 Swal.fire({
-                    title: '<strong>Sudah Klaim Voucher !</strong>',
-                    html: 'Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher, ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan mulai jelajahi fitur-fitur sesuai kebutuhanmu.',
+                    title: "<strong>Sudah Klaim Voucher !</strong>",
+                    html: "Hai! Voucher ini sudah menjadi milikmu! Karena kamu sudah mengklaim voucher, ayo lanjutkan dengan membuat akun untuk menikmati poin voucher ini dan mulai jelajahi fitur–fitur sesuai kebutuhanmu.",
                     showCancelButton: false,
-                    confirmButtonText: 'Kembali',
-                    confirmButtonColor: '#4A90E2',
+                    confirmButtonText: "Kembali",
+                    confirmButtonColor: "#4A90E2",
                     customClass: {
-                        popup: 'custom-swal-popup',
-                        title: 'custom-swal-title',
-                        confirmButton: 'custom-swal-button'
-                    }
+                        popup: "custom-swal-popup",
+                        title: "custom-swal-title",
+                        confirmButton: "custom-swal-button",
+                    },
                 });
             }
         });
-    </script>
+    });
 
-    <!-- ====== start to top button ====== -->
-    <a href="#" class="to_top bg-gray rounded-circle icon-40 d-inline-flex align-items-center justify-content-center">
-        <i class="bi bi-chevron-up fs-6 text-dark"></i>
-    </a>
-    <!-- ====== end to top button ====== -->
-
-    <!-- ====== request ====== -->
-
-    <script src="https://fingerspot.io/assets3/js/lib/jquery-migrate-3.0.0.min.js"></script>
-    <script src="https://fingerspot.io/assets3/js/lib/bootstrap.bundle.min.js"></script>
-    <script src="https://fingerspot.io/assets3/js/lib/wow.min.js"></script>
-    <script src="https://fingerspot.io/assets3/js/lib/jquery.fancybox.js"></script>
-    <script src="https://fingerspot.io/assets3/js/lib/lity.js"></script>
-    <script src="https://fingerspot.io/assets3/js/lib/swiper.min.js"></script>
-    <script src="https://fingerspot.io/assets3/js/lib/jquery.waypoints.min.js"></script>
-    <script src="https://fingerspot.io/assets3/js/lib/jquery.counterup.js"></script>
-
-    <script src="https://fingerspot.io/assets3/js/lib/scrollIt.min.js"></script>
-    <script src="https://fingerspot.io/assets3/js/main_new.js"></script>
-    <script src="https://fingerspot.io/assets/custom/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript">
-    </script>
-    <script src="https://fingerspot.io/assets/custom/plugins/jquery-loading-overlay-1.5.4/src/loadingoverlay.min.js"
-        type="text/javascript"></script>
-    <script src="https://fingerspot.io/assets3/js/canvas-confetti.min.js"></script>
-    <script src="https://fingerspot.io/assets3/js/jquery.validate.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            let packageData = JSON.parse(localStorage.getItem('package')) || null;
-            let devicesData = JSON.parse(localStorage.getItem('attendances')) || null;
-            let addons = localStorage.getItem('addons');
-            let addonsStorage = JSON.parse(localStorage.getItem('addons')) || [];
-            // set LocalStorage ketika di local storage kosong
-            if ((packageData === null && devicesData === null && addons === null)) {
-                setLocalStorage(packageData, devicesData);
+    function onChangeCountDevice(el) {
+        $("#alert").addClass("d-none");
+        let v = parseInt(el.value, 10);
+        let gps = parseInt($("#gpsValue").val(), 10);
+        if (v <= 0 && gps <= 0) {
+            displayErrorMessage(
+                "Tambahkan kuota Mesin Absensi atau Pengguna Absensi Ponsel"
+            );
+            $("#decreaseDeviceValue").css("background-color", "#A4AEB4");
+            v = 1;
+        } else {
+            if (v <= 0 && gps < 2) {
+                displayErrorMessage(
+                    "Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2"
+                );
+                v = 1;
+            } else if (v <= 0 && gps >= 2) {
+                $("#checkDevice").addClass("d-none");
+                $("#decreaseDeviceValue").css("background-color", "#A4AEB4");
+                $("#checkDeviceStatusForm").addClass("d-none");
+                $(".intro-3").addClass("d-none");
+                $(".intro-4").removeClass("d-none");
+            } else {
+                $("#checkDevice").removeClass("d-none");
+                $("#decreaseDeviceValue").css("background-color", "#3F87B9");
+                $("#confirmButton")
+                    .css("background-color", "#3F87B9")
+                    .prop("disabled", false);
+                $("#checkDeviceStatusForm").removeClass("d-none");
             }
-            // let url = window.location.href;
-            // let arr = url.split("/");
-            // let page = "";
-            // $('#mn_h_home').removeClass('active');
-            // $('#mn_h_about').removeClass('active');
-            // $('#mn_h_feature').removeClass('active');
-            // $('#mn_h_solution').removeClass('active');
-            // $('#mn_h_price').removeClass('active');
-            // $('#mn_f_home').removeClass('active');
-            // $('#mn_f_about').removeClass('active');
-            // $('#mn_f_feature').removeClass('active');
-            // $('#mn_f_solution').removeClass('active');
-            // page = arr[arr.length - 1];
-            // if (page == "")
-            // {
-            //     $('#mn_h_home').addClass('active');
-            //     $('#mn_f_home').addClass('active');
-            // }
-            // else
-            // {
-            //     $('#mn_h_'+page).addClass('active');
-            //     $('#mn_f_'+page).addClass('active');
-            // }
-            // init select2
-            setInterval(() => {
-                $('[data-toggle="tooltip"]').tooltip();
-            }, 100);
-            init_select2();
-            updateWishlistButtons();
-            displayWishlist();
-            updateBadge();
-            // updateRequestButton();
-            $('#btnLogin').click(function() {
-                const url = 'https://fingerspot.io/customer/login';
-                window.open(url, '_blank');
-            });
-            $('body').on('click', '.btn-remove-wishlist', function(event) {
-                event.preventDefault();
-                const button = $(this);
-                const productId = button.data('product-id');
-                let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-                const itemIndex = wishlist.findIndex(item => item.id === productId);
-                if (itemIndex > -1) {
-                    wishlist.splice(itemIndex, 1);
-                    localStorage.setItem('wishlist', JSON.stringify(wishlist));
-                    $('#wishlist').find('li[data-product-id="' + productId + '"]').remove();
-                    $('.wishlist-table tbody').find('tr[data-product-id="' + productId + '"]').remove();
-                    toastr_msg('success', 'Berhasil dihapus dari wishlist');
-                    if (wishlist.length === 0) {
-                        $('#wishlist').append(
-                            '<li class="dropdown-item">Wishlist belum ditambahkan</li>');
-                        $('.wishlist-table tbody').append(
-                            '<tr><td colspan="2">Wishlist belum ditambahkan</td></tr>');
+        }
+        if (v < 0) v = 0;
+        $("#attendaceValue").val(v);
+    }
+
+    function onChangeCountMobile(el) {
+        $("#alert").addClass("d-none");
+        let v = parseInt(el.value, 10);
+        let dev = parseInt($("#attendaceValue").val(), 10);
+        if (v < 0) v = 0;
+        if (v < 2 && dev === 0) {
+            displayErrorMessage(
+                "Jumlah karyawan yang menggunakan absensi GPS via ponsel minimal 2"
+            );
+            $("#gpsValue").val(2);
+            $("#decreaseGpsValue").css("background-color", "#3F87B9");
+        } else {
+            if (v <= 0) {
+                $("#checkApp").addClass("d-none");
+                $("#decreaseGpsValue").css("background-color", "#A4AEB4");
+                if (dev === 0) {
+                    $("#confirmButton")
+                        .prop("disabled", true)
+                        .css("background-color", "#A4AEB4");
+                }
+            } else {
+                $("#checkApp").removeClass("d-none");
+                $("#decreaseGpsValue").css("background-color", "#3F87B9");
+                if (!(dev === 0 && v < 2)) {
+                    $("#confirmButton")
+                        .css("background-color", "#3F87B9")
+                        .prop("disabled", false);
+                }
+            }
+            $("#gpsValue").val(v);
+        }
+    }
+
+    function checkDeviceInfo() {
+        const sn = $("#serialNumberForm").val();
+        const deviceType = $(".form-select").val();
+        $("#enableInfoIcon,#disableInfoIcon,#deviceStatusInfo").addClass("d-none");
+        if (sn !== "") {
+            const data = {
+                sn: sn,
+                device_type: deviceType,
+            };
+            loader_show();
+            $.ajax({
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                },
+                url: "https://fingerspot.io/validate_sn",
+                method: "POST",
+                data,
+                dataType: "json",
+                success: function(resp) {
+                    loader_hide();
+                    if (resp.status === "success" && resp.available === true) {
+                        $("#enableInfoIcon").removeClass("d-none");
+                        $("#deviceStatusInfo")
+                            .removeClass("d-none")
+                            .text(
+                                "Yeayy! Mesin absensi yang Anda miliki dapat terhubung absensi online fingerspot.io"
+                            );
+                    } else {
+                        $("#deviceNotFoundModal").modal("show");
                     }
-                    updateWishlistButtons();
-                    updateBadge();
-                    updateCompareButton()
-                    // updateRequestButton();
-                } else {
-                    toastr_msg('error', 'Product not found in wishlist');
-                }
+                },
+                error: function() {
+                    loader_hide();
+                },
             });
+        } else {
+            $("#deviceStatusInfo")
+                .removeClass("d-none")
+                .text("Mohon isi Serial Number terlebih dahulu");
+        }
+    }
+
+    function loader_show() {
+        $("#loader").show();
+    }
+
+    function loader_hide() {
+        $("#loader").hide();
+    }
+
+    function displayErrorMessage(text) {
+        Swal.fire({
+            title: "",
+            text: text,
+            icon: "warning",
+            showCancelButton: false,
+            confirmButtonText: "Tutup",
         });
-
-        function init_select2() {
-            $('.select2init').select2();
-        }
-        // dropdown language
-        if ($(".change_language").length) {
-            $(document).on("click", ".change_language .dropdown-item", function(e) {
-                e.preventDefault();
-                var flag = $(this).data("flag");
-                var lang = $(this).data("lang");
-                if (!$(this).hasClass("active")) {
-                    $(".change_language .dropdown-item").removeClass("active");
-                    $(this).addClass("active");
-                    $(this)
-                        .parents(".dropdown")
-                        .find("button")
-                        .html("<span class='fi " + flag + " me-1'></span>" + $(this).text() + " ");
-                }
-                $.ajax({
-                    url: "https://fingerspot.io/change_language",
-                    data: "c=" + lang,
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    type: 'POST',
-                    success: function(data) {
-                        var obj = jQuery.parseJSON(data);
-                        if (obj.success == true) {
-                            location.reload();
-                        }
-                    }
-                });
-            });
-        }
-        $('#btn-compare').on('click', function() {
-            var checkedSlugs = $(this).data('slugs');
-            if (checkedSlugs && checkedSlugs.length > 0) {
-                var slugs = checkedSlugs.join(',');
-                var compareUrl = "https://fingerspot.io/compare";
-                window.location.href = `${compareUrl}?slugs=${encodeURIComponent(slugs)}`;
-            } else {
-                alert('Select at least 2 items to compare.');
-            }
-        });
-        $('#btn-request-quote').on('click', function() {
-            var checkedSlugs = $(this).data('slugs');
-            if (checkedSlugs && checkedSlugs.length > 0) {
-                var slugs = checkedSlugs.join(',');
-                var compareUrl = "https://fingerspot.io/request-quote";
-                window.location.href = `${compareUrl}?slugs=${encodeURIComponent(slugs)}`;
-            } else {
-                alert('Select at least 2 items to compare.');
-            }
-        });
-
-        function displayWishlist() {
-            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-            const wishlistContainer = $('#wishlist');
-            wishlistContainer.empty();
-            if (wishlist.length === 0) {
-                wishlistContainer.append('<li class="dropdown-item">Wishlist belum ditambahkan</li>');
-            } else {
-                const productIds = wishlist.map(item => item.id);
-                $.ajax({
-                    url: "https://fingerspot.io/wishlist_product",
-                    type: 'POST',
-                    data: {
-                        id: productIds
-                    },
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    success: function(response) {
-                        if (response.length > 0) {
-                            response.forEach(product => {
-                                wishlistContainer.append(`
-                            <li class="dropdown-item" data-product-id="${product.product_id}">
-                                <div class="wishlist-item">
-                                    <div class="wishlist-content">
-                                        <div class="checkbox mr-10">
-                                            <input class="form-check-input" type="checkbox" id="item-checkbox-${product.slugs}" onchange="updateCompareButton()" name="item_checkbox"/>
-                                        </div>
-                                        <div class="wishlist-img">
-                                            <img src="https://fingerspot.com/upload/product_list/ori_${product.thumbnail_image}">
-                                        </div>
-                                        <div class="wishlist-name">
-                                            ${product.name}
-                                        </div>
-                                    </div>
-                                    <div class="btn-remove">
-                                        <a href="#" data-product-id="${product.product_id}" class="btn-remove-wishlist"><i class="fa fa-trash"></i></a>
-                                    </div>
-                                </div>
-                            </li>`);
-                            });
-                        } else {
-                            wishlistContainer.append('<li>No products found</li>');
-                        }
-                    },
-                    error: function(error) {
-                        console.error('Error fetching wishlist products:', error);
-                        wishlistContainer.append('<li>Error fetching wishlist products</li>');
-                    }
-                });
-            }
-        }
-
-        function updateWishlistButtons() {
-            const wishlistItems = JSON.parse(localStorage.getItem('wishlist')) || [];
-            $('.fav-btn').each(function() {
-                const button = $(this);
-                const productId = button.data('product-id');
-                if (wishlistItems.find(item => item.id === productId)) {
-                    button.addClass('active');
-                } else {
-                    button.removeClass('active');
-                }
-            });
-        }
-
-        function updateCompareButton() {
-            let product_wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-            let checkedCount = 0;
-            let checkedSlugs = [];
-            let checkedId = [];
-            product_wishlist.forEach(item => {
-                let checkbox = $('#item-checkbox-' + item.slugs);
-                if (checkbox.prop('checked')) {
-                    checkedCount++;
-                    checkedSlugs.push(item.slugs);
-                }
-            });
-            if (checkedCount > 1 && checkedCount < 4) {
-                $('#btn-compare').removeClass('disabled');
-                $('#btn-compare').data('slugs', checkedSlugs);
-                $('#btn-request-quote').removeClass('disabled');
-                $('#btn-request-quote').data('slugs', checkedSlugs);
-            } else {
-                $('#btn-compare').addClass('disabled');
-                $('#btn-compare').removeData('slugs');
-                $('#btn-request-quote').addClass('disabled');
-                $('#btn-request-quote').removeData('slugs');
-            }
-        }
-
-        function updateBadge() {
-            let devicesData = JSON.parse(localStorage.getItem('package')) || {};
-            let addons = JSON.parse(localStorage.getItem('addons')) || [];
-            let product_wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-            let totalDataCart = 0;
-            let deviceCount = Object.keys(devicesData.devices).length > 0 ? 1 : 0 || 0;
-            let mobileCount = Object.keys(devicesData.mobile).length > 0 ? 1 : 0 || 0;
-            let addonCount = addons.length;
-            totalDataCart = deviceCount + mobileCount + addonCount;
-            if (product_wishlist.length > 0) {
-                $('.badge-wishlist').removeClass('hide').text(product_wishlist.length);
-                // $('.count-item').text(' (' + product_wishlist.length + ')');
-            } else {
-                $('.badge-wishlist').addClass('hide').text('');
-                // $('.count-item').text('');
-            }
-            if (totalDataCart != 0) {
-                $('.badge-wishlist-cart').text(totalDataCart);
-                $('.badge-wishlist-cart').removeClass('hide');
-            } else {
-                $('.badge-wishlist-cart').addClass('hide');
-            }
-        }
-        // set localstorage di main_new
-        function setLocalStorage(packages, deviceCount) {
-            directToCart = true;
-            if (packages == null || deviceCount == null) {
-                var devicesData = {
-                    devices: 0,
-                    mobiles: 0,
-                    period: 12
-                };
-                var storage = {
-                    "devices": {},
-                    "mobile": {}
-                };
-                var addons = [];
-                localStorage.setItem('attendances', JSON.stringify(devicesData));
-                localStorage.setItem('package', JSON.stringify(storage));
-                localStorage.setItem('addons', JSON.stringify(addons));
-            }
-        };
-        // function updateRequestButton() {
-        //     let product_wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        //     if(product_wishlist.length > 0){
-        //         $('#btn-request-quote').attr('href','https://fingerspot.io/request-quote');
-        //     } else {
-        //         $('#btn-request-quote').attr('href','https://fingerspot.io/attendance-device');
-        //     }
-        // }
-        var messageLang = {
-            "en": {
-                "required": "*This field is required.",
-                "remote": "*Please fix this field.",
-                "email": "*Please enter a valid email address.",
-                "url": "*Please enter a valid URL.",
-                "date": "*Please enter a valid date.",
-                "dateISO": "*Please enter a valid date (ISO).",
-                "number": "*Please enter a valid number.",
-                "digits": "*Please enter only digits.",
-                "creditcard": "*Please enter a valid credit card number.",
-                "equalTo": "*Please enter the same value again.",
-                "accept": "*Please enter a value with a valid extension.",
-                "maxlength": jQuery.validator.format("*Please enter no more than {0} characters."),
-                "minlength": jQuery.validator.format("*Please enter at least {0} characters."),
-                "rangelength": jQuery.validator.format(
-                    "*Please enter a value between {0} and {1} characters long."),
-                "range": jQuery.validator.format("*Please enter a value between {0} and {1}."),
-                "max": jQuery.validator.format("*Please enter a value less than or equal to {0}."),
-                "min": jQuery.validator.format("*Please enter a value greater than or equal to {0}."),
-            },
-            "id": {
-                "required": "*Kolom ini wajib diisi.",
-                "remote": "*Silakan perbaiki kolom ini.",
-                "email": "*Silakan masukkan alamat email yang valid.",
-                "url": "*Silakan masukkan URL yang valid.",
-                "date": "*Silakan masukkan tanggal yang valid.",
-                "dateISO": "*Silakan masukkan tanggal yang valid (ISO).",
-                "number": "*Silakan masukkan angka yang valid.",
-                "digits": "*Silakan masukkan hanya digit.",
-                "creditcard": "*Silakan masukkan nomor kartu kredit yang valid.",
-                "equalTo": "*Silakan masukkan nilai yang sama lagi.",
-                "accept": "*Silakan masukkan nilai dengan ekstensi yang valid.",
-                "maxlength": jQuery.validator.format("*Silakan masukkan tidak lebih dari {0} karakter."),
-                "minlength": jQuery.validator.format("*Silakan masukkan setidaknya {0} karakter."),
-                "rangelength": jQuery.validator.format("*Silakan masukkan nilai antara {0} dan {1} karakter."),
-                "range": jQuery.validator.format("*Silakan masukkan nilai antara {0} dan {1}."),
-                "max": jQuery.validator.format("*Silakan masukkan nilai kurang dari atau sama dengan {0}."),
-                "min": jQuery.validator.format("*Silakan masukkan nilai lebih dari atau sama dengan {0}.")
-            }
-        };
-        var langCode = 'id';
-        jQuery.extend(jQuery.validator.messages,
-            messageLang[langCode]
-        );
-    </script>
-
-    <!-- <script src="//code.jivosite.com/widget/CzO0xQAPm1" async></script> -->
-
-    <!-- BEGIN CUSTOM JOGLO.INK -->
-    <script id="chat-init" src="https://chat.joglo.ink/account/js/init.js?id=5261972"></script>
-    <!-- END CUSTOM JOGLO.INK -->
-
-</body>
-
-</html>
+    }
+</script>
