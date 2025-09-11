@@ -2863,8 +2863,8 @@ small.text {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #0002;
-  color: #000;
+  /* border: 1px solid #0002; */
+  color: var(--color-main);
   font-size: 16px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -10577,6 +10577,7 @@ header.style-4 .wave {
 			[ * faq screenshots ] 
 ================================================================*/
 /* --------------- screenshots style-4 --------------- */
+
 .screenshots.style-4 {
   background-color: #3f87b92e;
   overflow: hidden;
