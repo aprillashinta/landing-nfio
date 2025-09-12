@@ -63,6 +63,67 @@
         .screenshots.style-4.section-space {
             position: relative;
         }
+
+.plan-segmented {
+  display:none;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#f4f5f7;
+  box-shadow: 0 2px 18px rgba(0,0,0,.06) inset, 0 8px 18px rgba(0,0,0,.04);
+  align-items:center;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.plan-segmented::-webkit-scrollbar { display:none; }
+
+.plan-segmented .seg-btn{
+  border:0;
+  background:transparent;
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:600;
+  white-space:nowrap;
+  color:#1b2a3a;
+  opacity:.8;
+}
+.plan-segmented .seg-btn.is-active{
+  background:#fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+  opacity:1;
+}
+
+@media (max-width: 720px){
+  .plan-row{ display:none; }
+  .plan-segmented{ display:flex; }
+
+  .feature-table .table-head .col:nth-child(n+2),
+  .feature-table .table-row  .col:nth-child(n+2){ display:none; }
+
+  .feature-table .table-head .col:nth-child(1),
+  .feature-table .table-row  .col:nth-child(1){ 
+    display:block;
+    font-weight:600;
+  }
+
+  .feature-table[data-show="starter"] .table-head .col:nth-child(2),
+  .feature-table[data-show="starter"] .table-row  .col:nth-child(2),
+  .feature-table[data-show="basic"]   .table-head .col:nth-child(3),
+  .feature-table[data-show="basic"]   .table-row  .col:nth-child(3),
+  .feature-table[data-show="prime"]   .table-head .col:nth-child(4),
+  .feature-table[data-show="prime"]   .table-row  .col:nth-child(4),
+  .feature-table[data-show="enterprise"] .table-head .col:nth-child(5),
+  .feature-table[data-show="enterprise"] .table-row  .col:nth-child(5),
+  .feature-table[data-show="supreme"] .table-head .col:nth-child(6),
+  .feature-table[data-show="supreme"] .table-row  .col:nth-child(6){
+    display:block;
+  }
+
+  .feature-table .table-head .highlight,
+  .table-row .highlight{ background:#fff7d9; }
+}
+
     </style>
 </head>
 
@@ -112,7 +173,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Beranda</a>
+                        <a class="nav-link" href="index.html">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="features.html">Fitur</a>
@@ -121,7 +182,7 @@
                         <a class="nav-link" href="faq.html">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="price.html">Harga</a>
+                        <a class="nav-link active" href="price.html">Harga</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="device.html">Mesin Absensi</a>
@@ -166,7 +227,6 @@
                             <span class="badge-wishlist-cart hide"></span>
                         </a>
 
-                        <!-- <button id="btnLogin" class="btn rounded-pill brd-gray hover-blue4 sm-butn fw-bold"> -->
                         <button id="btnLogin" class="btn rounded-pill btn-main sm-butn" targer="_blank">
                             <span>Masuk</span>
                         </button>
@@ -211,6 +271,10 @@
             --fsio-green: #1c7c2f;
             --fsio-dark: #0f2942;
             --fsio-light: #fff7d9;
+            --fsio-ice: #b8e2ff;
+            --fsio-ink: #0c2236;
+            --fsio-muted: #5d6b79;
+            --radius: 16px;
         }
     </style>
 
@@ -257,6 +321,16 @@
                 </button>
             </div>
 
+            <div class="plan-seg-wrap">
+                <div class="plan-segmented" role="tablist" aria-label="Pilih paket (mobile)">
+                    <button class="seg-btn" data-plan="starter" aria-selected="false">Starter</button>
+                    <button class="seg-btn" data-plan="basic" aria-selected="false">Basic</button>
+                    <button class="seg-btn is-active" data-plan="prime" aria-selected="true">Prime</button>
+                    <button class="seg-btn" data-plan="enterprise" aria-selected="false">Enterprise</button>
+                    <button class="seg-btn" data-plan="supreme" aria-selected="false">Supreme</button>
+                </div>
+            </div>
+
             <div class="feature-table" role="region" aria-live="polite">
                 <div class="table-head">
                     <div class="col feature-title">Fitur yang akan Anda dapatkan :</div>
@@ -267,7 +341,6 @@
                     <div class="col ta-c">Supreme</div>
                 </div>
 
-                <!-- FITUR UTAMA -->
                 <div class="table-row">
                     <div class="col feature"><span class="dot"></span>Jumlah Mesin Absensi yang Terhubung</div>
                     <div class="col ta-c">1 Mesin Absensi</div>
@@ -307,7 +380,6 @@
                     <div class="col ta-c"><i class="check"></i></div>
                 </div>
 
-                <!-- SUBHEAD: FITUR TAMBAHAN -->
                 <div class="subhead">FITUR TAMBAHAN :</div>
 
                 <div class="table-row">
@@ -387,11 +459,7 @@
         :root {
             --fsio-blue: #0d5f93;
             --fsio-blue2: #3f87b9;
-            --fsio-ink: #0c2236;
-            --fsio-muted: #5d6b79;
-            --fsio-ice: #b8e2ff;
             --fsio-kuning: #f2cf52;
-            --radius: 16px;
         }
 
         .section-space {
@@ -722,6 +790,52 @@
             });
         })();
     </script>
+<script>
+(function(){
+  const plans = ['starter','basic','prime','enterprise','supreme'];
+  const planCards = document.querySelectorAll('.plan-item');
+  const segWrap   = document.querySelector('.plan-segmented');
+  const segBtns   = segWrap ? segWrap.querySelectorAll('.seg-btn') : [];
+
+  const table = document.querySelector('.feature-table');
+
+  function setActive(plan){
+    // update kartu paket
+    planCards.forEach(b=>{
+      const isActive = b.dataset.plan === plan;
+      b.classList.toggle('is-active', isActive);
+      b.setAttribute('aria-selected', String(isActive));
+    });
+
+    document.querySelectorAll('.feature-table .highlight').forEach(el=>el.classList.remove('highlight'));
+    const idx = plans.indexOf(plan);
+    if(idx>=0){
+      const colIndex = idx + 2;
+      document.querySelectorAll(`.feature-table .table-head .col:nth-child(${colIndex}), .feature-table .table-row .col:nth-child(${colIndex})`)
+        .forEach(el=>el.classList.add('highlight'));
+    }
+
+    segBtns.forEach(b=>{
+      const on = b.dataset.plan === plan;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', String(on));
+    });
+
+    if(table) table.setAttribute('data-show', plan);
+  }
+
+  planCards.forEach(btn=>{
+    btn.addEventListener('click', ()=> setActive(btn.dataset.plan));
+  });
+
+  segBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=> setActive(btn.dataset.plan));
+  });
+
+  const defaultActive = document.querySelector('.plan-item.is-active')?.dataset.plan || 'prime';
+  setActive(defaultActive);
+})();
+</script>
 
 </body>
 
