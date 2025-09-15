@@ -1083,8 +1083,7 @@ footer .foot-info .d-flex.align-items-center {
   }
 }
 
-
-.floating-button {
+/* .floating-button {
   position: fixed;
   right: 24px;
   bottom: 24px;
@@ -1096,6 +1095,55 @@ footer .foot-info .d-flex.align-items-center {
   height: auto;
   cursor: pointer;
   animation: pulse 2s infinite;
+}
+
+#floating-btn:hover {
+  transform: scale(1.08);
+} */
+
+.floating-button {
+  position: fixed;
+  right: 16px;
+  bottom: 24px;
+  z-index: 1100;
+}
+
+#floating-btn {
+  width: 160px;
+  height: auto;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+#floating-btn:hover {
+  transform: scale(1.08);
+}
+
+@media (max-width: 992px) {
+  .floating-button {
+    bottom: 32px;
+  }
+  #floating-btn {
+    width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-button {
+    right: 16px;
+    bottom: 72px;
+  }
+  #floating-btn {
+    width: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-button {
+    right: 12px;
+    bottom: 24px;
+  }
 }
 
 @keyframes pulse {
@@ -1110,10 +1158,6 @@ footer .foot-info .d-flex.align-items-center {
   100% {
     transform: scale(1);
   }
-}
-
-#floating-btn:hover {
-  transform: scale(1.08);
 }
 
 .voucher-modal {
