@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="HTML5 Template Iteck Multi-Purpose themeforest" />
+    <meta name="description" content="Iteck - Multi-Purpose HTML5 Template" />
+    <meta name="author" content="" />
+    <title>ABSENSI NFIO</title>
+
+    <link rel="shortcut icon" href="assets/pict/fingerspot_logo_circle.png" title="Favicon" sizes="16x16" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/flag-icons@6.7.0/css/flag-icons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/lib/all.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/animate.css" />
+    <link rel="stylesheet" href="assets/css/lib/jquery.fancybox.css" />
+    <link rel="stylesheet" href="assets/css/lib/lity.css" />
+    <link rel="stylesheet" href="assets/css/lib/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style-nw.css" />
+
+    <style>
+        :root {
+            --section-space-y: 70px;
+        }
+
+        footer.style-4,
+        .navbar.style-4 {
+            position: relative;
+            z-index: 1;
+        }
+
+        #route-header.compact {
+            padding: 0 !important;
+        }
+
+        .section-space {
+            padding-top: var(--section-space-y);
+            padding-bottom: var(--section-space-y);
+        }
+
+        .section-space-top {
+            padding-top: var(--section-space-y);
+        }
+
+        .section-space-bottom {
+            padding-bottom: var(--section-space-y);
+        }
+
+        .screenshots.style-4.section-space {
+            position: relative;
+        }
+
+        .plan-segmented {
+            display: none;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #f4f5f7;
+            box-shadow: 0 2px 18px rgba(0, 0, 0, .06) inset, 0 8px 18px rgba(0, 0, 0, .04);
+            align-items: center;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .plan-segmented::-webkit-scrollbar {
+            display: none;
+        }
+
+        .plan-segmented .seg-btn {
+            border: 0;
+            background: transparent;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-weight: 600;
+            white-space: nowrap;
+            color: #1b2a3a;
+            opacity: .8;
+        }
+
+        .plan-segmented .seg-btn.is-active {
+            background: #fff;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+            opacity: 1;
+        }
+
+        .plan-seg-wrap{
+            position: relative;
+        }
+
+        @media (max-width: 770px) {
+            .plan-row {
+                display: none;
+            }
+
+            .plan-segmented {
+                display: flex;
+            }
+
+            .feature-table .table-head .col:nth-child(n+2),
+            .feature-table .table-row .col:nth-child(n+2) {
+                display: none;
+            }
+
+            .feature-table .table-head .col:nth-child(1),
+            .feature-table .table-row .col:nth-child(1) {
+                display: block;
+                font-weight: 600;
+            }
+
+            .feature-table[data-show="starter"] .table-head .col:nth-child(2),
+            .feature-table[data-show="starter"] .table-row .col:nth-child(2),
+            .feature-table[data-show="basic"] .table-head .col:nth-child(3),
+            .feature-table[data-show="basic"] .table-row .col:nth-child(3),
+            .feature-table[data-show="prime"] .table-head .col:nth-child(4),
+            .feature-table[data-show="prime"] .table-row .col:nth-child(4),
+            .feature-table[data-show="enterprise"] .table-head .col:nth-child(5),
+            .feature-table[data-show="enterprise"] .table-row .col:nth-child(5),
+            .feature-table[data-show="supreme"] .table-head .col:nth-child(6),
+            .feature-table[data-show="supreme"] .table-row .col:nth-child(6) {
+                display: block;
+            }
+
+            .feature-table .table-head .highlight,
+            .table-row .highlight {
+                background: #fff7d9;
+            }
+        }
+    </style>
+</head>
+
+<body data-page="home">
+    <div class="top-navbar style-4">
+        <div class="container">
+            <div class="content text-white d-flex justify-content-end align-items-center" data-bs-display="static">
+                <div class="dropdown change_language">
+                    <button class="dropdown-toggle" type="button" id="dropdownLangBtn" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span id="btn-flag" class="fi fi-id fis rounded-circle"></span>
+                        <span id="btn-label" class="lang-label">Bahasa Indonesia</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="dropdownLangBtn">
+                        <li>
+                            <a class="dropdown-item active" href="#" data-lang="id" data-label="Bahasa Indonesia"
+                                data-flag="fi fi-id fis rounded-circle">
+                                <span class="fi fi-id fis rounded-circle"></span>
+                                <span class="lang-label">Bahasa Indonesia</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-lang="en" data-label="English"
+                                data-flag="fi fi-us fis rounded-circle">
+                                <span class="fi fi-us fis rounded-circle"></span>
+                                <span class="lang-label">English</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light style-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/pict/logo_text_grey.png" alt="Fingerspot" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Fitur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="price.html">Harga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="device.html">Mesin Absensi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="check-device.html">Cek Mesin Absensi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak Kami</a>
+                    </li>
+                </ul>
+
+                <div class="nav-side">
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="search-icon me-1"><i class="fa fa-search"></i></a>
+
+                        <div class="nav-item dropdown icon-wishlist">
+                            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                class="search-icon me-1">
+                                <i class="fa fa-heart"></i>
+                            </a>
+                            <div class="dropdown-menu wishlist">
+                                <div class="title">
+                                    Produk Ditambahkan
+                                    <span class="bi bi-question-circle me-10"
+                                        style="color:#263238;font-size:14px;float:right" data-toggle="tooltip"
+                                        data-bs-original-title="Ceklist item untuk melakukan komparasi"></span>
+                                </div>
+                                <ul id="wishlist" aria-labelledby="wishlist"></ul>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-sm btn-wishlisit disabled" id="btn-request-quote"
+                                        data-slugs="">Minta Penawaran</a>
+                                    <a href="#" class="btn btn-sm btn-compare disabled" id="btn-compare"
+                                        data-slugs="">Komparasi</a>
+                                </div>
+                            </div>
+                            <span class="badge-wishlist hide"></span>
+                        </div>
+
+                        <a href="https://fingerspot.io/price/cart" class="search-icon me-1">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="badge-wishlist-cart hide"></span>
+                        </a>
+
+                        <button id="btnLogin" class="btn rounded-pill btn-main sm-butn" targer="_blank">
+                            <span>Masuk</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5" style="background:#fff;">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h1 class="fw-bold">Paket yang <span class="text-primary">kami tawarkan</span></h1>
+                <p class="text-muted">Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga
+                    spesial untukmu 🥰</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center p-3 rounded mb-4"
+                style="background:#0d5f93;box-shadow:0 4px 12px rgba(0,0,0,.12);">
+                <div class="d-none d-md-block">
+                    <img src="assets/pict/voucher-left.png" alt="Voucher" style="max-height:90px;">
+                </div>
+                <div class="flex-fill text-center">
+                    <h5 class="mb-0 fw-semibold text-white">Voucher spesial untuk pengguna baru - klaim sekarang juga!
+                    </h5>
+                </div>
+                <div class="d-none d-md-block">
+                    <img src="assets/pict/voucher-right.png" alt="Voucher" style="max-height:90px;">
+                </div>
+            </div>
+            <div class="text-center">
+                <h4 class="fw-bold"><span class="text-primary">Layanan Paket</span> Mesin Absensi</h4>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        :root {
+            --fsio-blue: #0d5f93;
+            --fsio-blue2: #3f87b9;
+            --fsio-kuning: #ffd85c;
+            --fsio-kuning2: #ffe99c;
+            --fsio-green: #1c7c2f;
+            --fsio-dark: #0f2942;
+            --fsio-light: #fff7d9;
+            --fsio-ice: #b8e2ff;
+            --fsio-ink: #0c2236;
+            --fsio-muted: #5d6b79;
+            --radius: 16px;
+        }
+    </style>
+
+    <section class="pricing fsio section-space" id="harga">
+        <div class="container">
+            <div class="section-head">
+                <h2>Harga <span>fingerspot.io</span></h2>
+                <p>Pilih paket yang pas, bisa upgrade kapan saja.</p>
+            </div>
+
+            <div class="plan-row" role="tablist" aria-label="Pilihan paket">
+                <button class="plan-item" data-plan="starter" role="tab" aria-selected="false">
+                    <span class="plan-name">Starter</span>
+                    <span class="plan-price"><sup>Rp</sup> 67K <span class="per">/Bulan</span></span>
+                    <small class="note">Pembayaran 3 Bulan Pertama</small>
+                </button>
+
+                <button class="plan-item" data-plan="basic" role="tab" aria-selected="false">
+                    <span class="plan-name">Basic</span>
+                    <span class="plan-price"><sup>Rp</sup> 50K <span class="per">/Bulan</span></span>
+                    <small class="note">Pembayaran 6 Bulan</small>
+                </button>
+
+                <button class="plan-item is-active" data-plan="prime" role="tab" aria-selected="true"
+                    aria-controls="prime-panel">
+                    <span class="ribbon">Paket Pilihanmu</span>
+                    <span class="plan-name">Prime</span>
+                    <span class="plan-price"><sup>Rp</sup> 42K <span class="per">/Bulan</span></span>
+                    <small class="note">Pembayaran Tahunan</small>
+                    <span class="badge">Populer</span>
+                </button>
+
+                <button class="plan-item" data-plan="enterprise" role="tab" aria-selected="false">
+                    <span class="plan-name">Enterprise</span>
+                    <span class="plan-price"><sup>Rp</sup> 60K <span class="per">/Bulan</span></span>
+                    <small class="note">Pembayaran Tahunan</small>
+                </button>
+
+                <button class="plan-item" data-plan="supreme" role="tab" aria-selected="false">
+                    <span class="plan-name">Supreme</span>
+                    <span class="plan-price"><sup>Rp</sup> 75K <span class="per">/Bulan</span></span>
+                    <small class="note">Pembayaran Tahunan</small>
+                    <span class="badge alt">Best Choice</span>
+                </button>
+            </div>
+
+            <div class="plan-seg-wrap">
+                <div class="plan-segmented" role="tablist" aria-label="Pilih paket (mobile)">
+                    <button class="seg-btn" data-plan="starter" aria-selected="false">Starter</button>
+                    <button class="seg-btn" data-plan="basic" aria-selected="false">Basic</button>
+                    <button class="seg-btn is-active" data-plan="prime" aria-selected="true">Prime</button>
+                    <button class="seg-btn" data-plan="enterprise" aria-selected="false">Enterprise</button>
+                    <button class="seg-btn" data-plan="supreme" aria-selected="false">Supreme</button>
+                </div>
+            </div>
+
+            <div class="feature-table" role="region" aria-live="polite">
+                <div class="table-head">
+                    <div class="col feature-title">Fitur yang akan Anda dapatkan :</div>
+                    <div class="col ta-c">Starter</div>
+                    <div class="col ta-c">Basic</div>
+                    <div class="col ta-c highlight" id="prime-col">Prime</div>
+                    <div class="col ta-c">Enterprise</div>
+                    <div class="col ta-c">Supreme</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col feature"><span class="dot"></span>Jumlah Mesin Absensi yang Terhubung</div>
+                    <div class="col ta-c">1 Mesin Absensi</div>
+                    <div class="col ta-c">1 Mesin Absensi</div>
+                    <div class="col ta-c highlight">1 Mesin Absensi</div>
+                    <div class="col ta-c">1 Mesin Absensi</div>
+                    <div class="col ta-c">1 Mesin Absensi</div>
+                </div>
+
+                <div class="table-row alt">
+                    <div class="col feature"><span class="dot"></span>Pengaturan Jadwal Kerja Karyawan (Flexibel, Shift,
+                        Tetap)</div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c highlight"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col feature"><span class="dot"></span>Monitoring Kehadiran Harian (Daily Monitoring)
+                    </div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c highlight"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                </div>
+
+                <div class="table-row alt">
+                    <div class="col feature"><span class="dot"></span>Melihat Data Kehadiran dari Aplikasi Karyawan
+                    </div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c highlight"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                    <div class="col ta-c"><i class="check"></i></div>
+                </div>
+
+                <div class="subhead">FITUR TAMBAHAN :</div>
+
+                <div class="table-row">
+                    <div class="col feature"><span class="dot"></span>Jumlah Karyawan yang Dapat Ditambahkan di Akun
+                        Perusahaan (Tidak Terakumulasi)</div>
+                    <div class="col ta-c">100 Karyawan / Akun</div>
+                    <div class="col ta-c">200 Karyawan / Akun</div>
+                    <div class="col ta-c highlight">300 Karyawan / Akun</div>
+                    <div class="col ta-c">600 Karyawan / Akun</div>
+                    <div class="col ta-c">1200 Karyawan / Akun</div>
+                </div>
+
+                <div class="table-row alt">
+                    <div class="col feature"><span class="dot"></span>Fitur Absensi GPS di Aplikasi Karyawan</div>
+                    <div class="col ta-c"><i class="x"></i></div>
+                    <div class="col ta-c">2 Karyawan / Akun</div>
+                    <div class="col ta-c highlight">2 Karyawan / Akun</div>
+                    <div class="col ta-c">2 Karyawan / Akun</div>
+                    <div class="col ta-c">4 Karyawan / Akun</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col feature"><span class="dot"></span>Notifikasi Kehadiran Secara Langsung (Realtime)
+                    </div>
+                    <div class="col ta-c"><i class="x"></i></div>
+                    <div class="col ta-c">2 Karyawan / Akun</div>
+                    <div class="col ta-c highlight">2 Karyawan / Akun</div>
+                    <div class="col ta-c">2 Karyawan / Akun</div>
+                    <div class="col ta-c">4 Karyawan / Akun</div>
+                </div>
+
+                <div class="table-row alt">
+                    <div class="col feature"><span class="dot"></span>Maksimum Absensi GPS Per Hari</div>
+                    <div class="col ta-c"><i class="x"></i></div>
+                    <div class="col ta-c">10x / hari / karyawan</div>
+                    <div class="col ta-c highlight">10x / hari / karyawan</div>
+                    <div class="col ta-c">10x / hari / karyawan</div>
+                    <div class="col ta-c">10x / hari / karyawan</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col feature"><span class="dot"></span>Fitur Pengajuan Izin dari Aplikasi Karyawan</div>
+                    <div class="col ta-c"><i class="x"></i></div>
+                    <div class="col ta-c">2 Karyawan / Akun</div>
+                    <div class="col ta-c highlight">2 Karyawan / Akun</div>
+                    <div class="col ta-c">2 Karyawan / Akun</div>
+                    <div class="col ta-c">4 Karyawan / Akun</div>
+                </div>
+
+                <div class="table-row alt">
+                    <div class="col feature"><span class="dot"></span>Fitur Pantau Lokasi di Aplikasi Karyawan</div>
+                    <div class="col ta-c"><i class="x"></i></div>
+                    <div class="col ta-c"><i class="x"></i></div>
+                    <div class="col ta-c highlight"><i class="x"></i></div>
+                    <div class="col ta-c">2 Karyawan / Akun</div>
+                    <div class="col ta-c">4 Karyawan / Akun</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col feature"><span class="dot"></span>Fitur Pengajuan Lembur dari Aplikasi Karyawan
+                    </div>
+                    <div class="col ta-c"><i class="x"></i></div>
+                    <div class="col ta-c"><i class="x"></i></div>
+                    <div class="col ta-c highlight"><i class="x"></i></div>
+                    <div class="col ta-c">2 Karyawan / Akun</div>
+                    <div class="col ta-c">4 Karyawan / Akun</div>
+                </div>
+            </div>
+
+            <div class="cta-row">
+                <a href="subscribe.html" class="btn fsio-btn">Oke, Selanjutnya</a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        :root {
+            --fsio-blue: #0d5f93;
+            --fsio-blue2: #3f87b9;
+            --fsio-kuning: #f2cf52;
+        }
+
+        .section-space {
+            padding: 48px 0
+        }
+
+        .pricing.fsio {
+            background: #fff
+        }
+
+        .pricing .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 16px
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 18px
+        }
+
+        .section-head h2 {
+            font-size: clamp(22px, 2.4vw, 32px);
+            color: var(--fsio-ink);
+            margin: 0
+        }
+
+        .section-head h2 span {
+            color: var(--fsio-blue2)
+        }
+
+        .section-head p {
+            color: var(--fsio-muted);
+            margin-top: 6px
+        }
+
+        .plan-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .plan-item {
+            position: relative;
+            background: var(--fsio-blue);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius);
+            padding: 18px 16px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease;
+            outline: none;
+        }
+
+        .plan-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(13, 95, 147, .18)
+        }
+
+        .plan-item .plan-name {
+            display: block;
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: .2px
+        }
+
+        .plan-item .plan-price {
+            display: block;
+            margin-top: 6px;
+            font-weight: 800;
+            font-size: 22px
+        }
+
+        .plan-item .plan-price sup {
+            font-size: .6em;
+            margin-right: 2px
+        }
+
+        .plan-item .per {
+            font-weight: 600;
+            font-size: .75em
+        }
+
+        .plan-item .note {
+            display: block;
+            opacity: .9;
+            margin-top: 6px;
+            font-size: 12px
+        }
+
+        .plan-item .badge {
+            position: absolute;
+            left: 50%;
+            bottom: -12px;
+            transform: translateX(-50%);
+            background: #1e64a0;
+            color: #fff;
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, .14);
+        }
+
+        .plan-item .badge.alt {
+            background: #1c7c2f
+        }
+
+        .plan-item.is-active {
+            background: linear-gradient(180deg, var(--fsio-kuning) 0%, #ffd85c 100%);
+            color: #0f2942;
+        }
+
+        .plan-item.is-active .badge {
+            background: #0f4e7a;
+            color: #fff
+        }
+
+        .plan-item .ribbon {
+            position: absolute;
+            top: -12px;
+            left: 12px;
+            background: #ffe99c;
+            color: #5a4300;
+            border-radius: 10px;
+            padding: 6px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .12)
+        }
+
+        .feature-table {
+            margin-top: 22px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid #e8eef5
+        }
+
+        .feature-table .table-head {
+            display: grid;
+            grid-template-columns: 2fr repeat(5, 1fr);
+            background: var(--fsio-blue);
+            color: #fff;
+            font-weight: 800
+        }
+
+        .feature-table .table-head .col {
+            padding: 16px
+        }
+
+        .feature-table .table-head .highlight {
+            background: #ffd85c;
+            color: #0f2942
+        }
+
+        .table-row {
+            display: grid;
+            grid-template-columns: 2fr repeat(5, 1fr);
+            background: #fff;
+            color: #0c2236;
+            border-top: 1px solid #edf2f7
+        }
+
+        .table-row.alt {
+            background: #f8fbff
+        }
+
+        .table-row .col {
+            padding: 14px 16px
+        }
+
+        .feature {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            color: #263238
+        }
+
+        .feature .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #6b7c8b;
+            margin-top: 8px;
+            flex: 0 0 auto
+        }
+
+        .ta-c {
+            text-align: center
+        }
+
+        .highlight {
+            background: #fff7d9
+        }
+
+        .check {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            box-shadow: inset 0 0 0 20px #fff, 0 0 0 2px #d7e7f5;
+            position: relative;
+        }
+
+        .check:after {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 2px;
+            width: 9px;
+            height: 14px;
+            border-right: 3px solid #1cab4d;
+            border-bottom: 3px solid #1cab4d;
+            transform: rotate(45deg)
+        }
+
+        .cta-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px
+        }
+
+        .fsio-btn {
+            background: var(--fsio-blue2);
+            color: #fff;
+            border-radius: 999px;
+            padding: 12px 22px;
+            font-weight: 700;
+            box-shadow: 0 6px 16px rgba(63, 135, 185, .22);
+            text-decoration: none
+        }
+
+        .fsio-btn:hover {
+            opacity: .95
+        }
+
+        .subhead {
+            grid-column: 1 / -1;
+            background: #eef5fb;
+            color: #0c2236;
+            font-weight: 800;
+            padding: 12px 16px;
+            border-top: 1px solid #e1ecf6
+        }
+
+        .x {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            box-shadow: inset 0 0 0 20px #fff, 0 0 0 2px #f1d3d6;
+            position: relative
+        }
+
+        .x:after,
+        .x:before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 8px;
+            width: 10px;
+            height: 2px;
+            background: #d92d20
+        }
+
+        .x:before {
+            transform: rotate(45deg)
+        }
+
+        .x:after {
+            transform: rotate(-45deg)
+        }
+
+
+        @media (max-width: 992px) {
+            .plan-row {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .feature-table .table-head,
+            .table-row {
+                grid-template-columns: 1.4fr repeat(5, 1fr)
+            }
+        }
+
+        @media (max-width: 720px) {
+            .plan-row {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .feature-table .table-head,
+            .table-row {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+
+            .feature-table .table-head .col:nth-child(n+4),
+            .table-row .col:nth-child(n+4) {
+                display: none
+            }
+        }
+    </style>
+
+    <script>
+        (function() {
+            const items = document.querySelectorAll('.plan-item');
+            items.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    items.forEach(b => {
+                        b.classList.remove('is-active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    btn.classList.add('is-active');
+                    btn.setAttribute('aria-selected', 'true');
+                    document.querySelectorAll('.feature-table .highlight').forEach(el => el
+                        .classList.remove('highlight'));
+                    const idx = ['starter', 'basic', 'prime', 'enterprise', 'supreme'].indexOf(btn
+                        .dataset.plan);
+                    if (idx >= 0) {
+                        const colIndex = idx + 2;
+                        document.querySelectorAll('.feature-table .table-head .col:nth-child(' +
+                                colIndex + '), .feature-table .table-row .col:nth-child(' +
+                                colIndex + ')')
+                            .forEach(el => el.classList.add('highlight'));
+                    }
+                });
+            });
+        })();
+    </script>
+    <script>
+        (function() {
+            const plans = ['starter', 'basic', 'prime', 'enterprise', 'supreme'];
+            const planCards = document.querySelectorAll('.plan-item');
+            const segWrap = document.querySelector('.plan-segmented');
+            const segBtns = segWrap ? segWrap.querySelectorAll('.seg-btn') : [];
+            const table = document.querySelector('.feature-table');
+
+            function setActive(plan) {
+                // update kartu paket
+                planCards.forEach(b => {
+                    const isActive = b.dataset.plan === plan;
+                    b.classList.toggle('is-active', isActive);
+                    b.setAttribute('aria-selected', String(isActive));
+                });
+                document.querySelectorAll('.feature-table .highlight').forEach(el => el.classList.remove(
+                    'highlight'));
+                const idx = plans.indexOf(plan);
+                if (idx >= 0) {
+                    const colIndex = idx + 2;
+                    document.querySelectorAll(
+                            `.feature-table .table-head .col:nth-child(${colIndex}), .feature-table .table-row .col:nth-child(${colIndex})`
+                            )
+                        .forEach(el => el.classList.add('highlight'));
+                }
+                segBtns.forEach(b => {
+                    const on = b.dataset.plan === plan;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-selected', String(on));
+                });
+                if (table) table.setAttribute('data-show', plan);
+            }
+            planCards.forEach(btn => {
+                btn.addEventListener('click', () => setActive(btn.dataset.plan));
+            });
+            segBtns.forEach(btn => {
+                btn.addEventListener('click', () => setActive(btn.dataset.plan));
+            });
+            const defaultActive = document.querySelector('.plan-item.is-active') ? .dataset.plan || 'prime';
+            setActive(defaultActive);
+        })();
+    </script>
+
+</body>
+
+</html>
