@@ -10580,6 +10580,7 @@ header.style-4 .wave {
   padding-top: 20px;
   position: relative;
   height: 750px;
+  margin-bottom: -35px;
 }
 
 .screenshots.style-4::after {
