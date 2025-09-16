@@ -418,6 +418,25 @@
           padding-inline: 14px;
         }
       }
+      
+      .claim-voucher {
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 52px;
+      }
+
+      .claim-voucher.right {
+        right: 10px;
+      }
+
+      .claim-image {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        z-index: 999;
+        width: 16%;
+        animation: pulse 2s infinite;
+      }
     </style>
   </head>
 
@@ -478,16 +497,8 @@
         <a class="navbar-brand" href="#">
           <img src="assets/pict/logo_text_grey.png" alt="Fingerspot" />
         </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -586,51 +597,68 @@
 
     <section class="pt-5 pb-1" style="background: #fff">
       <div class="container">
-        <div class="text-center mb-4">
-          <h1 class="fw-bold">
-            Paket yang
-            <span style="color: var(--fsio-blue)">kami tawarkan</span>
-          </h1>
-          <p class="text-muted">
-            Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran
-            dengan harga spesial untukmu 🥰
-          </p>
+        <div class="section-head text-center style-5 mb-40">
+          <h2 class="mb-20" style="color: #000"> Paket yang <span> kami tawarkan </span> </h2>
+          <p>
+            Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga spesial untukmu 🤩 </p>
         </div>
-        <div
-          class="d-flex justify-content-between align-items-center p-3 rounded mb-4"
-          style="
-            background: var(--fsio-blue2);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-          "
-        >
-          <div class="d-none d-md-block">
-            <img
-              src="assets/pict/voucher-left.png"
-              alt="Voucher"
-              style="max-height: 90px"
-            />
-          </div>
-          <div class="flex-fill text-center">
-            <h5 class="mb-0 fw-semibold text-white">
-              Voucher spesial untuk pengguna baru - klaim sekarang juga!
-            </h5>
-          </div>
-          <div class="d-none d-md-block">
-            <img
-              src="assets/pict/voucher-right.png"
-              alt="Voucher"
-              style="max-height: 90px"
-            />
-          </div>
-        </div>
-        <div class="text-center">
-          <h4 class="fw-bold">
-            <span style="color: var(--fsio-blue)">Layanan Paket</span> Mesin
-            Absensi
+        <table class="table m-0">
+          <tbody>
+            <tr>
+              <td style="width: 20%; border-top-left-radius: 10px; border: none; background-color: #016DB5">
+                <button class="claim-voucher" onclick="claimVoucher()">
+                  <img class="claim-image "
+                    src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+                    style="height: 170px; width: 182px;">
+                </button>
+              </td>
+              <td style="color: white; font-size: 22px; background-color: #016DB5; text-align: center; padding: 20px;">
+                Voucher spesial untuk pengguna baru – klaim sekarang juga!</td>
+              <td style="width: 20%; border-top-right-radius: 10px; border: none; background-color: #016DB5">
+                <button class="claim-voucher right" onclick="claimVoucher()">
+                  <img class="claim-image "
+                    src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+                    style="height: 170px; width: 182px;">
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <div style="flex: 1; height: 2px; background: #d3e6f7; margin-right: 10px;"></div>
+          <h4 class="fw-bold" style="margin: 0; white-space: nowrap;">
+            <span style="color: #016DB5;">Layanan Paket</span> Mesin Absensi
           </h4>
+          <div style="flex: 1; height: 2px; background: #d3e6f7; margin-left: 10px;"></div>
         </div>
       </div>
     </section>
+    <!-- <div class="text-center mb-4">
+      <h1 class="fw-bold">
+        Paket yang
+        <span style="color: var(--fsio-blue)">kami tawarkan</span>
+      </h1>
+      <p class="text-muted">
+        Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran
+        dengan harga spesial untukmu 🥰
+      </p>
+    </div>
+    <div class="d-flex justify-content-between align-items-center p-3 rounded mb-4" style="
+            background: var(--fsio-blue2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+          ">
+      <div class="d-none d-md-block">
+        <img src="assets/pict/voucher-left.png" alt="Voucher" style="max-height: 90px" />
+      </div>
+      <div class="flex-fill text-center">
+        <h5 class="mb-0 fw-semibold text-white">
+          Voucher spesial untuk pengguna baru - klaim sekarang juga!
+        </h5>
+      </div>
+      <div class="d-none d-md-block">
+        <img src="assets/pict/voucher-right.png" alt="Voucher" style="max-height: 90px" />
+      </div>
+    </div> -->
 
     <style>
       :root {
@@ -648,11 +676,11 @@
       }
     </style>
 
-    <section class="pricing fsio" id="harga">
+    <section class="pricing fsio pt-5" id="harga">
       <div class="container">
-        <div class="section-head">
+        <!-- <div class="section-head">
           <p>Pilih paket yang pas, bisa upgrade kapan saja.</p>
-        </div>
+        </div> -->
 
         <div class="plan-seg-wrap">
           <div

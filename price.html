@@ -166,53 +166,6 @@
             padding: 0 16px;
         }
 
-        /* #confirmButton {
-            --btn-blue: #3f87b9;
-            width: clamp(220px, 44vw, 520px);
-            height: 56px;
-            border: 0;
-            border-radius: 999px;
-            background: var(--btn-blue) !important;
-            color: #fff;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 18px rgba(63, 135, 185, 0.22);
-            transition: filter 0.2s ease, transform 0.05s ease, box-shadow 0.2s ease;
-            outline: none;
-            cursor: pointer;
-        }
-
-        #confirmButton #buttonText {
-            font-family: Roboto, system-ui, -apple-system, "Segoe UI", Arial,
-                sans-serif;
-            font-weight: 700;
-            font-size: 15.5px;
-            line-height: 1;
-        }
-
-        #confirmButton:hover {
-            filter: brightness(0.97);
-        }
-
-        #confirmButton:active {
-            transform: translateY(0.5px);
-            box-shadow: 0 6px 14px rgba(63, 135, 185, 0.22);
-        }
-
-        #confirmButton:focus-visible {
-            box-shadow: 0 8px 18px rgba(63, 135, 185, 0.22),
-                0 0 0 3px rgba(63, 135, 185, 0.35);
-        }
-
-        .confirm-row {
-            margin-top: 2rem;
-        } */
-
-        /* .container .row {
-        row-gap: 8px;
-    } */
-
         .container .row+.row {
             margin-top: 26px;
         }
@@ -356,7 +309,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container">
         <div class="row mt-5"></div>
 
@@ -505,14 +458,6 @@
 
         <div class="alert alert-danger mt-4 d-none" role="alert" id="alert"></div>
 
-        <!-- <div class="row confirm-row">
-            <div class="col d-flex justify-content-center">
-                <button class="btn rounded-pill fw-bold" id="confirmButton">
-                    <span id="buttonText">Oke, Selanjutnya</span>
-                </button>
-            </div>
-        </div> -->
-
         <div class="row" style="margin-top: 2rem;">
             <div class="col d-flex justify-content-center">
                 <button class="btn rounded-pill brd-gray hover-blue4 sm-butn fw-bold"
@@ -559,78 +504,92 @@
             </div>
         </div>
     </div>
-    
+
     <footer class="position-sticky style-4 bg-light pt-5 section-space-top">
         <div class="container">
-        <div class="row gy-4 gx-5 justify-content-between">
-            <div class="col-lg-4">
-            <div class="foot-info">
-                <div class="foot-logo mb-3">
-                <img src="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" alt="Fingerspot" width="156" height="25" />
-                </div>
-                <p class="text-muted" style="text-align:justify">
-                Jadi kapan mulai online-kan mesin absensimu? Berbagai kemudahan bisa kamu dapatkan seperti: bisa download data absensi dari mana saja, registrasi & pengaturan jadwal kerja dari mana saja, hingga bisa menikmati fitur Daily Monitoring.
-                </p>
+            <div class="row gy-4 gx-5 justify-content-between">
+                <div class="col-lg-4">
+                    <div class="foot-info">
+                        <div class="foot-logo mb-3">
+                            <img src="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" alt="Fingerspot"
+                                width="156" height="25" />
+                        </div>
+                        <p class="text-muted" style="text-align:justify">
+                            Jadi kapan mulai online-kan mesin absensimu? Berbagai kemudahan bisa kamu dapatkan seperti:
+                            bisa download data absensi dari mana saja, registrasi & pengaturan jadwal kerja dari mana
+                            saja, hingga bisa menikmati fitur Daily Monitoring.
+                        </p>
 
-                <div class="d-flex align-items-center mt-3">
-                <a href="https://pse.kominfo.go.id/tdpse-detail/5437" target="_blank" class="me-1">
-                    <img src="https://fingerspot.io/assets3/img/custom/certification/kominfo_new.png" alt="Kominfo" style="max-height:50px" />
-                </a>
-                <a href="https://secure.trust-provider.com/ttb_searcher/trustlogo?v_querytype=W&v_shortname=CL1&v_search=https://fingerspot.io" target="_blank" class="me-3">
-                    <img src="https://fingerspot.io/assets3/img/ssl.png" alt="SSL" style="max-height:40px;" />
-                </a>
-                <div>
-                    <div style="font-size:8pt">
-                    Tanda Daftar Kominfo <br />
-                    Penyelenggara System Elektronik
+                        <div class="d-flex align-items-center mt-3">
+                            <a href="https://pse.kominfo.go.id/tdpse-detail/5437" target="_blank" class="me-1">
+                                <img src="https://fingerspot.io/assets3/img/custom/certification/kominfo_new.png"
+                                    alt="Kominfo" style="max-height:50px" />
+                            </a>
+                            <a href="https://secure.trust-provider.com/ttb_searcher/trustlogo?v_querytype=W&v_shortname=CL1&v_search=https://fingerspot.io"
+                                target="_blank" class="me-3">
+                                <img src="https://fingerspot.io/assets3/img/ssl.png" alt="SSL"
+                                    style="max-height:40px;" />
+                            </a>
+                            <div>
+                                <div style="font-size:8pt">
+                                    Tanda Daftar Kominfo <br />
+                                    Penyelenggara System Elektronik
+                                </div>
+                                <div style="font-size:8pt;font-weight:bold;margin-top:10px">
+                                    003983.01/DJAI.PSE/07/2022
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="font-size:8pt;font-weight:bold;margin-top:10px">
-                    003983.01/DJAI.PSE/07/2022
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="fw-bold mb-3">Informasi</h6>
+                    <ul class="list-unstyled" style="line-height:1.7;">
+                        <li><a href="https://fingerspot.io/about-us" class="text-muted">Tentang Kami</a></li>
+                        <li><a href="https://fingerspot.io/feature" class="text-muted">Fitur</a></li>
+                        <li><a href="https://fingerspot.io/faq" class="text-muted">FAQ</a></li>
+                        <li><a href="https://fingerspot.io/news" class="text-muted">Tahukah Kamu?</a></li>
+                        <li><a href="https://fingerspot.io/privacy-policy" class="text-muted">Kebijakan Privasi</a></li>
+                        <li><a href="https://fingerspot.io/terms-and-conditions" class="text-muted">Syarat &
+                                Ketentuan</a></li>
+                        <li><a href="https://fingerspot.io/device" class="text-muted">Cek Mesin Absensi</a></li>
+                        <li><a href="https://fingerspot.io/check-server" class="text-muted">Cek Server</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <h6 class="fw-bold mb-3">Mesin Absensi Populer</h6>
+                    <ul class="list-unstyled" style="line-height:1.7;">
+                        <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-telapak-tangan-revo-wfv-208BNC"
+                                class="text-muted">Revo WFV-208BNC</a></li>
+                        <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-revo-wf-206bnc"
+                                class="text-muted">Revo WF-206BNC</a></li>
+                        <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-telapak-tangan-Revo-WDV-204BNC"
+                                class="text-muted">Revo WDV-204BNC</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">Hubungi Kami</h6>
+                    <p class="mb-1"><a href="https://fingerspot.io/contact-us" class="text-muted">Kontak Kami</a></p>
+                    <p class="text-muted">customercare@fingerspot.io</p>
+                    <div class="social-icons gap-3 mt-3 justify-content-start">
+                        <a href="https://www.facebook.com/fingerspot.io" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@Fingerspotindonesia" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@fingerspot.io" target="_blank"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/fingerspot.io" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+
+                <div class="border-top mt-4 mb-5 pt-3 text-center">
+                    <small class="text-muted">© Copyright by <b>Fingerspot</b> | All Rights Reserved 2025</small>
                 </div>
             </div>
-            </div>
-
-            <div class="col-lg-2 col-6">
-            <h6 class="fw-bold mb-3">Informasi</h6>
-            <ul class="list-unstyled" style="line-height:1.7;">
-                <li><a href="https://fingerspot.io/about-us" class="text-muted">Tentang Kami</a></li>
-                <li><a href="https://fingerspot.io/feature" class="text-muted">Fitur</a></li>
-                <li><a href="https://fingerspot.io/faq" class="text-muted">FAQ</a></li>
-                <li><a href="https://fingerspot.io/news" class="text-muted">Tahukah Kamu?</a></li>
-                <li><a href="https://fingerspot.io/privacy-policy" class="text-muted">Kebijakan Privasi</a></li>
-                <li><a href="https://fingerspot.io/terms-and-conditions" class="text-muted">Syarat & Ketentuan</a></li>
-                <li><a href="https://fingerspot.io/device" class="text-muted">Cek Mesin Absensi</a></li>
-                <li><a href="https://fingerspot.io/check-server" class="text-muted">Cek Server</a></li>
-            </ul>
-            </div>
-
-            <div class="col-lg-3 col-6">
-            <h6 class="fw-bold mb-3">Mesin Absensi Populer</h6>
-            <ul class="list-unstyled" style="line-height:1.7;">
-                <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-telapak-tangan-revo-wfv-208BNC" class="text-muted">Revo WFV-208BNC</a></li>
-                <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-revo-wf-206bnc" class="text-muted">Revo WF-206BNC</a></li>
-                <li><a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-telapak-tangan-Revo-WDV-204BNC" class="text-muted">Revo WDV-204BNC</a></li>
-            </ul>
-            </div>
-
-            <div class="col-lg-3">
-            <h6 class="fw-bold mb-3">Hubungi Kami</h6>
-            <p class="mb-1"><a href="https://fingerspot.io/contact-us" class="text-muted">Kontak Kami</a></p>
-            <p class="text-muted">customercare@fingerspot.io</p>
-            <div class="social-icons gap-3 mt-3 justify-content-start">
-                <a href="https://www.facebook.com/fingerspot.io" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.youtube.com/@Fingerspotindonesia" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.tiktok.com/@fingerspot.io" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/fingerspot.io" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-            </div>
-
-            <div class="border-top mt-4 mb-5 pt-3 text-center">
-            <small class="text-muted">© Copyright by <b>Fingerspot</b> | All Rights Reserved 2025</small>
-            </div>
-        </div>
         </div>
     </footer>
 
@@ -640,51 +599,6 @@
         </button>
     </div>
 
-    <!-- <section>
-        <form action="">
-            <p class="qty">
-                <label for="qty">Quantity:</label>
-                <button class="qtyminus" aria-hidden="true">&minus;</button>
-                <input type="number" name="qty" id="qty" min="1" max="10" step="1" value="1">
-                <button class="qtyplus" aria-hidden="true">&plus;</button>
-            </p>
-        </form>
-    </section>
-
-    <script>
-        var input = document.querySelector('#qty');
-        var btnminus = document.querySelector('.qtyminus');
-        var btnplus = document.querySelector('.qtyplus');
-        if (input !== undefined && btnminus !== undefined && btnplus !== undefined && input !== null && btnminus !==
-            null &&
-            btnplus !== null) {
-            var min = Number(input.getAttribute('min'));
-            var max = Number(input.getAttribute('max'));
-            var step = Number(input.getAttribute('step'));
-
-            function qtyminus(e) {
-                var current = Number(input.value);
-                var newval = (current - step);
-                if (newval < min) {
-                    newval = min;
-                } else if (newval > max) {
-                    newval = max;
-                }
-                input.value = Number(newval);
-                e.preventDefault();
-            }
-
-            function qtyplus(e) {
-                var current = Number(input.value);
-                var newval = (current + step);
-                if (newval > max) newval = max;
-                input.value = Number(newval);
-                e.preventDefault();
-            }
-            btnminus.addEventListener('click', qtyminus);
-            btnplus.addEventListener('click', qtyplus);
-        }
-    </script> -->
 </body>
 
 <script>
@@ -694,13 +608,8 @@
         const tambahBtn = document.getElementById("tambahmesin");
         const kurangBtn = document.getElementById("kurangmesin");
         tambahBtn.addEventListener("click", () => {
-            // console.log("menambah...");
-            // alert("menambah...")
             let val = parseInt(input.value) || 0;
             input.value = val += 1;
-            // if (typeof onChangeCountDevice === "function") {
-            //   onChangeCountDevice(input);
-            // }
         });
         kurangBtn.addEventListener("click", function() {
             let val = parseInt(input.value) || 0;
@@ -712,15 +621,14 @@
             }
         });
     });
-
     document.addEventListener("DOMContentLoaded", function() {
         console.log("page is loaded...");
         const input = document.getElementById("attendacegpsValue");
         const tambahBtn = document.getElementById("tambahgps");
-        const kurangBtn = document.getElementById("kuranggps                                                                                                                                                                                                                                                                                                                    ");
+        const kurangBtn = document.getElementById(
+            "kuranggps                                                                                                                                                                                                                                                                                                                    "
+            );
         tambahBtn.addEventListener("click", () => {
-            // console.log("menambah...");
-            // alert("menambah...")
             let val = parseInt(input.value) || 0;
             input.value = val += 1;
         });

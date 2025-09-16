@@ -1291,3 +1291,26 @@ section-head.style-4 h2 {
   color: #000;
   font-weight: 600;
 }
+
+/* .navbar.style-4 .nav-link {
+  color: #263238;
+  position: relative;
+}
+
+.navbar.style-4 .nav-link.active,
+.navbar.style-4 .nav-link[aria-current="page"] {
+  color: #3F87B9 !important;
+  font-weight: 600;
+}
+
+.navbar.style-4 .nav-link.active::after,
+.navbar.style-4 .nav-link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #3F87B9;
+  border-radius: 2px;
+} */
