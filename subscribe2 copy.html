@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="keywords" content="HTML5 Template Iteck Multi-Purpose themeforest" />
+  <meta name="description" content="Iteck - Multi-Purpose HTML5 Template" />
+  <meta name="author" content="" />
+  <title>ABSENSI NFIO</title>
+
+  <link rel="shortcut icon" href="assets/pict/fingerspot_logo_circle.png" title="Favicon" sizes="16x16" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/flag-icons@6.7.0/css/flag-icons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/lib/all.min.css" />
+  <link rel="stylesheet" href="assets/css/lib/animate.css" />
+  <link rel="stylesheet" href="assets/css/lib/jquery.fancybox.css" />
+  <link rel="stylesheet" href="assets/css/lib/lity.css" />
+  <link rel="stylesheet" href="assets/css/lib/swiper.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style-nw.css" />
+
+  <style>
+    :root {
+      /* --section-space-y: 70px; */
+      --primary: #3f87b9;
+      --secondary: #55c9f5;
+      --tertiary: #e6eff7;
+
+      --fsio-blue: var(--primary);
+      --fsio-blue2: var(--secondary);
+      --fsio-ice: var(--tertiary);
+
+      --fsio-kuning: #f2cf52;
+      --fsio-kuning2: #ffe99c;
+      --fsio-green: #1c7c2f;
+      --fsio-dark: #0f2942;
+      --fsio-light: #fff7d9;
+      --fsio-ink: #0c2236;
+      --fsio-muted: #5d6b79;
+      --radius: 16px;
+    }
+
+    footer.style-4,
+    .navbar.style-4 {
+      position: relative;
+      z-index: 1;
+    }
+
+    #route-header.compact {
+      padding: 0 !important;
+    }
+
+    .section-space {
+      padding-top: var(--section-space-y);
+      padding-bottom: var(--section-space-y);
+    }
+
+    .section-space-top {
+      padding-top: var(--section-space-y);
+    }
+
+    .section-space-bottom {
+      padding-bottom: var(--section-space-y);
+    }
+
+    .screenshots.style-4.section-space {
+      position: relative;
+    }
+
+    .plan-seg-wrap {
+      position: relative;
+    }
+
+    .plan-seg-wrap::before,
+    .plan-seg-wrap::after {
+      z-index: 2;
+    }
+
+    .plan-segmented {
+      display: flex;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #f4f5f7;
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.06) inset,
+        0 8px 18px rgba(0, 0, 0, 0.04);
+      align-items: center;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      z-index: 1;
+    }
+
+    .plan-segmented::-webkit-scrollbar {
+      display: none;
+    }
+
+    .plan-segmented .seg-btn {
+      border: 0;
+      background: transparent;
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+      white-space: nowrap;
+      color: #1b2a3a;
+      opacity: 0.8;
+    }
+
+    .plan-segmented .seg-btn.is-active {
+      background: #fff;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      opacity: 1;
+      padding: 7px 12px;
+    }
+
+    .plan-seg-wrap::before,
+    .plan-seg-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 40px;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      opacity: 0;
+      border-radius: 999px;
+    }
+
+    .plan-seg-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg,
+          #eef1f5 0%,
+          rgba(238, 241, 245, 0.85) 40%,
+          rgba(238, 241, 245, 0) 100%);
+    }
+
+    .plan-seg-wrap::after {
+      right: 0;
+      background: linear-gradient(270deg,
+          #eef1f5 0%,
+          rgba(238, 241, 245, 0.85) 40%,
+          rgba(238, 241, 245, 0) 100%);
+    }
+
+    .plan-seg-wrap.show-left::before {
+      opacity: 1;
+    }
+
+    .plan-seg-wrap.show-right::after {
+      opacity: 1;
+    }
+
+    .plan-detail-wrap {
+      margin-top: 18px;
+    }
+
+    .plan-detail {
+      display: none;
+    }
+
+    @media (min-width: 721px) {
+      .plan-seg-wrap {
+        display: none;
+      }
+    }
+
+    @media (max-width: 360px) {
+
+      .plan-seg-wrap::before,
+      .plan-seg-wrap::after {
+        width: 56px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .plan-row {
+        display: none;
+      }
+
+      .plan-segmented {
+        display: flex;
+      }
+
+      .feature-table .table-head .col:nth-child(n + 2),
+      .feature-table .table-row .col:nth-child(n + 2) {
+        display: none;
+      }
+
+      .feature-table .table-head .col:nth-child(1),
+      .feature-table .table-row .col:nth-child(1) {
+        display: block;
+        font-weight: 600;
+      }
+
+      .feature-table[data-show="starter"] .table-head .col:nth-child(2),
+      .feature-table[data-show="starter"] .table-row .col:nth-child(2),
+      .feature-table[data-show="basic"] .table-head .col:nth-child(3),
+      .feature-table[data-show="basic"] .table-row .col:nth-child(3),
+      .feature-table[data-show="prime"] .table-head .col:nth-child(4),
+      .feature-table[data-show="prime"] .table-row .col:nth-child(4),
+      .feature-table[data-show="enterprise"] .table-head .col:nth-child(5),
+      .feature-table[data-show="enterprise"] .table-row .col:nth-child(5),
+      .feature-table[data-show="supreme"] .table-head .col:nth-child(6),
+      .feature-table[data-show="supreme"] .table-row .col:nth-child(6) {
+        display: block;
+      }
+
+      .feature-table .table-head .highlight,
+      .table-row .highlight {
+        background: #fff7d9;
+      }
+
+      .plan-detail {
+        display: none;
+        background: #fff;
+        border: 1px solid #e8eef5;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(13, 95, 147, 0.06);
+      }
+
+      .pd-head {
+        padding: 18px 16px;
+        border-bottom: 1px solid #edf2f7;
+      }
+
+      .pd-plan {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+
+      .pd-plan h3 {
+        margin: 0;
+        font-weight: 800;
+        font-size: 22px;
+        color: #0c2236;
+      }
+
+      .pd-price {
+        font-weight: 800;
+        font-size: 22px;
+        color: #0c2236;
+      }
+
+      .pd-sub {
+        margin-top: 6px;
+        color: #5d6b79;
+        font-size: 14px;
+      }
+
+      .pd-cta {
+        margin-top: 12px;
+      }
+
+      .pd-cta .btn {
+        border-radius: 999px;
+        font-weight: 700;
+        padding: 10px 18px;
+        background: #3f87b9;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .pd-section {
+        background: #f9fbfd;
+        padding: 12px 16px;
+        font-weight: 800;
+        color: #0c2236;
+        border-top: 1px solid #e1ecf6;
+      }
+
+      .pd-list {
+        padding: 0;
+      }
+
+      .pd-row {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 12px;
+        padding: 14px 16px;
+        border-top: 1px solid #edf2f7;
+      }
+
+      .pd-label {
+        color: #263238;
+      }
+
+      .pd-help {
+        display: block;
+        color: #5d6b79;
+        font-size: 12.5px;
+        margin-top: 2px;
+      }
+
+      .pd-value {
+        text-align: right;
+        color: #0c2236;
+        font-weight: 600;
+      }
+
+      .pd-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .pd-badge.ok {
+        background: #e8f7ef;
+        color: #1c7c2f;
+      }
+
+      .pd-badge.no {
+        background: #fae7e9;
+        color: #d92d20;
+      }
+
+      /* .pricing .plan-row {
+          display: none !important;
+        } */
+      .feature-table .table-head,
+      .feature-table .table-row {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr !important;
+      }
+
+      .feature-table .table-head .col,
+      .feature-table .table-row .col {
+        display: none !important;
+      }
+
+      .feature-table .table-head .col:first-child,
+      .feature-table .table-row .col:first-child {
+        display: block !important;
+      }
+
+      .feature-table[data-show="starter"] .table-head .col:nth-child(2),
+      .feature-table[data-show="starter"] .table-row .col:nth-child(2),
+      .feature-table[data-show="basic"] .table-head .col:nth-child(3),
+      .feature-table[data-show="basic"] .table-row .col:nth-child(3),
+      .feature-table[data-show="prime"] .table-head .col:nth-child(4),
+      .feature-table[data-show="prime"] .table-row .col:nth-child(4),
+      .feature-table[data-show="enterprise"] .table-head .col:nth-child(5),
+      .feature-table[data-show="enterprise"] .table-row .col:nth-child(5),
+      .feature-table[data-show="supreme"] .table-head .col:nth-child(6),
+      .feature-table[data-show="supreme"] .table-row .col:nth-child(6) {
+        display: block !important;
+      }
+
+      .feature-table[data-show="starter"] .table-row:has(.col:nth-child(2) .x),
+      .feature-table[data-show="basic"] .table-row:has(.col:nth-child(3) .x),
+      .feature-table[data-show="prime"] .table-row:has(.col:nth-child(4) .x),
+      .feature-table[data-show="enterprise"] .table-row:has(.col:nth-child(5) .x),
+      .feature-table[data-show="supreme"] .table-row:has(.col:nth-child(6) .x) {
+        display: none;
+      }
+
+      .feature .dot {
+        display: none;
+      }
+
+      .feature {
+        gap: 0;
+      }
+
+      .plan-row {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .plan-row .plan-item {
+        display: none !important;
+      }
+
+      .plan-row .plan-item.is-active {
+        /* display: block !important;
+          text-align: left;
+          padding: 12px 14px;
+          border-radius: 12px; */
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 16px;
+        border-radius: 12px;
+        margin-top: 20px;
+        background: var(--tertiary);
+      }
+
+      .plan-row .plan-item.is-active .plan-name {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .plan-row .plan-item.is-active .plan-price {
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+
+      .plan-row .plan-item.is-active .note {
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      /* .plan-row .plan-item.is-active .note, */
+      .plan-row .plan-item.is-active .badge,
+      .plan-row .plan-item.is-active .ribbon {
+        display: none;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .pricing.fsio .container {
+        padding-inline: 14px;
+      }
+    }
+
+    .claim-voucher {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: 52px;
+    }
+
+    .claim-voucher.right {
+      right: 10px;
+    }
+
+    .claim-image {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      z-index: 999;
+      width: 16%;
+      animation: pulse 2s infinite;
+    }
+  </style>
+</head>
+
+<body data-page="home">
+  <div class="top-navbar style-4">
+    <div class="container">
+      <div class="content text-white d-flex justify-content-end align-items-center" data-bs-display="static">
+        <div class="dropdown change_language">
+          <button class="dropdown-toggle" type="button" id="dropdownLangBtn" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span id="btn-flag" class="fi fi-id fis rounded-circle"></span>
+            <span id="btn-label" class="lang-label">Bahasa Indonesia</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="dropdownLangBtn">
+            <li>
+              <a class="dropdown-item active" href="#" data-lang="id" data-label="Bahasa Indonesia"
+                data-flag="fi fi-id fis rounded-circle">
+                <span class="fi fi-id fis rounded-circle"></span>
+                <span class="lang-label">Bahasa Indonesia</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" data-lang="en" data-label="English"
+                data-flag="fi fi-us fis rounded-circle">
+                <span class="fi fi-us fis rounded-circle"></span>
+                <span class="lang-label">English</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light style-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/pict/logo_text_grey.png" alt="Fingerspot" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="features.html">Fitur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="price.html">Harga</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="device.html">Mesin Absensi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="check-device.html">Cek Mesin Absensi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Kontak Kami</a>
+          </li>
+        </ul>
+
+        <div class="nav-side">
+          <div class="d-flex align-items-center">
+            <a href="#" class="search-icon me-1"><i class="fa fa-search"></i></a>
+
+            <div class="nav-item dropdown icon-wishlist">
+              <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="search-icon me-1">
+                <i class="fa fa-heart"></i>
+              </a>
+              <div class="dropdown-menu wishlist">
+                <div class="title">
+                  Produk Ditambahkan
+                  <span class="bi bi-question-circle me-10" style="color: #263238; font-size: 14px; float: right"
+                    data-toggle="tooltip" data-bs-original-title="Ceklist item untuk melakukan komparasi"></span>
+                </div>
+                <ul id="wishlist" aria-labelledby="wishlist"></ul>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-wishlisit disabled" id="btn-request-quote" data-slugs="">Minta
+                    Penawaran</a>
+                  <a href="#" class="btn btn-sm btn-compare disabled" id="btn-compare" data-slugs="">Komparasi</a>
+                </div>
+              </div>
+              <span class="badge-wishlist hide"></span>
+            </div>
+
+            <a href="https://fingerspot.io/price/cart" class="search-icon me-1">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="badge-wishlist-cart hide"></span>
+            </a>
+
+            <button id="btnLogin" class="btn rounded-pill btn-main sm-butn" targer="_blank">
+              <span>Masuk</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <section class="pt-5 pb-1" style="background:#fff;">
+    <div class="container">
+      <div class="section-head text-center style-5 mb-40">
+        <h2 class="mb-20" style="color:#000;">Paket yang <span>kami tawarkan</span></h2>
+        <p style="margin:0;">
+          Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga spesial untukmu 🤩
+        </p>
+      </div>
+
+      <div style="
+        border-radius:14px;
+        padding:14px 18px;
+        background:#E9F3FB;
+        border:1px solid #D0E6F5;
+        display:flex;align-items:center;justify-content:space-between;
+        gap:16px;flex-wrap:wrap;
+      ">
+        <div style="flex:1 1 360px;min-width:260px;">
+          <h3 style="margin:0 0 6px;font-size:clamp(18px,2.6vw,26px);line-height:1.2;font-weight:800;color:#0C2236;">
+            Voucher Spesial <span style="color:#016DB5;">Rp225.000</span>
+          </h3>
+          <p style="margin:0 0 10px;font-size:14px;color:#2F4A60;opacity:.95;">
+            Klaim sekarang dan nikmati penawaran terbaik untuk paket pilihanmu.
+          </p>
+
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+            <a href="#klaim-voucher" onclick="if(window.claimVoucher) claimVoucher();"
+              style="
+                display:inline-flex;align-items:center;gap:8px;
+                background:#016DB5;color:#fff;text-decoration:none;
+                border-radius:999px;padding:9px 16px;font-weight:800;font-size:14px;
+                box-shadow:0 6px 14px rgba(1,109,181,.25);transition:transform .15s ease, box-shadow .15s ease;
+              "
+              onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 18px rgba(1,109,181,.32)';"
+              onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 14px rgba(1,109,181,.25)';">
+              🎁 Klaim Voucher
+            </a>
+
+            <a href="#syarat" style="font-size:12px;color:#2F4A60;text-decoration:underline;">S&K berlaku</a>
+          </div>
+        </div>
+
+        <div style="flex:0 0 auto;text-align:center;">
+          <img src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+              alt="Ilustrasi voucher"
+              style="width:clamp(96px,16vw,136px);height:auto;display:block;" />
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:center;margin-top:14px;">
+        <div style="flex:1;height:2px;background:#d3e6f7;margin-right:10px;"></div>
+        <h4 class="fw-bold" style="margin:0;white-space:nowrap;">
+          <span style="color:#016DB5;">Layanan Paket</span> Mesin Absensi
+        </h4>
+        <div style="flex:1;height:2px;background:#d3e6f7;margin-left:10px;"></div>
+      </div>
+    </div>
+    <script>
+      function claimVoucher(){
+        const target = document.querySelector('#syarat') || document.body;
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    </script>
+  </section> -->
+
+<!-- <section class="pt-5 pb-1" style="background:#fff;">
+  <div class="container">
+    <div class="section-head text-center style-5 mb-40">
+      <h2 class="mb-20" style="color:#000;">Paket yang <span>kami tawarkan</span></h2>
+      <p style="margin:0;">Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga spesial untukmu 🤩</p>
+    </div>
+
+    <div style="
+      border-radius:14px;
+      padding:18px 20px;
+      background:#E9F3FB;
+      border:1px solid #D0E6F5;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    ">
+      <div style="flex:1 1 300px;min-width:220px;">
+        <h3 style="margin:0 0 6px;font-size:clamp(18px,2.8vw,26px);line-height:1.2;font-weight:800;color:#0C2236;">
+          Voucher Spesial <span style="color:#016DB5;">Rp225.000</span>
+        </h3>
+        <p style="margin:0 0 10px;font-size:14px;color:#2F4A60;opacity:.95;">
+          Klaim sekarang dan nikmati penawaran terbaik untuk paket pilihanmu.
+        </p>
+        <button onclick="claimVoucher()" style="
+          background:#016DB5;
+          color:#fff;
+          border:0;
+          border-radius:999px;
+          padding:9px 16px;
+          font-weight:700;
+          font-size:14px;
+          cursor:pointer;
+          box-shadow:0 4px 10px rgba(1,109,181,.25);
+          transition:transform .15s ease, box-shadow .15s ease;
+        "
+        onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 16px rgba(1,109,181,.3)';"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 10px rgba(1,109,181,.25)';">
+          🎁 Klaim Voucher
+        </button>
+      </div>
+
+      <div style="flex:0 0 auto;text-align:center;">
+        <img src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+             alt="Voucher Rp225.000"
+             style="width:clamp(110px,20vw,150px);height:auto;display:block;" />
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;margin-top:16px;">
+      <div style="flex:1;height:2px;background:#d3e6f7;margin-right:10px;"></div>
+      <h4 class="fw-bold" style="margin:0;white-space:nowrap;">
+        <span style="color:#016DB5;">Layanan Paket</span> Mesin Absensi
+      </h4>
+      <div style="flex:1;height:2px;background:#d3e6f7;margin-left:10px;"></div>
+    </div>
+  </div>
+</section> -->
+
+  <!-- <section class="pt-5 pb-1" style="background:#fff;">
+  <div class="container">
+    <div class="section-head text-center style-5 mb-40">
+      <h2 class="mb-20" style="color:#000;">Paket yang <span>kami tawarkan</span></h2>
+      <p style="margin:0;">Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga spesial untukmu 🤩</p>
+    </div>
+
+    <div style="
+      position:relative;
+      border-radius:18px;
+      padding:22px 24px;
+      background:#F7FBFF;
+      border:1px solid #E2EEF8;
+      box-shadow:0 8px 26px rgba(1,109,181,.10);
+      overflow:hidden;
+    ">
+      <div style="position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#3FA6E0,#016DB5);"></div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+        <div style="flex:1 1 330px;min-width:260px;">
+          <div style="
+            display:inline-block;
+            padding:6px 12px;
+            border-radius:999px;
+            background:#E7F3FD;
+            color:#0A72B8;
+            font-size:12px;
+            font-weight:700;
+            margin:6px 0 10px;
+          ">Untuk Pengguna Baru</div>
+
+          <h3 style="margin:0 0 8px;font-size:clamp(20px,3.2vw,30px);line-height:1.2;color:#0C2236;">
+            Voucher Spesial <span style="color:#016DB5;white-space:nowrap;">Rp225.000</span>
+          </h3>
+
+          <p style="margin:0 0 14px;font-size:clamp(12px,2vw,15px);color:#2F4A60;">
+            Klaim sekarang juga dan nikmati penawaran terbaik untuk paket pilihanmu!
+          </p>
+
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin:0 0 14px;">
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#2F4A60;">
+              ✅ Berlaku instan
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#2F4A60;">
+              ✅ Tanpa kartu kredit
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#2F4A60;">
+              ✅ Semua paket
+            </span>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <button onclick="claimVoucher()" aria-label="Klaim Voucher Rp225.000" style="
+              background:linear-gradient(135deg,#1A92D0,#016DB5);
+              color:#fff;border:0;border-radius:999px;
+              padding:11px 18px;font-weight:800;font-size:14px;cursor:pointer;
+              display:inline-flex;align-items:center;gap:8px;
+              box-shadow:0 8px 18px rgba(1,109,181,.25);
+              transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+            " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 24px rgba(1,109,181,.30)';"
+               onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 18px rgba(1,109,181,.25)';">
+              🎁 Klaim Voucher
+            </button>
+
+            <a href="#syarat" style="font-size:12px;color:#5A748C;text-decoration:underline;">S&K berlaku</a>
+          </div>
+        </div>
+
+        <div style="flex:0 0 auto;text-align:center;">
+          <img
+            src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+            alt="Voucher Rp225.000"
+            style="width:clamp(150px,24vw,210px);height:auto;display:block;filter:drop-shadow(0 10px 20px rgba(1,109,181,.25));"
+          />
+        </div>
+      </div>
+
+      <div style="position:absolute;right:-80px;bottom:-80px;width:220px;height:220px;border-radius:50%;
+                  background:radial-gradient(circle at 30% 30%, rgba(1,109,181,.18), rgba(1,109,181,0) 60%);"></div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;margin-top:20px;">
+      <div style="flex:1;height:2px;background:#d3e6f7;margin-right:10px;"></div>
+      <h4 class="fw-bold" style="margin:0;white-space:nowrap;">
+        <span style="color:#016DB5;">Layanan Paket</span> Mesin Absensi
+      </h4>
+      <div style="flex:1;height:2px;background:#d3e6f7;margin-left:10px;"></div>
+    </div>
+  </div>
+</section> -->
+
+  <!-- <section class="pt-5 pb-1" style="background:#fff;">
+    <div class="container">
+      <div class="section-head text-center style-5 mb-40">
+        <h2 class="mb-20" style="color:#000;">Paket yang <span>kami tawarkan</span></h2>
+        <p style="margin:0;">Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga spesial
+          untukmu 🤩</p>
+      </div>
+
+      <div style="
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          gap:24px;
+          flex-wrap:wrap;
+          background: linear-gradient(135deg,#1A92D0,#016DB5);
+          border-radius:20px;
+          padding:32px 28px;
+          box-shadow:0 12px 28px rgba(0,0,0,.12);
+          color:#fff;
+          position:relative;
+          overflow:hidden;
+        ">
+        <div style="flex:1 1 320px; min-width:260px; z-index:1;">
+          <div style="
+          display:inline-block;
+          padding:6px 14px;
+          border-radius:999px;
+          background:rgba(255,255,255,.2);
+          font-size:12px;
+          font-weight:600;
+          margin-bottom:10px;
+        ">
+            Untuk Pengguna Baru
+          </div>
+          <h3 style="margin:0 0 10px; font-size: clamp(22px,3vw,30px); font-weight:800; line-height:1.2;">
+            Voucher Spesial <span style="white-space:nowrap;">Rp225.000</span>
+          </h3>
+          <p style="margin:0 0 18px; font-size:15px; opacity:.95;">
+            Klaim sekarang juga dan nikmati penawaran terbaik untuk paket pilihanmu!
+          </p>
+          <button onclick="claimVoucher()" style="
+          background:#fff;
+          color:#016DB5;
+          border:0;
+          border-radius:999px;
+          padding:12px 22px;
+          font-weight:700;
+          font-size:15px;
+          cursor:pointer;
+          box-shadow:0 6px 18px rgba(0,0,0,.15);
+          display:inline-flex;
+          align-items:center;
+          gap:8px;
+          transition:all .2s ease;
+        " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 24px rgba(0,0,0,.2)';"
+            onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 18px rgba(0,0,0,.15)';">
+            🎁 Klaim Voucher
+          </button>
+        </div>
+
+        <div style="flex:0 0 auto; text-align:center; z-index:1;">
+          <img src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+            alt="Voucher Rp225.000"
+            style="width: clamp(160px, 26vw, 220px); height:auto; display:block; filter:drop-shadow(0 8px 18px rgba(0,0,0,.2));" />
+        </div>
+
+        <div
+          style="position:absolute; top:-40%; right:-20%; width:300px; height:300px; background:#fff; opacity:.1; border-radius:50%; filter:blur(80px);">
+        </div>
+        <div
+          style="position:absolute; bottom:-30%; left:-10%; width:240px; height:240px; background:#fff; opacity:.08; border-radius:50%; filter:blur(60px);">
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:center;margin-top:22px;">
+        <div style="flex:1;height:2px;background:#d3e6f7;margin-right:10px;"></div>
+        <h4 class="fw-bold" style="margin:0;white-space:nowrap;">
+          <span style="color:#016DB5;">Layanan Paket</span> Mesin Absensi
+        </h4>
+        <div style="flex:1;height:2px;background:#d3e6f7;margin-left:10px;"></div>
+      </div>
+    </div>
+  </section> -->
+
+<!-- <section class="pt-4 pb-1" style="background:#fff;">
+  <div class="container">
+    <div class="section-head text-center style-5" style="margin-bottom:20px;">
+      <h2 class="mb-10" style="color:#000;margin-bottom:8px;">Paket yang <span>kami tawarkan</span></h2>
+      <p style="margin:0;font-size:14px;">Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga spesial untukmu 🤩</p>
+    </div>
+
+    <div style="
+      border-radius:14px;
+      background:linear-gradient(180deg,#F4F9FF 0%, #E9F3FB 100%);
+      border:1px solid #D7E8F6;
+      box-shadow:0 6px 12px rgba(12,34,54,.05);
+      padding:12px 16px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:10px;flex-wrap:wrap;
+    ">
+      <div style="flex:1 1 420px;min-width:260px;">
+        <div style="
+          display:inline-block;
+          background:#016DB5;
+          color:#fff;
+          font-size:11px;
+          font-weight:700;
+          padding:4px 10px;
+          border-radius:999px;
+          margin-bottom:6px;
+          ">
+          🎁 Khusus Pengguna Baru
+        </div>
+
+        <h3 style="
+          margin:0 0 4px;
+          font-size:clamp(16px,2.1vw,22px);
+          line-height:1.15;
+          font-weight:800;
+          color:#0C2236;
+          ">
+          Voucher Spesial <span style="color:#016DB5;">Rp225.000</span>
+        </h3>
+        <p style="margin:0;font-size:13px;color:#2F4A60;opacity:.95;">
+          Klaim sekarang dan nikmati penawaran terbaik untuk paket pilihanmu —
+          <a href="#klaim-voucher" onclick="if(window.claimVoucher) claimVoucher();"
+             style="color:#016DB5;font-weight:800;text-decoration:underline;">klaim sekarang juga!</a>
+        </p>
+      </div>
+
+      <div style="flex:0 0 auto;text-align:center;">
+        <img
+          src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+          alt="Ilustrasi voucher"
+          style="width:clamp(80px,12vw,110px);height:auto;display:block;filter:drop-shadow(0 4px 8px rgba(1,109,181,.10));">
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;margin-top:12px;">
+      <div style="flex:1;height:2px;background:#d3e6f7;margin-right:10px;"></div>
+      <h4 class="fw-bold" style="margin:0;white-space:nowrap;font-size:18px;">
+        <span style="color:#016DB5;">Layanan Paket</span> Mesin Absensi
+      </h4>
+      <div style="flex:1;height:2px;background:#d3e6f7;margin-left:10px;"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function claimVoucher(){
+    const target = document.querySelector('#syarat') || document.body;
+    target.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+</script> -->
+
+<!-- <section class="pt-4 pb-1" style="background:#fff;">
+  <div class="container">
+    <div class="section-head text-center style-5" style="margin-bottom:20px;">
+      <h2 class="mb-10" style="color:#000;margin-bottom:8px;">Paket yang <span>kami tawarkan</span></h2>
+      <p style="margin:0;font-size:14px;">Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga spesial untukmu 🤩</p>
+    </div>
+
+    <div style="
+      border-radius:16px;
+      background:#3F87B9;
+      border:1px solid #2f6c99;
+      box-shadow:0 6px 12px rgba(63,135,185,.25);
+      padding:14px 16px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;flex-wrap:wrap;color:#fff;
+    ">
+      <div style="flex:1 1 460px;min-width:260px;">
+        <div style="
+          display:inline-flex;align-items:center;gap:6px;
+          background:rgba(255,255,255,.2);
+          color:#fff;border-radius:999px;
+          padding:4px 10px;font-size:11px;font-weight:700;margin-bottom:6px;
+        ">🎁 Khusus Pengguna Baru</div>
+
+        <h3 style="margin:0 0 6px;font-size:clamp(16px,2.1vw,22px);line-height:1.2;font-weight:800;color:#fff;">
+          Voucher Spesial <span style="color:#FFD43B;">Rp225.000</span>
+        </h3>
+
+        <p style="margin:0 0 10px;font-size:13px;opacity:.95;">
+          Klaim sekarang dan nikmati penawaran terbaik untuk paket pilihanmu —
+          <a href="#klaim-voucher" onclick="if(window.claimVoucher) claimVoucher();"
+             style="color:#FFD43B;font-weight:800;text-decoration:underline;">klaim sekarang juga!</a>
+        </p>
+
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+          <a href="#klaim-voucher" onclick="if(window.claimVoucher) claimVoucher();"
+             style="
+               display:inline-flex;align-items:center;gap:8px;
+               background:#fff;color:#3F87B9;text-decoration:none;
+               border-radius:999px;padding:8px 14px;font-weight:800;font-size:13px;
+               box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .15s ease, box-shadow .15s ease;
+             "
+             onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 14px rgba(0,0,0,.25)';"
+             onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 10px rgba(0,0,0,.15)';">
+            🎁 Klaim Voucher
+          </a>
+          <a href="#syarat" style="font-size:12px;color:#E9F3FB;text-decoration:underline;">S&K berlaku</a>
+        </div>
+      </div>
+
+      <div style="flex:0 0 auto;text-align:center;">
+        <img
+          src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+          alt="Ilustrasi voucher"
+          style="width:clamp(84px,12vw,110px);height:auto;display:block;filter:drop-shadow(0 6px 12px rgba(0,0,0,.15));">
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;margin-top:12px;">
+      <div style="flex:1;height:2px;background:#d3e6f7;margin-right:10px;"></div>
+      <h4 class="fw-bold" style="margin:0;white-space:nowrap;font-size:18px;">
+        <span style="color:#016DB5;">Layanan Paket</span> Mesin Absensi
+      </h4>
+      <div style="flex:1;height:2px;background:#d3e6f7;margin-left:10px;"></div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <script>
+  function claimVoucher(){
+    const target=document.querySelector('#syarat')||document.body;
+    target.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+</script> -->
+
+
+  <section class="pt-5 pb-1" style="background: #fff">
+    <div class="container">
+      <div class="section-head text-center style-5 mb-40">
+        <h2 class="mb-20" style="color: #000"> Paket yang <span> kami tawarkan </span> </h2>
+        <p>
+          Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran dengan harga spesial untukmu 🤩 </p>
+      </div>
+      <table class="table m-0">
+        <tbody>
+          <tr>
+            <td style="width: 20%; border-top-left-radius: 10px; border: none; background-color: #016DB5">
+              <button class="claim-voucher" onclick="claimVoucher()">
+                <img class="claim-image "
+                  src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+                  style="height: 170px; width: 182px;">
+              </button>
+            </td>
+            <td style="color: white; font-size: 22px; background-color: #016DB5; text-align: center; padding: 20px;">
+              Voucher spesial untuk pengguna baru - klaim sekarang juga!</td>
+            <td style="width: 20%; border-top-right-radius: 10px; border: none; background-color: #016DB5">
+              <button class="claim-voucher right" onclick="claimVoucher()">
+                <img class="claim-image "
+                  src="https://fingerspot.io/assets3/img/custom/about/absensi-online-fingerspot-io-voucher.png"
+                  style="height: 170px; width: 182px;">
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <div style="flex: 1; height: 2px; background: #d3e6f7; margin-right: 10px;"></div>
+        <h4 class="fw-bold" style="margin: 0; white-space: nowrap;">
+          <span style="color: #016DB5;">Layanan Paket</span> Mesin Absensi
+        </h4>
+        <div style="flex: 1; height: 2px; background: #d3e6f7; margin-left: 10px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="text-center mb-4">
+      <h1 class="fw-bold">
+        Paket yang
+        <span style="color: var(--fsio-blue)">kami tawarkan</span>
+      </h1>
+      <p class="text-muted">
+        Pilih paket yang sesuai dengan kebutuhanmu dan nikmati penawaran
+        dengan harga spesial untukmu 🥰
+      </p>
+    </div>
+    <div class="d-flex justify-content-between align-items-center p-3 rounded mb-4" style="
+            background: var(--fsio-blue2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+          ">
+      <div class="d-none d-md-block">
+        <img src="assets/pict/voucher-left.png" alt="Voucher" style="max-height: 90px" />
+      </div>
+      <div class="flex-fill text-center">
+        <h5 class="mb-0 fw-semibold text-white">
+          Voucher spesial untuk pengguna baru - klaim sekarang juga!
+        </h5>
+      </div>
+      <div class="d-none d-md-block">
+        <img src="assets/pict/voucher-right.png" alt="Voucher" style="max-height: 90px" />
+      </div>
+    </div> -->
+
+  <style>
+    :root {
+      --fsio-blue: #3f87b9;
+      --fsio-blue2: #3f87b9;
+      --fsio-kuning: #ffd85c;
+      --fsio-kuning2: #ffe99c;
+      --fsio-green: #1c7c2f;
+      --fsio-dark: #0f2942;
+      --fsio-light: #fff7d9;
+      --fsio-ice: #b8e2ff;
+      --fsio-ink: #0c2236;
+      --fsio-muted: #5d6b79;
+      --radius: 16px;
+    }
+  </style>
+
+  <section class="pricing fsio pt-5" id="harga">
+    <div class="container">
+      <!-- <div class="section-head">
+          <p>Pilih paket yang pas, bisa upgrade kapan saja.</p>
+        </div> -->
+
+      <div class="plan-seg-wrap">
+        <div class="plan-segmented" role="tablist" aria-label="Pilih paket (mobile)">
+          <button class="seg-btn" data-plan="starter" aria-selected="false">
+            Starter
+          </button>
+          <button class="seg-btn" data-plan="basic" aria-selected="false">
+            Basic
+          </button>
+          <button class="seg-btn is-active" data-plan="prime" aria-selected="true">
+            Prime
+          </button>
+          <button class="seg-btn" data-plan="enterprise" aria-selected="false">
+            Enterprise
+          </button>
+          <button class="seg-btn" data-plan="supreme" aria-selected="false">
+            Supreme
+          </button>
+        </div>
+      </div>
+
+      <div class="plan-row" role="tablist" aria-label="Pilihan paket">
+        <button class="plan-item" data-plan="starter" role="tab" aria-selected="false">
+          <span class="plan-name">Starter</span>
+          <span class="plan-price"><sup>Rp</sup> 67K <span class="per">/Bulan</span></span>
+          <small class="note">Pembayaran 3 Bulan Pertama</small>
+        </button>
+
+        <button class="plan-item" data-plan="basic" role="tab" aria-selected="false">
+          <span class="plan-name">Basic</span>
+          <span class="plan-price"><sup>Rp</sup> 50K <span class="per">/Bulan</span></span>
+          <small class="note">Pembayaran 6 Bulan</small>
+        </button>
+
+        <button class="plan-item is-active" data-plan="prime" role="tab" aria-selected="true"
+          aria-controls="prime-panel">
+          <span class="ribbon">Paket Pilihanmu</span>
+          <span class="plan-name">Prime</span>
+          <span class="plan-price"><sup>Rp</sup> 42K <span class="per">/Bulan</span></span>
+          <small class="note">Pembayaran Tahunan</small>
+          <span class="badge alt">Populer</span>
+        </button>
+
+        <button class="plan-item" data-plan="enterprise" role="tab" aria-selected="false">
+          <span class="plan-name">Enterprise</span>
+          <span class="plan-price"><sup>Rp</sup> 60K <span class="per">/Bulan</span></span>
+          <small class="note">Pembayaran Tahunan</small>
+        </button>
+
+        <button class="plan-item" data-plan="supreme" role="tab" aria-selected="false">
+          <span class="plan-name">Supreme</span>
+          <span class="plan-price"><sup>Rp</sup> 75K <span class="per">/Bulan</span></span>
+          <small class="note">Pembayaran Tahunan</small>
+          <span class="badge alt">Best Choice</span>
+        </button>
+      </div>
+
+      <div class="feature-table" role="region" aria-live="polite">
+        <div class="table-head">
+          <div class="col feature-title">Fitur yang akan Anda dapatkan :</div>
+          <div class="col ta-c">Starter</div>
+          <div class="col ta-c">Basic</div>
+          <div class="col ta-c highlight" id="prime-col">Prime</div>
+          <div class="col ta-c">Enterprise</div>
+          <div class="col ta-c">Supreme</div>
+        </div>
+
+        <div class="table-row">
+          <div class="col feature">
+            <span class="dot"></span>Jumlah Mesin Absensi yang Terhubung
+          </div>
+          <div class="col ta-c">1 Mesin Absensi</div>
+          <div class="col ta-c">1 Mesin Absensi</div>
+          <div class="col ta-c highlight">1 Mesin Absensi</div>
+          <div class="col ta-c">1 Mesin Absensi</div>
+          <div class="col ta-c">1 Mesin Absensi</div>
+        </div>
+
+        <div class="table-row alt">
+          <div class="col feature">
+            <span class="dot"></span>Pengaturan Jadwal Kerja Karyawan
+            (Flexibel, Shift, Tetap)
+          </div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c highlight"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+        </div>
+
+        <div class="table-row">
+          <div class="col feature">
+            <span class="dot"></span>Monitoring Kehadiran Harian (Daily
+            Monitoring)
+          </div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c highlight"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+        </div>
+
+        <div class="table-row alt">
+          <div class="col feature">
+            <span class="dot"></span>Melihat Data Kehadiran dari Aplikasi
+            Karyawan
+          </div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c highlight"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+          <div class="col ta-c"><i class="check"></i></div>
+        </div>
+
+        <div class="subhead">FITUR TAMBAHAN :</div>
+
+        <div class="table-row">
+          <div class="col feature">
+            <span class="dot"></span>Jumlah Karyawan yang Dapat Ditambahkan di
+            Akun Perusahaan (Tidak Terakumulasi)
+          </div>
+          <div class="col ta-c">100 Karyawan / Akun</div>
+          <div class="col ta-c">200 Karyawan / Akun</div>
+          <div class="col ta-c highlight">300 Karyawan / Akun</div>
+          <div class="col ta-c">600 Karyawan / Akun</div>
+          <div class="col ta-c">1200 Karyawan / Akun</div>
+        </div>
+
+        <div class="table-row alt">
+          <div class="col feature">
+            <span class="dot"></span>Fitur Absensi GPS di Aplikasi Karyawan
+          </div>
+          <div class="col ta-c"><i class="x"></i></div>
+          <div class="col ta-c">2 Karyawan / Akun</div>
+          <div class="col ta-c highlight">2 Karyawan / Akun</div>
+          <div class="col ta-c">2 Karyawan / Akun</div>
+          <div class="col ta-c">4 Karyawan / Akun</div>
+        </div>
+
+        <div class="table-row">
+          <div class="col feature">
+            <span class="dot"></span>Notifikasi Kehadiran Secara Langsung
+            (Realtime)
+          </div>
+          <div class="col ta-c"><i class="x"></i></div>
+          <div class="col ta-c">2 Karyawan / Akun</div>
+          <div class="col ta-c highlight">2 Karyawan / Akun</div>
+          <div class="col ta-c">2 Karyawan / Akun</div>
+          <div class="col ta-c">4 Karyawan / Akun</div>
+        </div>
+
+        <div class="table-row alt">
+          <div class="col feature">
+            <span class="dot"></span>Maksimum Absensi GPS Per Hari
+          </div>
+          <div class="col ta-c"><i class="x"></i></div>
+          <div class="col ta-c">10x / hari / karyawan</div>
+          <div class="col ta-c highlight">10x / hari / karyawan</div>
+          <div class="col ta-c">10x / hari / karyawan</div>
+          <div class="col ta-c">10x / hari / karyawan</div>
+        </div>
+
+        <div class="table-row">
+          <div class="col feature">
+            <span class="dot"></span>Fitur Pengajuan Izin dari Aplikasi
+            Karyawan
+          </div>
+          <div class="col ta-c"><i class="x"></i></div>
+          <div class="col ta-c">2 Karyawan / Akun</div>
+          <div class="col ta-c highlight">2 Karyawan / Akun</div>
+          <div class="col ta-c">2 Karyawan / Akun</div>
+          <div class="col ta-c">4 Karyawan / Akun</div>
+        </div>
+
+        <div class="table-row alt">
+          <div class="col feature">
+            <span class="dot"></span>Fitur Pantau Lokasi di Aplikasi Karyawan
+          </div>
+          <div class="col ta-c"><i class="x"></i></div>
+          <div class="col ta-c"><i class="x"></i></div>
+          <div class="col ta-c highlight"><i class="x"></i></div>
+          <div class="col ta-c">2 Karyawan / Akun</div>
+          <div class="col ta-c">4 Karyawan / Akun</div>
+        </div>
+
+        <div class="table-row">
+          <div class="col feature">
+            <span class="dot"></span>Fitur Pengajuan Lembur dari Aplikasi
+            Karyawan
+          </div>
+          <div class="col ta-c"><i class="x"></i></div>
+          <div class="col ta-c"><i class="x"></i></div>
+          <div class="col ta-c highlight"><i class="x"></i></div>
+          <div class="col ta-c">2 Karyawan / Akun</div>
+          <div class="col ta-c">4 Karyawan / Akun</div>
+        </div>
+      </div>
+
+      <div class="plan-detail-wrap">
+        <div id="planDetail" class="plan-detail"></div>
+      </div>
+
+      <div class="cta-row pb-5">
+        <a href="subscribe.html" class="btn fsio-btn">Oke, Selanjutnya</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="position-sticky style-4 bg-light pt-5 section-space-top">
+    <div class="container">
+      <div class="row gy-4 gx-5 justify-content-between">
+        <div class="col-lg-4">
+          <div class="foot-info">
+            <div class="foot-logo mb-3">
+              <img src="https://fingerspot.io/assets3/img/new_logo/logo_text_grey.png" alt="Fingerspot" width="156"
+                height="25" />
+            </div>
+            <p class="text-muted" style="text-align: justify">
+              Jadi kapan mulai online-kan mesin absensimu? Berbagai kemudahan
+              bisa kamu dapatkan seperti: bisa download data absensi dari mana
+              saja, registrasi & pengaturan jadwal kerja dari mana saja,
+              hingga bisa menikmati fitur Daily Monitoring.
+            </p>
+
+            <div class="d-flex align-items-center mt-3">
+              <a href="https://pse.kominfo.go.id/tdpse-detail/5437" target="_blank" class="me-1">
+                <img src="https://fingerspot.io/assets3/img/custom/certification/kominfo_new.png" alt="Kominfo"
+                  style="max-height: 50px" />
+              </a>
+              <a href="https://secure.trust-provider.com/ttb_searcher/trustlogo?v_querytype=W&v_shortname=CL1&v_search=https://fingerspot.io"
+                target="_blank" class="me-3">
+                <img src="https://fingerspot.io/assets3/img/ssl.png" alt="SSL" style="max-height: 40px" />
+              </a>
+              <div>
+                <div style="font-size: 8pt">
+                  Tanda Daftar Kominfo <br />
+                  Penyelenggara System Elektronik
+                </div>
+                <div style="font-size: 8pt; font-weight: bold; margin-top: 10px">
+                  003983.01/DJAI.PSE/07/2022
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h6 class="fw-bold mb-3">Informasi</h6>
+          <ul class="list-unstyled" style="line-height: 1.7">
+            <li>
+              <a href="https://fingerspot.io/about-us" class="text-muted">Tentang Kami</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/feature" class="text-muted">Fitur</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/faq" class="text-muted">FAQ</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/news" class="text-muted">Tahukah Kamu?</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/privacy-policy" class="text-muted">Kebijakan Privasi</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/terms-and-conditions" class="text-muted">Syarat & Ketentuan</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/device" class="text-muted">Cek Mesin Absensi</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/check-server" class="text-muted">Cek Server</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h6 class="fw-bold mb-3">Mesin Absensi Populer</h6>
+          <ul class="list-unstyled" style="line-height: 1.7">
+            <li>
+              <a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-telapak-tangan-revo-wfv-208BNC"
+                class="text-muted">Revo WFV-208BNC</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-wajah-revo-wf-206bnc"
+                class="text-muted">Revo WF-206BNC</a>
+            </li>
+            <li>
+              <a href="https://fingerspot.io/detail-product/mesin-absensi-sidik-jari-telapak-tangan-Revo-WDV-204BNC"
+                class="text-muted">Revo WDV-204BNC</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h6 class="fw-bold mb-3">Hubungi Kami</h6>
+          <p class="mb-1">
+            <a href="https://fingerspot.io/contact-us" class="text-muted">Kontak Kami</a>
+          </p>
+          <p class="text-muted">customercare@fingerspot.io</p>
+          <div class="social-icons gap-3 mt-3 justify-content-start">
+            <a href="https://www.facebook.com/fingerspot.io" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@Fingerspotindonesia" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@fingerspot.io" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/fingerspot.io" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="border-top mt-4 mb-5 pt-3 text-center">
+          <small class="text-muted">© Copyright by <b>Fingerspot</b> | All Rights Reserved
+            2025</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* .section-space {
+        padding: 48px 0;
+      } */
+
+    .pricing.fsio {
+      background: #fff;
+    }
+
+    .pricing .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(22px, 2.4vw, 32px);
+      color: var(--fsio-ink);
+      margin: 0;
+    }
+
+    .section-head h2 span {
+      color: var(--fsio-blue2);
+    }
+
+    .section-head p {
+      color: var(--fsio-muted);
+      margin-top: 6px;
+    }
+
+    .plan-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .plan-item {
+      position: relative;
+      background: var(--fsio-blue);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      padding: 18px 16px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+    }
+
+    .plan-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(13, 95, 147, 0.18);
+    }
+
+    .plan-item .plan-name {
+      display: block;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 0.2px;
+    }
+
+    .plan-item .plan-price {
+      display: block;
+      margin-top: 6px;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .plan-item .plan-price sup {
+      font-size: 0.6em;
+      margin-right: 2px;
+    }
+
+    .plan-item .per {
+      font-weight: 600;
+      font-size: 0.75em;
+    }
+
+    .plan-item .note {
+      display: block;
+      opacity: 0.9;
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
+    .plan-item .badge {
+      position: absolute;
+      left: 50%;
+      bottom: -12px;
+      transform: translateX(-50%);
+      background: #1e64a0;
+      color: #fff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-weight: 700;
+      font-size: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
+    }
+
+    .plan-item .badge.alt {
+      background: #1c7c2f;
+    }
+
+    .plan-item.is-active {
+      background: var(--tertiary);
+      color: #0f2942;
+    }
+
+    .plan-item.is-active .badge {
+      background: #0f4e7a;
+      color: #fff;
+    }
+
+    .plan-item .ribbon {
+      position: absolute;
+      top: -12px;
+      left: 12px;
+      background: #ffe99c;
+      color: #5a4300;
+      border-radius: 10px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .feature-table {
+      margin-top: 22px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid #e8eef5;
+    }
+
+    .feature-table .table-head {
+      display: grid;
+      grid-template-columns: 2fr repeat(5, 1fr);
+      background: var(--fsio-blue);
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .feature-table .table-head .col {
+      padding: 16px;
+    }
+
+    .feature-table .table-head .highlight {
+      background: #ffd85c;
+      color: #0f2942;
+    }
+
+    .table-row {
+      display: grid;
+      grid-template-columns: 2fr repeat(5, 1fr);
+      background: #fff;
+      color: #0c2236;
+      border-top: 1px solid #edf2f7;
+    }
+
+    .table-row.alt {
+      background: #f8fbff;
+    }
+
+    .table-row .col {
+      padding: 14px 16px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #263238;
+    }
+
+    .feature .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #6b7c8b;
+      margin-top: 8px;
+      flex: 0 0 auto;
+    }
+
+    .ta-c {
+      text-align: center;
+    }
+
+    .highlight {
+      background: #fff7d9;
+    }
+
+    .check {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      box-shadow: inset 0 0 0 20px #fff, 0 0 0 2px #d7e7f5;
+      position: relative;
+    }
+
+    .check:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 2px;
+      width: 9px;
+      height: 14px;
+      border-right: 3px solid #1cab4d;
+      border-bottom: 3px solid #1cab4d;
+      transform: rotate(45deg);
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .fsio-btn {
+      background: var(--fsio-blue2);
+      color: #fff;
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-weight: 700;
+      box-shadow: 0 6px 16px rgba(63, 135, 185, 0.22);
+      text-decoration: none;
+    }
+
+    .fsio-btn:hover {
+      opacity: 0.95;
+    }
+
+    .subhead {
+      grid-column: 1 / -1;
+      background: #eef5fb;
+      color: #0c2236;
+      font-weight: 800;
+      padding: 12px 16px;
+      border-top: 1px solid #e1ecf6;
+    }
+
+    .x {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      box-shadow: inset 0 0 0 20px #fff, 0 0 0 2px #f1d3d6;
+      position: relative;
+    }
+
+    .x:after,
+    .x:before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 8px;
+      width: 10px;
+      height: 2px;
+      background: #d92d20;
+    }
+
+    .x:before {
+      transform: rotate(45deg);
+    }
+
+    .x:after {
+      transform: rotate(-45deg);
+    }
+
+    @media (max-width: 992px) {
+      .plan-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .feature-table .table-head,
+      .table-row {
+        grid-template-columns: 1.4fr repeat(5, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .plan-row {
+        grid-template-columns: 1fr;
+      }
+
+      /* .plan-row .plan-item.is-active {
+          text-align: center !important;
+          padding: 14px 16px;
+        } */
+
+      .feature-table .table-head,
+      .table-row {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .feature-table .table-head .col:nth-child(n + 4),
+      .table-row .col:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  </style>
+
+  <script>
+    (function() {
+      const plans = ["starter", "basic", "prime", "enterprise", "supreme"];
+
+      function htmlEscape(s) {
+        return String(s || "").replace(
+          /[&<>"']/g,
+          (m) =>
+          ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;",
+          } [m])
+        );
+      }
+
+      function renderPlanDetail(plan) {
+        const table = document.querySelector(".feature-table");
+        const mount = document.getElementById("planDetail");
+        if (!table || !mount) return;
+        const idx = plans.indexOf(plan);
+        const colIndex = idx + 2;
+        const card = document.querySelector(
+          `.plan-item[data-plan="${plan}"]`
+        );
+        const planName =
+          card ? .querySelector(".plan-name") ? .textContent ? .trim() || plan;
+        const planPrice =
+          card ? .querySelector(".plan-price") ? .innerText ? .trim() || "";
+        const planNote =
+          card ? .querySelector(".note") ? .innerText ? .trim() || "";
+        let bodyHTML = "";
+        table.querySelectorAll(".table-row, .subhead").forEach((row) => {
+          if (row.classList.contains("subhead")) {
+            const title = row.textContent.trim().replace(/:\s*$/, "");
+            bodyHTML += `<div class="pd-section">${htmlEscape(title)}</div>`;
+            return;
+          }
+          const labelCol = row.querySelector(".col:first-child");
+          const valueCol = row.querySelector(`.col:nth-child(${colIndex})`);
+          if (!labelCol || !valueCol) return;
+          const rawLabel = labelCol.textContent.trim();
+          const m = rawLabel.match(/^(.*?)(\s*\(.*\))$/);
+          const mainLabel = m ? m[1].trim() : rawLabel;
+          const helpText = m ? m[2].trim().replace(/[()]/g, "") : "";
+          let valueHTML = valueCol.innerHTML.trim();
+          if (valueCol.querySelector(".check"))
+            valueHTML = `<span class="pd-badge ok">Included</span>`;
+          else if (valueCol.querySelector(".x"))
+            valueHTML = `<span class="pd-badge no">Not available</span>`;
+          else valueHTML = htmlEscape(valueCol.textContent.trim() || "-");
+          bodyHTML += `
+        <div class="pd-row">
+          <div class="pd-label">${htmlEscape(mainLabel)}${
+              helpText
+                ? `<span class="pd-help">${htmlEscape(helpText)}</span>`
+                : ""
+            }</div>
+          <div class="pd-value">${valueHTML}</div>
+        </div>`;
+        });
+        mount.innerHTML = `
+      <div class="pd-head">
+        <div class="pd-plan">
+          <h3>${htmlEscape(planName)}</h3>
+          ${
+            planPrice
+              ? `<div class="pd-price">${htmlEscape(planPrice)}</div>`
+              : ""
+          }
+        </div>
+        ${planNote ? `<div class="pd-sub">${htmlEscape(planNote)}</div>` : ""}
+        <div class="pd-cta"><a href="subscribe.html" class="btn">Choose plan</a></div>
+      </div>
+      <div class="pd-list">${bodyHTML}</div>`;
+      }
+      // Sinkronkan pilihan plan (cards, segmented, tabel, panel)
+      function setActive(plan) {
+        const table = document.querySelector(".feature-table");
+        document.querySelectorAll(".plan-item").forEach((b) => {
+          const on = b.dataset.plan === plan;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-selected", String(on));
+        });
+        document.querySelectorAll(".plan-segmented .seg-btn").forEach((b) => {
+          const on = b.dataset.plan === plan;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-selected", String(on));
+        });
+        document
+          .querySelectorAll(".feature-table .highlight")
+          .forEach((el) => el.classList.remove("highlight"));
+        const idx = plans.indexOf(plan);
+        if (idx >= 0) {
+          const colIndex = idx + 2;
+          document
+            .querySelectorAll(
+              `.feature-table .table-head .col:nth-child(${colIndex}), .feature-table .table-row .col:nth-child(${colIndex})`
+            )
+            .forEach((el) => el.classList.add("highlight"));
+        }
+        if (table) table.setAttribute("data-show", plan);
+        renderPlanDetail(plan);
+      }
+      document.querySelectorAll(".plan-item").forEach((btn) => {
+        btn.addEventListener("click", () => setActive(btn.dataset.plan));
+      });
+      document.querySelectorAll(".plan-segmented .seg-btn").forEach((btn) => {
+        btn.addEventListener("click", () => setActive(btn.dataset.plan));
+      });
+      const defaultActive =
+        document.querySelector(".plan-item.is-active") ? .dataset.plan ||
+        "prime";
+      setActive(defaultActive);
+    })();
+  </script>
+  <script>
+    (function() {
+      const wrap = document.querySelector(".plan-seg-wrap");
+      const scroller = wrap ? .querySelector(".plan-segmented");
+      if (!wrap || !scroller) return;
+
+      function updateOverlays() {
+        const atStart = scroller.scrollLeft <= 1;
+        const atEnd =
+          scroller.scrollLeft + scroller.clientWidth >=
+          scroller.scrollWidth - 1;
+        wrap.classList.toggle("show-left", !atStart);
+        wrap.classList.toggle("show-right", !atEnd);
+      }
+      updateOverlays();
+      window.addEventListener("resize", updateOverlays, {
+        passive: true
+      });
+      scroller.addEventListener("scroll", updateOverlays, {
+        passive: true
+      });
+      requestAnimationFrame(updateOverlays);
+      setTimeout(updateOverlays, 250);
+    })();
+  </script>
+</body>
+
+</html>

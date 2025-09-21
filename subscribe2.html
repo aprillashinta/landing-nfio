@@ -437,7 +437,21 @@
         width: 16%;
         animation: pulse 2s infinite;
       }
-    </style>
+
+      @media (max-width: 576px) {
+        .table .claim-image {
+          display: none !important;
+        }
+
+        .table .voucher {
+          font-size: 16px !important;
+          line-height: 1.4;
+          padding: 12px !important;
+          text-align: center;
+        }
+      }
+
+      </style>
   </head>
 
   <body data-page="home">
@@ -612,7 +626,8 @@
                     style="height: 170px; width: 182px;">
                 </button>
               </td>
-              <td style="color: white; font-size: 22px; background-color: #016DB5; text-align: center; padding: 20px;">
+              
+              <td class="voucher" style="color: white; font-size: 22px; background-color: #016DB5; text-align: center; padding: 20px;">
                 Voucher spesial untuk pengguna baru – klaim sekarang juga!</td>
               <td style="width: 20%; border-top-right-radius: 10px; border: none; background-color: #016DB5">
                 <button class="claim-voucher right" onclick="claimVoucher()">

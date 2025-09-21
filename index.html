@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="assets/css/lib/swiper.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/style-nw.css" />
+  <link rel="stylesheet" href="assets/css/testi.css" />
 
   <style>
     :root {
@@ -163,6 +164,9 @@
 
             <button id="btnLogin" class="btn rounded-pill btn-main sm-butn" targer="_blank">
               <span>Masuk</span>
+            </button>
+            <button id="btnLogin" class="btn rounded-pill btn-main sm-butn" targer="_blank">
+              <span>Daftar</span>
             </button>
           </div>
         </div>
@@ -387,33 +391,22 @@
       <img src="https://fingerspot.io/assets3/img/screenshots/hand.png" alt="Phone Hand" class="mob-hand" />
     </div>
 
-    <div class="container section-space">
-      <section class="new-testimonials style-4" data-scroll-index="5">
+    <div class="container">
+      <section class="new-testimonials style-4 section-space" data-scroll-index="5">
         <div class="content">
           <div class="container">
-            <div class="section-head style-4 wow fadeInUp">
+            <div class="section-head style-4">
               <h2 class="mb-50">Pengalaman seru mereka tentang <br /><span>fingerspot.io</span></h2>
             </div>
 
-            <!-- <div class="d-flex align-items-center button-group wow fadeInUp">
-              <a href="https://fingerspot.io/customer/form_register" target="_blank" class="btn coba-gratis">Gabung
-                Sekarang !</a>
-              <a href="https://fingerspot.io/testimonial" class="play-btn wow fadeInUp"
-                style="border-left:1px solid #3f87b9;padding:5px 20px;">
-                <span class="icon me-2"><i class="fas fa-eye"></i></span>
-                <strong class="small" style="font-size:14px">Lihat Testimoni Lainnya</strong>
-              </a>
-            </div> -->
             <div class="d-flex align-items-center button-group wow fadeInUp">
-              <a href="https://fingerspot.io/customer/form_register" target="blank"
-                class="btn coba-gratis">
-                Gabung Sekarang ! </a>
-              <a href="https://fingerspot.io/testimonial" class="play-btn wow fadeInUp"
-                style="border-left: 1px solid #3f87b9; padding: 5px 20px;">
+              <a href="https://fingerspot.io/customer/form_register" target="blank" class="btn coba-gratis">
+                Coba Gratis!</a>
+              <a href="https://fingerspot.io/testimonial" class="play-btn testimonial-link wow fadeInUp" ...>
                 <span class="icon me-2">
                   <i class="fas fa-eye"></i>
                 </span>
-                <strong class="small" style="font-size: 14px">Lihat Testimoni Lainnya</strong>
+                <strong class="small" style="font-size: 14px;">Testimoni Lainnya</strong>
               </a>
             </div>
           </div>
@@ -508,7 +501,7 @@
 
         <div class="d-flex align-items-center justify-content-center mt-50 mb-50 wow fadeInUp">
           <div class="row justify-content-center">
-            <div class="col-6 col-md-6 mb-30 text-center">
+            <div class="col-4 col-md-6 mb-30 text-center">
               <img src="https://fingerspot.io/assets/custom/img/playstore_fio.png" alt="Google Play"
                 style="width:12em;" /><br />
               <a href="https://play.google.com/store/apps/details?id=com.fingerspot.io" target="_blank"
@@ -525,6 +518,12 @@
                 <img src="https://fingerspot.io/assets/custom/img/download_on_the_app_store.png"
                   alt="Download on the App Store" style="max-width:12em;width:114px;height:33px;margin-top:20px;" />
               </a>
+            </div>
+            <div class="col-4 col-md-4 mb-30">
+                <img src="https://fingerspot.io/assets/custom/img/desktop_fio.png" alt="Desktop Version" style="width:12em"><br>
+                <a href="https://fingerspot.io/download-desktop-version" target="_blank" class="app-store">
+                    <img src="https://fingerspot.io/assets/custom/img/get_it_on_windows.png" alt="Desktop Version" style="max-width:12em">
+                </a>
             </div>
           </div>
         </div>
@@ -651,6 +650,15 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script src="assets/js/new.js"></script>
 
+  <script>
+    new Swiper('.new-testimonials.style-4 .swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 18,
+      loop: true,
+      grabCursor: true
+    });
+  </script>
+  
   <!-- <script>
     const testi = new Swiper('.new-testimonials.style-4 .swiper-container', {
       slidesPerView: 'auto',
